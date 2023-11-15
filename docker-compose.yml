@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  php-httpd:
+    build:
+      context: ./app_php
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    volumes:
+      - "./app_php:/var/www/html"
+
+  mariadb:
+    image: mariadb:10.5.2
+    volumes:
+      - "./database:/var/lib/mysql"
+    environment:
+      TZ: "Europe/Madrid"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "rootpwd"
+      MYSQL_USER: 'testuser'
+      MYSQL_PASSWORD: 'testpassword'
+      MYSQL_DATABASE: 'testdb'
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - 'mariadb:db'
+    ports:
+      - 8080:80
+
+  fastapi:
+    build:
+      context: ./fastapi
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
