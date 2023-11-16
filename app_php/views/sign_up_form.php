@@ -15,7 +15,7 @@
 </head>
 
 <div class="container">
-    <form id="formulario" action="../controllers/Controlador.php?action=signup" method="post">
+    <form id="formulario" action="../controllers/UserController.php?action=signup" method="post">
         <div class="alert alert-danger" id="generalAlert" role="alert">
         </div>
         <div class="row justify-content-center">

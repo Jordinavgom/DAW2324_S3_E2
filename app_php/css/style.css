@@ -1,3 +1,6 @@
+p {
+  color: white;
+}
 
 .bg-dark {
     --bs-bg-opacity: 1;
