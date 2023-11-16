@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y libpq-dev
 
 # Instalar extensiones PDO y el controlador PDO MySQL
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
 
 # Reiniciar el servidor Apache para aplicar los cambios
 RUN service apache2 restart
