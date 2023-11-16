@@ -1,4 +1,5 @@
 <?php 
+// xdebug_info();
 session_start();
 include('views/header.php'); ?>
 <main>
