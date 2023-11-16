@@ -68,7 +68,7 @@
                                 <a class="nav-link" href="../views/shopping_cart.php">Carrito</a>
                             </li>
                             <li class="nav-item">
-                            <form method="POST" action="../controllers/Controlador.php">
+                            <form method="POST" action="../logout.php">
                             <input type="submit" class="nav-link" name="logOut" value="LogOut"/>
                             </form>
                             </li>
