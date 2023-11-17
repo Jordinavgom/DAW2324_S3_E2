@@ -1,4 +1,4 @@
-<?php 
+<?php
 // xdebug_info();
 session_start();
 include('views/header.php'); ?>
@@ -10,7 +10,9 @@ include('views/header.php'); ?>
                 <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one
                     in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it
                     to your liking.</p>
-                <button class="btn btn-primary btn-lg" type="button" id="botonCrear">Crear</button>
+                <a href="./views/generateImages.php">
+                    <button class="btn btn-primary btn-lg" type="button" id="botonCrear">Crear</button>
+                </a>
             </div>
         </div>
         <h2 class="tituloSeccion col-md-2">Popular</h2>
@@ -23,7 +25,7 @@ include('views/header.php'); ?>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                       <img src="img/imgInicio/1.png" alt="">
+                        <img src="img/imgInicio/1.png" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
@@ -31,7 +33,7 @@ include('views/header.php'); ?>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                    <img src="img/imgInicio/2.png" alt="">
+                        <img src="img/imgInicio/2.png" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
@@ -39,7 +41,7 @@ include('views/header.php'); ?>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                    <img src="img/imgInicio/3.png" alt="">
+                        <img src="img/imgInicio/3.png" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
