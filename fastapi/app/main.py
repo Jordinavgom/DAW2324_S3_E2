@@ -13,6 +13,7 @@ from fastapi import Form
 
 app = FastAPI()
 
+load_dotenv()
 ### Picanova ###
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
@@ -25,7 +26,8 @@ external_api_password = "2b8af5289aa93fc62eae989b4dcc9725"
 # Defineix les credencials i les codifica en base64
 credentials = 'ai-art-prints-apparel:ab6e8e9e8c2d46a7d8b47913f87d45c5'
 encoded_credentials = base64.b64encode(credentials.encode()).decode()
-
+print(f"SECRET_KEY: {SECRET_KEY}")
+print(f"ALGORITHM: {ALGORITHM}")
 def create_token(data: dict):
     return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)
 
@@ -65,7 +67,7 @@ def login(username: str = Form(...), password: str = Form(...)):
             raise credentials_exception
     except Exception as e:
         # Capturar otros errores
-        return {"message": f"Error: {str(e)}"}
+        return {"message": f"Error : {str(e)}"}
 
 
 
@@ -105,7 +107,7 @@ def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(ge
         url = 'https://api.picanova.com/api/beta/orders'
      
         # Realiza la solicitud POST a la API externa de Picanova
-        response = requests.post(url, json=jsonable_encoder(order_data), headers={'Authorization': auth_header})
+        response = requests.post(url, json=jsonable_encoder(order_data), headers={'Authorization': f'Basic {encoded_credentials}'})
 
         # Verifica el código de estado de la respuesta
         if response.status_code == 200:

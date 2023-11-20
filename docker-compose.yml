@@ -37,6 +37,6 @@ services:
       dockerfile: Dockerfile
     container_name: fastapi
     ports:
-      - "8003:8000"
+      - "8003:8003"
     volumes:
       - ./fastapi/app:/app
