@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
   php-httpd:
@@ -28,10 +28,15 @@ services:
       - 'mariadb:db'
     ports:
       - 8080:80
+    environment:
+      PMA_ARBITRARY: 1
 
   fastapi:
     build:
       context: ./fastapi
       dockerfile: Dockerfile
+    container_name: fastapi
     ports:
-      - "8001:80"
+      - "8003:8003"
+    volumes:
+      - ./fastapi/app:/app

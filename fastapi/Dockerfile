@@ -1,17 +1,18 @@
-# Use an official Python runtime as a parent image
-FROM python:3.9
+FROM python:3.10
 
-# Set the working directory in the container to /app
+# Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Add the current directory contents into the container at /app
-ADD . /app
+# Copia los archivos de tu aplicación FastAPI al contenedor
+COPY /app /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt && pip install requests && pip install httpx
+COPY requirements.txt /app/requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Instala las dependencias de tu aplicación FastAPI
+RUN pip install -r /app/requirements.txt
 
-# Run app.py when the container launches
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80","--reload"]
+# Expone el puerto en el que se ejecutará tu aplicación FastAPI
+EXPOSE 8003
+
+# Comando para ejecutar tu aplicación FastAPI con auto-reload
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8003", "--reload"]
