@@ -13,6 +13,7 @@ $(document).ready(function () {
         $("#promptButton").hide();
         $("#spinner").show();
         $("#contentAfterLoading").show();
+        $("#continueButton").addClass('disabled');
         setTimeout(function () {
             $("#spinner").fadeOut(3000, function () {
 
@@ -38,3 +39,13 @@ $(document).ready(function () {
         });
     });
 });
+
+function buttonClick(clickedImage) {
+    // Elimina la clase 'selected' de todas las imágenes
+    $('.img-fade').removeClass('border border-5 border-warning');
+
+    // Agrega la clase 'selected' a la imagen clicada
+    $('#' + clickedImage).addClass('border border-5 border-warning');
+    $("#continueButton").removeClass('disabled');
+    // Puedes realizar otras acciones aquí si es necesario
+}
