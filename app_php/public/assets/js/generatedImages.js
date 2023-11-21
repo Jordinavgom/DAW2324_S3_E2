@@ -7,6 +7,7 @@ $(document).ready(function () {
     $("#img4").hide();
     $("#continueButton").hide();
     $("#keepTrying").hide();
+    $("#contentContainer").hide();
 
     $("#promptButton").click(function () {
         $("#textPrompt").hide();
@@ -37,6 +38,15 @@ $(document).ready(function () {
         $("#textPrompt").fadeIn(1000, function () {
             $("#promptButton").fadeIn(3000);
         });
+    });
+
+    $("#continueButton").click(function () {
+        // Cargar y mostrar contenido de otra página en el contenedor
+        $("#contentContainer").show();
+
+        $('html, body').animate({
+            scrollTop: $("#contentContainer").offset().top
+        }, 500);
     });
 });
 
