@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// ...
+
 class UserController
 {
     private $model;
@@ -32,13 +34,33 @@ class UserController
     public function create()
     {
         try {
-            $email = $_POST['email'];
-            $pass = md5($_POST['pass']);
+            // Validaciones generales
+            if (empty($_POST['email']) || empty($_POST['pass'])) {
+                header("Location: ../views/sign_up_form.php");
+                return;
+            }
 
+            $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+            if (!$email) {
+                header("Location: ../views/sign_up_form.php");
+                return;
+            }
+
+            $pass = $_POST['pass'];
+
+            // Validar longitud de la contraseña, puedes ajustar según tus criterios
+            if (strlen($pass) < 8) {
+                header("Location: ../views/sign_up_form.php");
+                return;
+            }
+
+            // Crear usuario
             $this->model->createUser($email, $pass);
 
+            // Redirigir después del registro
             header("Location: ../views/registroResponse.php");
         } catch (Exception $e) {
+            // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
         }
     }
@@ -46,21 +68,44 @@ class UserController
     public function login()
     {
         try {
-            $email = $_POST['email'];
-            $pass = md5($_POST['pass']);
-
-            $user_id = $this->model->logUser($email, $pass);
-
-            if ($user_id !== false) {
-                session_start();
-                $_SESSION['id_user'] = $user_id;
-                header('Location: ../index.php');
-            } else {
-                echo "Credenciales inválidas. Vuelve a intentarlo.";
+            // Validaciones generales
+            if (empty($_POST['email']) || empty($_POST['pass'])) {
                 include('../views/loginStandAlone.php');
+                return;
             }
+
+            $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+            if (!$email) {
+                include('../views/loginStandAlone.php');
+                return;
+            }
+
+            $pass = $_POST['pass'];
+
+            // Validar longitud de la contraseña, puedes ajustar según tus criterios
+            if (strlen($pass) < 8) {
+                include('../views/loginStandAlone.php');
+                return;
+            }
+
+            // Validación de seguridad contra la inyección de SQL
+            if (!$this->model->isValidUser($email, $pass)) {
+                include('../views/loginStandAlone.php');
+                return;
+            }
+
+            // Iniciar sesión
+            session_start();
+            $_SESSION['id_user'] = $this->model->getId($email);
+
+            // Redirigir después del inicio de sesión
+            header('Location: ../index.php');
         } catch (Exception $e) {
+            // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
         }
     }
 }
+?>
+
+
