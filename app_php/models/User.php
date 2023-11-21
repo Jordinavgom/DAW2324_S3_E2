@@ -17,48 +17,67 @@ class User
     public function createUser($email, $pass)
     {
         try {
-            $query = "INSERT INTO " . $this->table_name . "(
-                        email, 
-                        password
-                        ) 
-                      VALUES (
-                        :email, 
-                        :password
-                        )";
-
+            $hash = password_hash($pass, PASSWORD_DEFAULT);
+            $query = "INSERT INTO " . $this->table_name . " (email, password) VALUES (:email, :password)";
             $stmt = $this->conn->prepare($query);
 
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
+            $stmt->bindParam(':password', $hash);
 
             $stmt->execute();
         } catch (Exception $e) {
-            echo ("Error en el controlador: " . $e->getMessage());
+            // Log error o redirigir a una página de error
+            echo "Error en el modelo: " . $e->getMessage();
         }
     }
 
     public function logUser($email, $pass)
     {
         try {
-
-            $sql = "SELECT id_user, email, password FROM " . $this->table_name . " 
-            WHERE email = :email AND password = :password";
+            $sql = "SELECT id_user, email, password FROM " . $this->table_name . " WHERE email = :email";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($result && password_verify($pass, $result['password'])) {
+                return $result['id_user'];
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el modelo: " . $e->getMessage();
+        }
+    }
+
+    public function isValidUser($email, $password)
+    {
+        // Recupera el hash almacenado para el usuario con el correo electrónico dado
+        $storedHash = $this->getStoredHash($email);
+
+        // Verifica si la contraseña proporcionada coincide con el hash almacenado
+        return password_verify($password, $storedHash);
+    }
+
+
+    private function getStoredHash($email)
+    {
+        try {
+            $stmt = $this->conn->prepare("SELECT password FROM users WHERE email = :email");
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($result) {
-                // Las credenciales son válidas, el usuario está autenticado
-                return $result['id_user']; // Devuelve el ID del usuario autenticado
+                return $result['password'];
             } else {
-                // Las credenciales son inválidas
                 return false;
             }
         } catch (PDOException $e) {
-            // Manejo de la excepción, como registro de errores o redirección a una página de error.
-            echo "Error en el controlador: " . $e->getMessage();
+            // Log error o redirigir a una página de error
+            echo "Error en el modelo: " . $e->getMessage();
+            return false;
         }
     }
 
