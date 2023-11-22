@@ -58,7 +58,7 @@
 
     <div class="col">
         <div class="row justify-content-center">
-            <button id="continueButton" type="button" class="btn mt-3 w-25" name="continueButton">Escollir un suport</button>
+            <button id="continueButton" type="button" class="btn mt-3 w-25" name="continueButton">Selecciona una imatge per a escollir un suport</button>
         </div>
         <div class="row justify-content-center">
             <button id="keepTrying" type="button" class="btn btn-primary mt-3 w-25" name="keepTrying">Torna a generar una imatge</button>

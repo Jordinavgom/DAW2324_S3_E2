@@ -47,5 +47,5 @@ function buttonClick(clickedImage) {
     // Agrega la clase 'selected' a la imagen clicada
     $('#' + clickedImage).addClass('border border-5 border-warning');
     $("#continueButton").removeClass('disabled');
-    // Puedes realizar otras acciones aquí si es necesario
+    $("#continueButton").text('Selecciona un suport');
 }
