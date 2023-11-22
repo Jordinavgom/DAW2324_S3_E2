@@ -3,25 +3,42 @@ $(document).ready(function () {
     $('#generalAlert').hide();
     $('#alertPass').hide();
 
-    $('#boto-login').click(function (event) {
-        event.preventDefault(); 
+    $('#email').on('input', function () {
+        comprovarMail();
+        restablirEstils();
+    });
 
-        if (comprovarMail() && comprovarContrasenya()) {
+    $('#password').on('input', function () {
+        comprovarContrasenya();
+        restablirEstils();
+    });
+
+    $('#boto-login').click(function (event) {
+        event.preventDefault();
+
+        if (comprovarDades() && comprovarMail() && comprovarContrasenya()) {
             $('#formulario').submit();
+
         }
     });
 });
 
-let email, mailformat, patroAlfaNumeric, password;
-
-function dades() {
-    email = $('#email').val();
-    mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    password = $('#password').val();
-    patroAlfaNumeric = /^[a-zA-Z0-9\s\-_.,'"/&(){}[\]<>]+$/;
-    patroAlfabetic = /^[A-Za-z]+$/;
-    patroNumeric = /^[0-9]+$/;
+let mailformat, patroAlfaNumeric;
+function restablirEstils() {
+    if ($('#email').val() === '') {
+        $('#email').removeClass('border-danger');
+        $('#alertmail').hide();
+    } else if ($('#password').val() === '') {
+        $('#password').removeClass('border-danger');
+        $('#alertPass').hide();
+    }
 }
+// function dades() {
+//     mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//     patroAlfaNumeric = /^[a-zA-Z0-9\s\-_.,'"/&(){}[\]<>]+$/;
+//     patroAlfabetic = /^[A-Za-z]+$/;
+//     patroNumeric = /^[0-9]+$/;
+// }
 
 function comprovarDades() {
     if (email === '' || password === '') {
@@ -30,11 +47,15 @@ function comprovarDades() {
 }
 
 function comprovarMail() {
+    email = $('#email').val();
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email === '') {
+        $('#email').removeClass('border-success');
         $('#email').addClass('border-danger');
         $('#alertmail').text('El correu electrònic es obligatori.').show();
     } else if (!email.match(mailformat)) {
         $('#alertmail').text('Introdueix un mail en format correcte.').show();
+        $('#email').removeClass('border-success');
         $('#email').addClass('border-danger');
     } else {
         $('#alertmail').hide();
@@ -45,6 +66,7 @@ function comprovarMail() {
 }
 
 function comprovarContrasenya() {
+    password = $('#password').val();
     if (password === '') {
         $('#password').addClass('border-danger');
         $('#alertPass').text('Cal introduir una contrasenya.').show();
@@ -63,7 +85,7 @@ function comprovarContrasenya() {
 }
 
 function formulari() {
-    dades();
+    //dades();
     comprovarDades();
     comprovarMail();
     comprovarContrasenya();
