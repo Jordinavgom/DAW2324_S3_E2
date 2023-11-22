@@ -70,13 +70,13 @@ class UserController
         try {
             // Validaciones generales
             if (empty($_POST['email']) || empty($_POST['pass'])) {
-                include('../views/loginStandAlone.php');
+                header('Location: ../views/loginStandAlone.php');
                 return;
             }
 
             $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
             if (!$email) {
-                include('../views/loginStandAlone.php');
+                header('Location: ../views/loginStandAlone.php');
                 return;
             }
 
@@ -84,13 +84,13 @@ class UserController
 
             // Validar longitud de la contraseña, puedes ajustar según tus criterios
             if (strlen($pass) < 8) {
-                include('../views/loginStandAlone.php');
+                header('Location: ../views/loginStandAlone.php');
                 return;
             }
 
             // Validación de seguridad contra la inyección de SQL
             if (!$this->model->isValidUser($email, $pass)) {
-                include('../views/loginStandAlone.php');
+                header('Location: ../views/loginStandAlone.php');
                 return;
             }
 
@@ -106,6 +106,3 @@ class UserController
         }
     }
 }
-?>
-
-
