@@ -64,6 +64,10 @@
             <button id="keepTrying" type="button" class="btn btn-primary mt-3 w-25" name="keepTrying">Torna a generar una imatge</button>
         </div>
     </div>
+    <div id="contentContainer" class="mt-4">
+        <?php include('./productList.php');
+        ?>
+    </div>
 </body>
 
 
