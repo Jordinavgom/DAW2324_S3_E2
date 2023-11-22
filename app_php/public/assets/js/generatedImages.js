@@ -12,6 +12,9 @@ $(document).ready(function () {
     $("#promptButton").click(function () {
         $("#textPrompt").hide();
         $("#promptButton").hide();
+        $("#promptIdea1").hide();
+        $("#promptIdea2").hide();
+        $("#promptIdea3").hide();
         $("#spinner").show();
         $("#contentAfterLoading").show();
         $("#continueButton").addClass('disabled');
@@ -35,8 +38,11 @@ $(document).ready(function () {
     });
 
     $("#keepTrying").click(function () {
+        $('#contentAfterLoading, #keepTrying, #continueButton').hide();
         $("#textPrompt").fadeIn(1000, function () {
-            $("#promptButton").fadeIn(3000);
+            $("#promptButton, #promptIdea1, #promptIdea2, #promptIdea3").fadeIn(3000, function () {
+
+            });
         });
     });
 
@@ -49,6 +55,18 @@ $(document).ready(function () {
         }, 500);
     });
 });
+
+function promptIdea1() {
+    $("#textPrompt").val("hola");
+}
+
+function promptIdea2() {
+    $("#textPrompt").val("hola 2");
+}
+
+function promptIdea3() {
+    $("#textPrompt").val("hola 3");
+}
 
 function buttonClick(clickedImage) {
     // Elimina la clase 'selected' de todas las imágenes
