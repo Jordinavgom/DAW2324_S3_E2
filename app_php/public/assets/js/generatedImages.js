@@ -7,10 +7,14 @@ $(document).ready(function () {
     $("#img4").hide();
     $("#continueButton").hide();
     $("#keepTrying").hide();
+    $("#contentContainer").hide();
 
     $("#promptButton").click(function () {
         $("#textPrompt").hide();
         $("#promptButton").hide();
+        $("#promptIdea1").hide();
+        $("#promptIdea2").hide();
+        $("#promptIdea3").hide();
         $("#spinner").show();
         $("#contentAfterLoading").show();
         $("#continueButton").addClass('disabled');
@@ -34,11 +38,35 @@ $(document).ready(function () {
     });
 
     $("#keepTrying").click(function () {
+        $('#contentAfterLoading, #keepTrying, #continueButton').hide();
         $("#textPrompt").fadeIn(1000, function () {
-            $("#promptButton").fadeIn(3000);
+            $("#promptButton, #promptIdea1, #promptIdea2, #promptIdea3").fadeIn(3000, function () {
+
+            });
         });
     });
+
+    $("#continueButton").click(function () {
+        // Cargar y mostrar contenido de otra página en el contenedor
+        $("#contentContainer").show();
+
+        $('html, body').animate({
+            scrollTop: $("#contentContainer").offset().top
+        }, 500);
+    });
 });
+
+function promptIdea1() {
+    $("#textPrompt").val("hola");
+}
+
+function promptIdea2() {
+    $("#textPrompt").val("hola 2");
+}
+
+function promptIdea3() {
+    $("#textPrompt").val("hola 3");
+}
 
 function buttonClick(clickedImage) {
     // Elimina la clase 'selected' de todas las imágenes
@@ -47,5 +75,5 @@ function buttonClick(clickedImage) {
     // Agrega la clase 'selected' a la imagen clicada
     $('#' + clickedImage).addClass('border border-5 border-warning');
     $("#continueButton").removeClass('disabled');
-    // Puedes realizar otras acciones aquí si es necesario
+    $("#continueButton").text('Selecciona un suport');
 }
