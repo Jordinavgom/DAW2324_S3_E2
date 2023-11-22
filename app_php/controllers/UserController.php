@@ -18,9 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_GET['action'] == 'login') {
         $userController->login();
     }
+    if ($_GET['action'] == 'update') {
+        $userController->update();
+    }
 }
-
-// ...
 
 class UserController
 {
@@ -96,10 +97,35 @@ class UserController
 
             // Iniciar sesión
             session_start();
-            $_SESSION['id_user'] = $this->model->getId($email);
+            $id_user = $this->model->getId();
+            //$_SESSION['id_user'] = $this->model->getId();
+            //$_SESSION['id_user'] = $this->model->getId($email);
 
-            // Redirigir después del inicio de sesión
-            header('Location: ../index.php');
+            if ($id_user) {
+                $_SESSION['id_user'] = $id_user;
+                // Redirigir después del inicio de sesión
+                header('Location: ../index.php');
+            } else {
+                // Manejar el caso en que no se puede obtener el ID del usuario
+                header('Location: ../views/loginStandAlone.php');
+            }
+        } catch (Exception $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el controlador: " . $e->getMessage();
+        }
+    }
+
+    public function update()
+    {
+        try {
+            $firstName = $_POST['nom'];
+            $lastName = $_POST['cognoms'];
+            $street_primary = $_POST['adreça'];
+            $city = $_POST['ciutat'];
+            $postCode = $_POST['codipostal'];
+            $telephone = $_POST['telefon'];
+
+            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
