@@ -5,6 +5,7 @@ if (empty($_SESSION['id_user'])) { ?>
 
     <head>
         <script src="../public/assets/js/sign_in_form.js"></script>
+        <link rel="stylesheet" href="../css/botoanimat.css">
     </head>
     <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
         <div class="modal-dialog" role="document">
@@ -25,7 +26,7 @@ if (empty($_SESSION['id_user'])) { ?>
                             <label for="floatingPassword" class="inputInside">Contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
-                        <button id="boto-login" type="button" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
+                        <button id="boto-login" type="button" class="w-100 mb-2 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
                     </form>
                     <p><a class="link" href="sign_up_form.php">No tens compte? Registra't aquí</a></p>
                 </div>
