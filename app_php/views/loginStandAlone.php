@@ -2,6 +2,11 @@
 
 if (empty($_SESSION['id_user'])) { ?>
     <?= include('header.php'); ?>
+
+    <head>
+        <script src="../public/assets/js/sign_in_form.js"></script>
+        <link rel="stylesheet" href="../css/botoanimat.css">
+    </head>
     <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
         <div class="modal-dialog" role="document">
             <div class="alert alert-danger" id="generalAlert" role="alert"></div>
@@ -12,27 +17,23 @@ if (empty($_SESSION['id_user'])) { ?>
                 <div class="modal-body p-5 pt-0">
                     <form id="formulario" action="../controllers/UserController.php?action=login" method="POST">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="floatingInput" class="input" placeholder="name@example.com" name="email">
+                            <input type="email" class="form-control rounded-3" id="email" class="input" placeholder="name@example.com" name="email">
                             <label for="floatingInput" class="inputInside">Correu electrònic</label>
                         </div>
                         <div class="alert alert-danger" id="alertmail" role="alert"></div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="floatingPassword" class="input" placeholder="Password" name="pass">
+                            <input type="password" class="form-control rounded-3" id="password" class="input" placeholder="Password" name="password">
                             <label for="floatingPassword" class="inputInside">Contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
-                        <input type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" value="Entrar" />
+                        <button id="boto-login" type="button" class="w-100 mb-2 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
                     </form>
                     <p><a class="link" href="sign_up_form.php">No tens compte? Registra't aquí</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../public/assets/js/sign_in_form.js"></script>
 <?php
-
-
-
 } else { ?>
     <?= include('header.php'); ?>
     <p style="color:white">Ya estas conectado</p>
