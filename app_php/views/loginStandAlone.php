@@ -17,16 +17,16 @@ if (empty($_SESSION['id_user'])) { ?>
                 <div class="modal-body p-5 pt-0">
                     <form id="formulario" action="../controllers/UserController.php?action=login" method="POST">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="email" class="input" placeholder="name@example.com" name="email">
+                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email">
                             <label for="floatingInput" class="inputInside">Correu electrònic</label>
                         </div>
                         <div class="alert alert-danger" id="alertmail" role="alert"></div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="password" class="input" placeholder="Password" name="password">
+                            <input type="password" class="form-control rounded-3" id="password" placeholder="Password" name="password">
                             <label for="floatingPassword" class="inputInside">Contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
-                        <button id="boto-login" type="button" class="w-100 mb-2 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
+                        <button id="boto-login" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
                     </form>
                     <p><a class="link" href="sign_up_form.php">No tens compte? Registra't aquí</a></p>
                 </div>
