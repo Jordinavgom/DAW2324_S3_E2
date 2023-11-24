@@ -119,6 +119,33 @@ def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(ge
     except Exception as e:
         # Captura otros errores y los devuelve como detalle en la excepción HTTP
         raise HTTPException(status_code=500, detail=f"Error interno en el servidor: {str(e)}")
+    
+
+@app.get("/products")
+async def get_products(current_user: dict = Depends(get_current_user)):
+    try:
+        # URL del nuevo endpoint
+        url = 'https://api.picanova.com/api/beta/products'
+
+        async with httpx.AsyncClient() as client:
+            # Realiza la solicitud GET al nuevo endpoint
+            response = await client.get(
+                url,
+                headers={'Authorization': f'Basic {encoded_credentials}'}  # Ajusta según tus necesidades
+            )
+
+            # Verifica el código de estado de la respuesta
+            if response.status_code == 200:
+                return response.json()
+            else:
+                # Si la respuesta no es exitosa, lanza una excepción HTTP con el detalle del error
+                raise HTTPException(status_code=400, detail=f"Error en la solicitud GET: {response.text}")
+
+    except Exception as e:
+        # Captura otros errores y los devuelve como detalle en la excepción HTTP
+        raise HTTPException(status_code=500, detail=f"Error interno en el servidor: {str(e)}")
+
+
 ### BigJPG ###
 
 class BigJpgRequest(BaseModel):
