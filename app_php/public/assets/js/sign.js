@@ -1,3 +1,118 @@
+function mostrarRegistre() {
+    $("#sign-in").css("display", "none");
+    $("#sign-up").css("display", "block");
+}
+
+function mostrarLogin() {
+    $("#sign-in").css("display", "block");
+    $("#sign-up").css("display", "none");
+}
+
+
+
+
+
+
+// LOGIN
+$(document).ready(function () {
+    $('#alertmail1').hide();
+    $('#generalAlert1').hide();
+    $('#alertPass1').hide();
+
+    $('#emaillogin').on('input', function () {
+        comprovarMail();
+        restablirEstils();
+    });
+
+    $('#password').on('input', function () {
+        comprovarContrasenya();
+        restablirEstils();
+    });
+
+    $('#boto-login').click(function (event) {
+        event.preventDefault();
+
+        if (comprovarDades() && comprovarMail() && comprovarContrasenya()) {
+            $('#formulario').submit();
+
+        }
+    });
+});
+
+let mailformat, patroAlfaNumeric;
+function restablirEstils() {
+    if ($('#emaillogin').val() === '') {
+        $('#emaillogin').removeClass('border-danger');
+        $('#alertmail1').hide();
+    } else if ($('#password').val() === '') {
+        $('#password').removeClass('border-danger');
+        $('#alertPass1').hide();
+    }
+}
+// function dades() {
+//     mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//     patroAlfaNumeric = /^[a-zA-Z0-9\s\-_.,'"/&(){}[\]<>]+$/;
+//     patroAlfabetic = /^[A-Za-z]+$/;
+//     patroNumeric = /^[0-9]+$/;
+// }
+
+function comprovarDades() {
+    if (email === '' || password === '') {
+        $('#generalAlert1').text('Completa tots els camps.').show();
+    }
+}
+
+function comprovarMail() {
+    email = $('#emaillogin').val();
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email === '') {
+        $('#emaillogin').removeClass('border-success');
+        $('#emaillogin').addClass('border-danger');
+        $('#alertmail1').text('El correu electrònic es obligatori.').show();
+    } else if (!email.match(mailformat)) {
+        $('#alertmail1').text('Introdueix un mail en format correcte.').show();
+        $('#emaillogin').removeClass('border-success');
+        $('#emaillogin').addClass('border-danger');
+    } else {
+        $('#alertmail1').hide();
+        $('#emaillogin').removeClass('border-danger');
+        $('#emaillogin').addClass('border-success');
+        return true;
+    }
+}
+
+function comprovarContrasenya() {
+    password = $('#password').val();
+    if (password === '') {
+        $('#password').addClass('border-danger');
+        $('#alertPass1').text('Cal introduir una contrasenya.').show();
+    } else if (!password.match(patroAlfaNumeric)) {
+        $('#password').addClass('border-danger');
+        $('#alertPass1').text('La contrasenya ha de tenir un format vàlid.').show();
+    } else if (password !== '' && password.length < 8) {
+        $('#password').addClass('border-danger');
+        $('#alertPass1').text('La contrasenya ha de tenir com a mínim 8 caràcters.').show();
+    } else {
+        $('#alertPass1').hide();
+        $('#password').removeClass('border-danger');
+        $('#password').addClass('border-success');
+        return true;
+    }
+}
+
+function formulari() {
+    //dades();
+    comprovarDades();
+    comprovarMail();
+    comprovarContrasenya();
+}
+
+
+
+
+
+// REGISTRE
+
 $(document).ready(function () {
     $('#generalAlert').hide();
     $('#alertmail').hide();

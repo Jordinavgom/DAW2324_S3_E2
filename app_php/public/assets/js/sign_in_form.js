@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#generalAlert').hide();
     $('#alertPass').hide();
 
-    $('#email').on('input', function () {
+    $('#emaillogin').on('input', function () {
         comprovarMail();
         restablirEstils();
     });
@@ -25,8 +25,8 @@ $(document).ready(function () {
 
 let mailformat, patroAlfaNumeric;
 function restablirEstils() {
-    if ($('#email').val() === '') {
-        $('#email').removeClass('border-danger');
+    if ($('#emaillogin').val() === '') {
+        $('#emaillogin').removeClass('border-danger');
         $('#alertmail').hide();
     } else if ($('#password').val() === '') {
         $('#password').removeClass('border-danger');
@@ -47,20 +47,20 @@ function comprovarDades() {
 }
 
 function comprovarMail() {
-    email = $('#email').val();
+    email = $('#emaillogin').val();
     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email === '') {
-        $('#email').removeClass('border-success');
-        $('#email').addClass('border-danger');
+        $('#emaillogin').removeClass('border-success');
+        $('#emaillogin').addClass('border-danger');
         $('#alertmail').text('El correu electrònic es obligatori.').show();
     } else if (!email.match(mailformat)) {
         $('#alertmail').text('Introdueix un mail en format correcte.').show();
-        $('#email').removeClass('border-success');
-        $('#email').addClass('border-danger');
+        $('#emaillogin').removeClass('border-success');
+        $('#emaillogin').addClass('border-danger');
     } else {
         $('#alertmail').hide();
-        $('#email').removeClass('border-danger');
-        $('#email').addClass('border-success');
+        $('#emaillogin').removeClass('border-danger');
+        $('#emaillogin').addClass('border-success');
         return true;
     }
 }
