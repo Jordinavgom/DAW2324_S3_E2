@@ -24,12 +24,14 @@ function loadTable(movies) {
                     return '<img src="' + row.images[0].thumb + '" style="width:150px; height:150px">';
                 }
             },
-            { data: 'id' },
             { data: 'name' },
             { data: 'variants' },
-            { data: 'sku' },
-            { data: 'dpi' },
-            { data: 'type' }
+            {
+                data: null,
+                render: function (data, type, row) {
+                    return '<button class="btn delete-button" data-id="' + row.id + '">Afegir al carretó</button>';
+                }
+            }
         ]
     });
     $('#taula tbody').on('click', '.delete-button', function () {

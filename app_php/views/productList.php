@@ -10,20 +10,18 @@
 </head>
 
 <body>
-    <table id="taula" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Variants</th>
-                <th>SKU</th>
-                <th>DPI</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-    </table>
-
+    <div class="container w-50">
+        <table id="taula" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Variants</th>
+                    <th>Afegir al carretó</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
 </body>
 
