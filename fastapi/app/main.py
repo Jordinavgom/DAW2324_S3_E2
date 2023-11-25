@@ -10,7 +10,7 @@ from fastapi.security import OAuth2PasswordBearer
 from dotenv import load_dotenv
 import os
 from fastapi import Form
-from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey, Float
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -180,6 +180,25 @@ products_images_table = Table(
     # Agrega más columnas según sea necesario
 )
 
+# Tabla de detalles de productos
+product_details_table = Table(
+    'product_details', metadata,
+    Column('id', Integer),
+    Column('product_id', Integer, ForeignKey('products.id')),  # Clave foránea que apunta al ID del producto
+    Column('code', String(255)),
+    Column('variant_id', Integer),
+    Column('variant_code', String(255)),
+    Column('sku', String(255)),
+    Column('name', String(255)),
+    Column('format_width', Integer),
+    Column('format_height', Integer),
+    Column('price', Float),
+    Column('currency', String(3)),
+    Column('formatted_price', String(20)),
+    Column('price_in_subunit', Integer),
+    # Agrega más columnas según sea necesario
+)
+
 # Crea la tabla de imágenes si no existe
 metadata.create_all(engine)
 
@@ -251,6 +270,42 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                     # Ejecuta la sentencia de inserción de la imagen
                                     connection.execute(ins_image)
 
+                                product_details_data = await get_product_details_from_api(product_id, encoded_credentials)
+
+                                for product_detail_data in product_details_data:
+                                    id = product_detail_data.get('id')
+                                    code = product_detail_data.get('code')
+                                    variant_id = product_detail_data.get('variant_id')
+                                    variant_code = product_detail_data.get('variant_code')
+                                    sku=product_detail_data.get('sku')
+                                    name=product_detail_data.get('name')
+                                    format_width=product_detail_data.get('printfile', {}).get('format_width')
+                                    format_height=product_detail_data.get('printfile', {}).get('format_height')
+                                    price=product_detail_data.get('price')
+                                    currency=product_detail_data.get('price_details', {}).get('currency')
+                                    formatted_price=product_detail_data.get('price_details', {}).get('formatted')
+                                    price_in_subunit=product_detail_data.get('price_details', {}).get('in_subunit')
+                                    print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
+
+                                    ins_details = product_details_table.insert().values(
+                                        id=id,
+                                        product_id=product_id,
+                                        code=code,
+                                        variant_id=variant_id,
+                                        variant_code=variant_code,
+                                        sku=sku,
+                                        name=name,
+                                        format_width=format_width,
+                                        format_height=format_height,
+                                        price=price,
+                                        currency=currency,
+                                        formatted_price=formatted_price,
+                                        price_in_subunit=price_in_subunit
+                                    )
+
+                                    connection.execute(ins_details)
+                                        
+
 
                     return {"message": "IDs de productos insertados en la base de datos"}
 
@@ -269,6 +324,17 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
         # Lanza una excepción HTTP con un mensaje genérico
         raise HTTPException(status_code=500, detail="Error interno del servidor")
 
+
+async def get_product_details_from_api(product_id: int, encoded_credentials: str) -> dict:
+    url = f'https://api.picanova.com/api/beta/products/{product_id}'
+    async with httpx.AsyncClient() as client:
+        response = await client.get(
+            url,
+            headers={'Authorization': f'Basic {encoded_credentials}'}
+        )
+        if response.status_code == 200:
+            return response.json().get('data', {})
+        return {}
 
 ### BigJPG ###
 
