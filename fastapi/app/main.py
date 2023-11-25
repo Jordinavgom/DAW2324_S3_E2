@@ -10,7 +10,6 @@ from fastapi.security import OAuth2PasswordBearer
 from dotenv import load_dotenv
 import os
 from fastapi import Form
-
 from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey
 
 load_dotenv()
@@ -22,18 +21,12 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-user = DB_USER
-userpassword = DB_PASSWORD
-host = DB_HOST
-port = DB_PORT
-database = DB_NAME
-
 # if user is None or userpassword is None or host is None or port is None or database is None:
 #     print(user)
 #     raise ValueError("Please set all the required environment variables.")
     
 
-database_user_uri = f"mariadb+pymysql://{user}:{userpassword}@{host}:{port}/{database}"
+database_user_uri = f"mariadb+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 print ("user ======", {database_user_uri})
 
 # from sqlalchemy.exc import OperationalError
@@ -47,35 +40,11 @@ print ("user ======", {database_user_uri})
 #     print(f"Error al conectar a la base de datos: {e}")
 
 
-# Crear la instancia de motor de SQLAlchemy
-engine = create_engine(database_user_uri)
-
-# Definir metadata y la tabla
-metadata = MetaData()
-
-mi_tabla = Table(
-    'testdb', metadata,
-    Column('id', Integer, primary_key=True),
-    Column('nombre_columna', String(255)),
-    # Agrega más columnas según sea necesario
-)
-
-# Crea la tabla si no existe
-metadata.create_all(engine)
-
-# Insertar un nuevo registro
-with engine.connect() as connection:
-    ins = mi_tabla.insert().values(nombre_columna='test')
-    connection.execute(ins)
-
 ####
 
 app = FastAPI()
 
-
-
 ### Picanova ###
-
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
@@ -180,6 +149,15 @@ def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(ge
 
 ### CREACIO TAULES ###
 
+# Crear la instancia de motor de SQLAlchemy
+engine = create_engine(database_user_uri)
+
+# Definir metadata y la tabla
+metadata = MetaData()
+
+# Crea la tabla si no existe
+metadata.create_all(engine)
+
 ### TAULA PRODUCTES ###
 products_table = Table(
     'products', metadata,
@@ -191,9 +169,6 @@ products_table = Table(
     Column('type', String(255)),
     # Agrega más columnas según sea necesario
 )
-
-# Crea la tabla si no existe
-metadata.create_all(engine)
 
 ### TAULA IMATGES PRODUCTES ###
 products_images_table = Table(
