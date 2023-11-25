@@ -230,33 +230,52 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                 # Asegúrate de que la respuesta tenga una estructura de diccionario
                 if isinstance(response_data, dict):
                     # Accede a la lista de productos dentro de la clave 'data'
-                    products = response_data.get('data', [])
+                    products_data = response_data.get('data', [])
 
                     with engine.connect() as connection:
                         # Itera sobre la lista de productos y realiza la inserción en la base de datos
-                        for product in products:
-                            id = product.get('id')
-                            name = product.get('name')
-                            variants = product.get('variants')
-                            sku = product.get('sku')
-                            dpi = product.get('dpi')
-                            type = product.get('type')
-                            # images = product.get('images', [])
+                        for product_data in products_data:
+                            product_id = product_data.get('id')
+                            name = product_data.get('name')
+                            variants = product_data.get('variants')
+                            sku = product_data.get('sku')
+                            dpi = product_data.get('dpi')
+                            product_type = product_data.get('type')
 
                             # Verifica si 'id' está presente antes de intentar insertarlo
-                            if name is not None:
-                                # Realiza la inserción en la base de datos
-                                ins = products_table.insert().values(
-                                    id=id,
+                            if product_id is not None:
+                                # Realiza la inserción del producto en la base de datos
+                                ins_product = products_table.insert().values(
+                                    id=product_id,
                                     name=name,
                                     variants=variants,
                                     sku=sku,
                                     dpi=dpi,
-                                    type=type
+                                    type=product_type
                                 )
 
-                                # Ejecuta la sentencia de inserción
-                                connection.execute(ins)
+                                # Ejecuta la sentencia de inserción del producto
+                                result = connection.execute(ins_product)
+                                product_id = result.lastrowid  # Obtiene el ID del producto insertado
+
+                                # Itera sobre la lista de imágenes y realiza la inserción en la base de datos
+                                images_data = product_data.get('images', [])
+                                for image_data in images_data:
+                                    image_id = image_data.get('id')
+                                    original = image_data.get('original')
+                                    thumb = image_data.get('thumb')
+
+                                    # Realiza la inserción de la imagen en la base de datos
+                                    ins_image = products_images_table.insert().values(
+                                        id=image_id,
+                                        original=original,
+                                        thumb=thumb,
+                                        product_id=product_id
+                                    )
+
+                                    # Ejecuta la sentencia de inserción de la imagen
+                                    connection.execute(ins_image)
+
 
                     return {"message": "IDs de productos insertados en la base de datos"}
 
