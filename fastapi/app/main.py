@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 import os
 from fastapi import Form
 
-from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table
+from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -128,8 +128,6 @@ def login(username: str = Form(...), password: str = Form(...)):
         # Capturar otros errores
         return {"message": f"Error : {str(e)}"}
 
-
-
 class ShippingDetails(BaseModel):
     email: str
     firstname: str
@@ -180,8 +178,39 @@ def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(ge
         raise HTTPException(status_code=500, detail=f"Error interno en el servidor: {str(e)}")
     
 
+### CREACIO TAULES ###
+
+### TAULA PRODUCTES ###
+products_table = Table(
+    'products', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('name', String(255)),  # Ajusta el tipo y nombre de las columnas según tus necesidades
+    Column('variants', Integer),
+    Column('sku', String(255)),
+    Column('dpi', Integer),
+    Column('type', String(255)),
+    # Agrega más columnas según sea necesario
+)
+
+# Crea la tabla si no existe
+metadata.create_all(engine)
+
+### TAULA IMATGES PRODUCTES ###
+products_images_table = Table(
+    'images_table', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('original', String(255)),
+    Column('thumb', String(255)),
+    Column('product_id', Integer, ForeignKey('products.id')),
+    # Agrega más columnas según sea necesario
+)
+
+# Crea la tabla de imágenes si no existe
+metadata.create_all(engine)
+
+
 @app.get("/products")
-async def get_products(current_user: dict = Depends(get_current_user)):
+async def get_and_insert_products(current_user: dict = Depends(get_current_user)):
     try:
         # URL del nuevo endpoint
         url = 'https://api.picanova.com/api/beta/products'
@@ -195,14 +224,56 @@ async def get_products(current_user: dict = Depends(get_current_user)):
 
             # Verifica el código de estado de la respuesta
             if response.status_code == 200:
-                return response.json()
+                # Obtiene la lista de productos desde la respuesta JSON
+                response_data = response.json()
+
+                # Asegúrate de que la respuesta tenga una estructura de diccionario
+                if isinstance(response_data, dict):
+                    # Accede a la lista de productos dentro de la clave 'data'
+                    products = response_data.get('data', [])
+
+                    with engine.connect() as connection:
+                        # Itera sobre la lista de productos y realiza la inserción en la base de datos
+                        for product in products:
+                            id = product.get('id')
+                            name = product.get('name')
+                            variants = product.get('variants')
+                            sku = product.get('sku')
+                            dpi = product.get('dpi')
+                            type = product.get('type')
+                            # images = product.get('images', [])
+
+                            # Verifica si 'id' está presente antes de intentar insertarlo
+                            if name is not None:
+                                # Realiza la inserción en la base de datos
+                                ins = products_table.insert().values(
+                                    id=id,
+                                    name=name,
+                                    variants=variants,
+                                    sku=sku,
+                                    dpi=dpi,
+                                    type=type
+                                )
+
+                                # Ejecuta la sentencia de inserción
+                                connection.execute(ins)
+
+                    return {"message": "IDs de productos insertados en la base de datos"}
+
+                else:
+                    # Si la respuesta no es un diccionario, lanza una excepción
+                    raise HTTPException(status_code=500, detail="La respuesta de la API no es válida")
+
             else:
                 # Si la respuesta no es exitosa, lanza una excepción HTTP con el detalle del error
                 raise HTTPException(status_code=400, detail=f"Error en la solicitud GET: {response.text}")
 
     except Exception as e:
-        # Captura otros errores y los devuelve como detalle en la excepción HTTP
-        raise HTTPException(status_code=500, detail=f"Error interno en el servidor: {str(e)}")
+        # Captura y registra el error
+        print(f"Error: {str(e)}")
+
+        # Lanza una excepción HTTP con un mensaje genérico
+        raise HTTPException(status_code=500, detail="Error interno del servidor")
 
 
 ### BigJPG ###
