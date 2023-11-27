@@ -106,9 +106,4 @@ class User
             return false;
         }
     }
-
-    public function getId()
-    {
-        return $this->id;
-    }
 }

@@ -15,6 +15,7 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="../css/style.css">
     <script src='../public/assets/js/shopping_cart.js'></script>
     <script src="../public/assets/js/updateUser.js"></script>
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
@@ -26,27 +27,27 @@ var_dump($_SESSION);
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-md-right" id="navbarsExample08">
-                    <div class="container">
+                    <div class="container borderYtoX">
                         <ul class="navbar-nav">
                             <?php if (empty($_SESSION['id_user'])) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
+                                    <a class="nav-link fw-bold" aria-current="page" href="../index.php">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Tendencias</a>
+                                    <a class="nav-link fw-bold" href="#">Tendencias</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">Servicios</a>
+                                    <a class="nav-link fw-bold" href="">Servicios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">Contacto</a>
+                                    <a class="nav-link fw-bold" href="">Contacto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../views/historialComands.php">Pedidos</a>
+                                    <a class="nav-link fw-bold" href="../views/historialComands.php">Pedidos</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../views/loginStandAlone.php">Login</a>
+                                    <a class="nav-link fw-bold" href="../views/loginStandAlone.php">Login</a>
                                 </li>
 
                             <?php } else { ?>

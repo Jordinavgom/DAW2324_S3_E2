@@ -97,18 +97,11 @@ class UserController
 
             // Iniciar sesión
             session_start();
-            $id_user = $this->model->getId();
-            //$_SESSION['id_user'] = $this->model->getId();
-            //$_SESSION['id_user'] = $this->model->getId($email);
+            $_SESSION['id_user'] = $this->model->logUser($email, $pass);
+            setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
 
-            if ($id_user) {
-                $_SESSION['id_user'] = $id_user;
-                // Redirigir después del inicio de sesión
-                header('Location: ../index.php');
-            } else {
-                // Manejar el caso en que no se puede obtener el ID del usuario
-                header('Location: ../views/loginStandAlone.php');
-            }
+            // Manejar el caso en que no se puede obtener el ID del usuario
+            header('Location: ../views/loginStandAlone.php');
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
