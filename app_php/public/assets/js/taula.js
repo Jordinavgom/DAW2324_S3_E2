@@ -4,7 +4,7 @@ $(document).ready(function () {
     if (moviesData && moviesData.length > 0) {
         loadTable(moviesData);
     } else {
-        const url = 'https://thronesapi.com/api/v2/Characters';
+        const url = '../public/assets/JSON/products.json';
         fetch(url)
             .then(response => response.json())
             .then(movies => {
@@ -15,34 +15,24 @@ $(document).ready(function () {
 });
 
 function loadTable(movies) {
-    const table = $('#taula').DataTable({
-        data: movies,
+    $('#taula').DataTable({
+        data: movies.data,
         columns: [
-            { data: 'firstName' },
-            { data: 'lastName' },
-            { data: 'fullName' },
-            { data: 'id' },
             {
-                data: 'imageUrl',
-                "render": function (data) {
-                    return '<img src="' + data + '" style="width:150px; height:150px">';
+                data: 'null',
+                "render": function (data, type, row) {
+                    return '<img src="' + row.images[0].thumb + '" style="width:150px; height:150px">';
                 }
             },
+            { data: 'name' },
+            { data: 'variants' },
             {
                 data: null,
                 render: function (data, type, row) {
-                    return '<button class="delete-button" data-id="' + row.id + '">Eliminar</button>';
+                    return '<button class="btn delete-button" data-id="' + row.id + '">Afegir al carretó</button>';
                 }
             }
-        ],
-        columnDefs: [
-            {
-                targets: -1,
-                orderable: false,
-                className: 'dt-center',
-            }
         ]
-
     });
     $('#taula tbody').on('click', '.delete-button', function () {
         const id = $(this).data('id');
