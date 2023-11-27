@@ -1,4 +1,6 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, HTTPException, status, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from typing import Optional 
 from fastapi.encoders import jsonable_encoder
@@ -43,6 +45,13 @@ print ("user ======", {database_user_uri})
 ####
 
 app = FastAPI()
+
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/api-status", response_class=HTMLResponse)
+async def read_api_status(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
+
 
 ### Picanova ###
 
