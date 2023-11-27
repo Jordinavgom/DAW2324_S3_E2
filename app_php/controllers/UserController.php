@@ -96,7 +96,8 @@ class UserController
 
             // Iniciar sesión
             session_start();
-            $_SESSION['id_user'] = $this->model->getId($email);
+            $_SESSION['id_user'] = $this->model->logUser($email, $pass);
+            setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
 
             // Redirigir después del inicio de sesión
             header('Location: ../index.php');
