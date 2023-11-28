@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     // Controladors de events para verificar els campos conforme s'escriuen
     $('#email').on('input', comprovarMail);
-    $('#password, #password2').on('input', comprovarContrasenya);
+    $('#pass, #password2').on('input', comprovarContrasenya);
     $('#checkCondicions').on('change', comprovarCheckBox);
 
     // Controlador de events para el botó "Registrar-me"
@@ -25,7 +25,7 @@ $(document).ready(function () {
 // checkbox = $("#checkCondicions")[0];
 function dades() {
     email = $('#email').val();
-    password = $('#password').val();
+    password = $('#pass').val();
     password2 = $('#password2').val();
 }
 
@@ -67,12 +67,12 @@ function comprovarMail() {
 }
 
 function comprovarContrasenya() {
-    let password = $('#password').val();
+    let password = $('#pass').val();
     let password2 = $('#password2').val();
     let patroAlfaNumeric = /^[a-zA-Z0-9\s\-_.,'"/&(){}[\]<>]+$/;
 
     // Restableix els estils i els missatges d'alerta
-    $('#password, #password2').removeClass('border-danger border-success');
+    $('#pass, #password2').removeClass('border-danger border-success');
     $('#alertPass').hide().empty();
 
     if (password === '' && password2 === '') {
@@ -84,14 +84,14 @@ function comprovarContrasenya() {
     } else if (password2 !== password) {
         mostrarError('Les contrasenyes han de coincidir.');
     } else {
-        $('#password, #password2').addClass('border-success');
+        $('#pass, #password2').addClass('border-success');
         return true;
     }
 
     return false;
 
     function mostrarError(missatge) {
-        $('#password, #password2').addClass('border-danger');
+        $('#pass, #password2').addClass('border-danger');
         $('#alertPass').text(missatge).show();
     }
 }
