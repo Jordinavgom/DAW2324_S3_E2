@@ -51,6 +51,32 @@ class User
         }
     }
 
+    public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone)
+    {
+        try {
+            $sql = "UPDATE " . $this->table_name . " 
+        SET firstName = :firstName, 
+            lastName = :lastName, 
+            street_primary = :street_primary, 
+            city = :city, 
+            postcode = :postcode, 
+            telephone = :telephone 
+        WHERE id_user = " . $_SESSION['id_user'];
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':firstName', $firstName);
+            $stmt->bindParam(':lastName', $lastName);
+            $stmt->bindParam(':street_primary', $street_primary);
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':postcode', $postCode);
+            $stmt->bindParam(':telephone', $telephone);
+            $stmt->execute();
+        } catch (PDOException $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el modelo: " . $e->getMessage();
+        }
+    }
+
     public function isValidUser($email, $password)
     {
         // Recupera el hash almacenado para el usuario con el correo electrónico dado

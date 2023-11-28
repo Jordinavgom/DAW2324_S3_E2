@@ -18,9 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_GET['action'] == 'login') {
         $userController->login();
     }
+    if ($_GET['action'] == 'update') {
+        $userController->update();
+    }
 }
-
-// ...
 
 class UserController
 {
@@ -99,8 +100,25 @@ class UserController
             $_SESSION['id_user'] = $this->model->logUser($email, $pass);
             setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
 
-            // Redirigir después del inicio de sesión
-            header('Location: ../index.php');
+            // Manejar el caso en que no se puede obtener el ID del usuario
+            header('Location: ../views/index.php');
+        } catch (Exception $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el controlador: " . $e->getMessage();
+        }
+    }
+
+    public function update()
+    {
+        try {
+            $firstName = $_POST['nom'];
+            $lastName = $_POST['cognoms'];
+            $street_primary = $_POST['adreça'];
+            $city = $_POST['ciutat'];
+            $postCode = $_POST['codipostal'];
+            $telephone = $_POST['telefon'];
+
+            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
