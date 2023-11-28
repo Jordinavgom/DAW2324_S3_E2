@@ -101,7 +101,7 @@ class UserController
             setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
 
             // Manejar el caso en que no se puede obtener el ID del usuario
-            header('Location: ../views/loginStandAlone.php');
+            header('Location: ../views/index.php');
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();

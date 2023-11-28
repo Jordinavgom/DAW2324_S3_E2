@@ -1,6 +1,5 @@
 <?php
-xdebug_info();
-var_dump($_SESSION);
+//xdebug_info();
 ?>
 <!doctype html>
 <html lang="en">
