@@ -3,83 +3,80 @@ p {
 }
 
 .bg-dark {
-    --bs-bg-opacity: 1;
-    background-color:#4e45a3 !important;
+  --bs-bg-opacity: 1;
+  background-color: #4e45a3 !important;
 }
 
-.blue{
-    background-color:#4e45a3 !important;
-    margin-bottom: -25px !important;
+.blue {
+  background-color: #4e45a3 !important;
+  margin-bottom: -25px !important;
 }
 
-.text-body-secondary{
-    color: #01eeac !important;
+.text-body-secondary {
+  color: #01eeac !important;
 }
 
-#jumbotron{
-    margin-top: 60px;
-    color: #01eeac;
-    background-color: #4e45a3 !important;
+#jumbotron {
+  margin-top: 60px;
+  color: #01eeac;
+  background-color: #4e45a3 !important;
 }
 
-#botonCrear{
-    background-color: #01eeac;
-    color: #4e45a3;
-    font-weight: bold;
+#botonCrear {
+  background-color: #01eeac;
+  color: #4e45a3;
+  font-weight: bold;
 }
 
-.tituloSeccion{
-    background-color: #4e45a3;
-    color: #01eeac;
-    font-weight: bolder;
-    margin-top: 50px !important;
-}
-
-
-
-
-
-.nav-item{
-    font-weight: bold;
-    color:#01eeac !important;
-}
-
-.nav-link{
-    color:#01eeac;
-}
-
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
-    background-color: #01eeac !important;
-    color: #4e45a3 !important;
-}
-
-#footer{
-    bottom: 0!important; left: 0!important; width: 100%!important;
-    background-color: #4e45a3;
-} 
-
-
-
-body{
-    background-color: #241651;
-}
-
-.card-body{
-    border-color: #01eeac;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: #01eeac;
-}
-
-.card{
-    border: none;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+.tituloSeccion {
+  background-color: #4e45a3;
+  color: #01eeac;
+  font-weight: bolder;
+  margin-top: 50px !important;
 }
 
 
 
-:root{
+
+
+.nav-item {
+  font-weight: bold;
+  color: #01eeac !important;
+}
+
+.nav-link {
+  color: #01eeac;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  background-color: #01eeac !important;
+  color: #4e45a3 !important;
+}
+
+#footer {
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background-color: #4e45a3;
+}
+
+.card-body {
+  border-color: #01eeac;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #01eeac;
+}
+
+.card {
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+
+
+:root {
   --bs-dark: #241651;
 }
 
@@ -129,69 +126,69 @@ body{
   animation-direction: alternate;
 }
 
-.nav-item active{
-    color:#01eeac;
-    background-color: #01eeac;
+.nav-item active {
+  color: #01eeac;
+  background-color: #01eeac;
 
 }
 
-.table{
+.table {
   margin-top: 40px !important;
   margin-bottom: 40px !important;
 }
 
-th{
+th {
   background-color: #01eeac !important;
   color: #4e45a3 !important;
   border-bottom: #241651;
 }
 
-thead{
+thead {
   background-color: #01eeac;
   border-top-left-radius: 25px !important;
   border-top-right-radius: 25px !important;
 }
 
-tr{
+tr {
   border-top-left-radius: 25px !important;
   border-top-right-radius: 25px !important;
 }
 
-td{
+td {
   background-color: #4e45a3 !important;
   color: white !important;
   border-bottom: #241651;
-  
+
 }
 
-.modal-content{
+.modal-content {
   background-color: #4e45a3 !important;
-} 
+}
 
-.btn{
+.btn {
   background-color: #01eeac !important;
   color: #4e45a3 !important;
   font-weight: bold !important;
 }
 
-.input{
+.input {
   background-color: #241651 !important;
-  color:#241651 !important;
+  color: #241651 !important;
 }
 
-.modal-header{
+.modal-header {
   color: #01eeac !important;
 }
 
-.form{
+.form {
   background-color: #241651;
 }
 
-.h4{
+.h4 {
   color: #01eeac !important;
 }
 
-.desconectar{
+.desconectar {
   color: #01eeac !important;
   background-color: #241651;
   border: none;
@@ -199,23 +196,23 @@ td{
   float: right !important;
 }
 
-#formulario{
+#formulario {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-.link{
+.link {
   color: #01eeac;
   text-decoration: none;
 }
 
-.registro{
-margin-top: 40px;
- text-align: center;
- color: #01eeac;
+.registro {
+  margin-top: 40px;
+  text-align: center;
+  color: #01eeac;
 }
 
 
-.form-label{
+.form-label {
   color: #01eeac;
 }
