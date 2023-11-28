@@ -1,0 +1,1209 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "Canvas",
+      "variants": 27,
+      "sku": "CVS",
+      "dpi": 36,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 14431,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/5D/V7/5DV7FZnllE8xbUIU3eKzVGgO3ZCZA3emwrHe9ste.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/5D/V7/300x300/5DV7FZnllE8xbUIU3eKzVGgO3ZCZA3emwrHe9ste.jpeg"
+        },
+        {
+          "id": 14432,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ij/ns/IjnsHVF8IrIKF8s3bb2pR47DZ08hlER6ro0TWtRV.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ij/ns/300x300/IjnsHVF8IrIKF8s3bb2pR47DZ08hlER6ro0TWtRV.jpeg"
+        },
+        {
+          "id": 14433,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/f3/37/f337rIvRZuo7lwohqIWBuyav6oho2b625f2EX91B.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/f3/37/300x300/f337rIvRZuo7lwohqIWBuyav6oho2b625f2EX91B.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Magic Mug",
+      "variants": 5,
+      "sku": "MGM",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 14435,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/HX/Q5/HXQ5EizT55dO6AAvpuA10HPXj3bq8uhkkqGeppdy.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/HX/Q5/300x300/HXQ5EizT55dO6AAvpuA10HPXj3bq8uhkkqGeppdy.jpeg"
+        },
+        {
+          "id": 14436,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Az/IM/AzIM5GmoOle0kThRUbltW0IdN3mByyWXYq6HU4rm.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Az/IM/300x300/AzIM5GmoOle0kThRUbltW0IdN3mByyWXYq6HU4rm.jpeg"
+        },
+        {
+          "id": 146173,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vx/v2/vxv2q9QCAFi1aRsp3tHsd4tDbDARuEY6hc8h9WNt.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vx/v2/300x300/vxv2q9QCAFi1aRsp3tHsd4tDbDARuEY6hc8h9WNt.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Puzzle",
+      "variants": 3,
+      "sku": "PZS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 148,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/9i/GD/9iGDeuGavoSRJvCMTWJhZlwjhWCMObOsSkIQDfSq.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/9i/GD/300x300/9iGDeuGavoSRJvCMTWJhZlwjhWCMObOsSkIQDfSq.jpeg"
+        },
+        {
+          "id": 115826,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/P9/Rv/P9RvhUFhUcA4xdA5h1v9wSLMeMDuDtXwClmA9gel.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/P9/Rv/300x300/P9RvhUFhUcA4xdA5h1v9wSLMeMDuDtXwClmA9gel.png"
+        },
+        {
+          "id": 115827,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vc/Ds/vcDsvx4TPjEC8ZWsMsZ0AJWtvnvE0iSUCajvcnI9.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vc/Ds/300x300/vcDsvx4TPjEC8ZWsMsZ0AJWtvnvE0iSUCajvcnI9.png"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Blanket Basic",
+      "variants": 3,
+      "sku": "BLB",
+      "dpi": 40,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 14451,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/WJ/Y8/WJY8UKjAImuoQgyYq5kLKhVPqZhrbWjf4jbzmxIK.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/WJ/Y8/300x300/WJY8UKjAImuoQgyYq5kLKhVPqZhrbWjf4jbzmxIK.jpeg"
+        },
+        {
+          "id": 14452,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zL/ul/zLul0RNBOmxaka6PMfIlQJuYz24ut3SRcwQMsfqq.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zL/ul/300x300/zLul0RNBOmxaka6PMfIlQJuYz24ut3SRcwQMsfqq.jpeg"
+        },
+        {
+          "id": 14453,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/VQ/eo/VQeofb9ob09ES9K2YchBydMGr4T9VmuQURhua5yt.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/VQ/eo/300x300/VQeofb9ob09ES9K2YchBydMGr4T9VmuQURhua5yt.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Acrylic Glass on Metal",
+      "variants": 29,
+      "sku": "AAP",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 158,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/cM/Tt/cMTtJg4jMl3kGdx6MeqWmkCHaBWEvtRwGAkvfe0l.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/cM/Tt/300x300/cMTtJg4jMl3kGdx6MeqWmkCHaBWEvtRwGAkvfe0l.jpeg"
+        },
+        {
+          "id": 115808,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fZ/d5/fZd5Sg8MlLVp1QcDW8k6rERFtXc6A0vF4knrc44y.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fZ/d5/300x300/fZd5Sg8MlLVp1QcDW8k6rERFtXc6A0vF4knrc44y.png"
+        },
+        {
+          "id": 115809,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Rs/2U/Rs2UJEjL4qpfVodi8XMRKhkOeTjIwUnGUOq7PJu6.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Rs/2U/300x300/Rs2UJEjL4qpfVodi8XMRKhkOeTjIwUnGUOq7PJu6.png"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Acrylic Glass",
+      "variants": 20,
+      "sku": "ACS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 149,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/8i/kg/8ikgRJZaP3QrTlGQEPP1y4YhfLnrAUAoeLiSQAof.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/8i/kg/300x300/8ikgRJZaP3QrTlGQEPP1y4YhfLnrAUAoeLiSQAof.jpeg"
+        },
+        {
+          "id": 115810,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/4y/y1/4yy1f9khMMmcQbxO47GPfC5zquRi9p0ICway7dZN.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/4y/y1/300x300/4yy1f9khMMmcQbxO47GPfC5zquRi9p0ICway7dZN.png"
+        },
+        {
+          "id": 115811,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/xg/sd/xgsdRe27jaHz9JEFC7YvRvXHcMZkGfmTSLVbZtop.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/xg/sd/300x300/xgsdRe27jaHz9JEFC7YvRvXHcMZkGfmTSLVbZtop.png"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Metal",
+      "variants": 30,
+      "sku": "ALS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 150,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/A9/yH/A9yH4e5FLbBjoX6X4ZMVeJWnV0aeN1RhE92xVito.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/A9/yH/300x300/A9yH4e5FLbBjoX6X4ZMVeJWnV0aeN1RhE92xVito.jpeg"
+        },
+        {
+          "id": 26002,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oG/QY/oGQYRSsxuLPEmkWVXvGI3hKe86Hr16OUFEbuWEDh.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oG/QY/300x300/oGQYRSsxuLPEmkWVXvGI3hKe86Hr16OUFEbuWEDh.jpeg"
+        },
+        {
+          "id": 115812,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Wd/gr/WdgrJnWPAAa4UABNAqYLlEE1nNC8z6nxQ5JyQ9D6.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Wd/gr/300x300/WdgrJnWPAAa4UABNAqYLlEE1nNC8z6nxQ5JyQ9D6.png"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Photoboard",
+      "variants": 20,
+      "sku": "FXW",
+      "dpi": 74,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 151,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vf/z9/vfz9dLqJTnd2zVUEyBT6qOz04mhobpLvLozCBLZW.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vf/z9/300x300/vfz9dLqJTnd2zVUEyBT6qOz04mhobpLvLozCBLZW.jpeg"
+        },
+        {
+          "id": 115814,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/UL/dI/ULdIXyf8typmz7HScv1MArkpEkjdlecGQKqFUY1Q.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/UL/dI/300x300/ULdIXyf8typmz7HScv1MArkpEkjdlecGQKqFUY1Q.png"
+        },
+        {
+          "id": 115815,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mY/1q/mY1qnsxDcNeC1EhEYynUP5UllhawliYUPz3g6RRX.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mY/1q/300x300/mY1qnsxDcNeC1EhEYynUP5UllhawliYUPz3g6RRX.png"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Passepartout",
+      "variants": 6,
+      "sku": "PPS",
+      "dpi": 74,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 165,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fu/Ew/fuEwa67EKwDm9Ud3RrBQnS5uAgEtD2NNzzQGQpnQ.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fu/Ew/300x300/fuEwa67EKwDm9Ud3RrBQnS5uAgEtD2NNzzQGQpnQ.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Wood",
+      "variants": 10,
+      "sku": "MPW",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 159,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qZ/zS/qZzSjAVVVw10WFUI4sK76fBfRXrRwLUyw3uEKSZk.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qZ/zS/300x300/qZzSjAVVVw10WFUI4sK76fBfRXrRwLUyw3uEKSZk.jpeg"
+        },
+        {
+          "id": 115816,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/aE/uj/aEujSRQP8WOY070aFXdAp3ztXw0lhGGPz86RKWxZ.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/aE/uj/300x300/aEujSRQP8WOY070aFXdAp3ztXw0lhGGPz86RKWxZ.png"
+        },
+        {
+          "id": 115817,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wp/HI/wpHI4VW0seHGYGHUUcwe5TBDBSMpVWgsejqgYKeJ.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wp/HI/300x300/wpHI4VW0seHGYGHUUcwe5TBDBSMpVWgsejqgYKeJ.png"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Mug Standard",
+      "variants": 5,
+      "sku": "MGS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 152,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Po/tQ/PotQoZ7EXza0yoykIRvF6I5EKgAfEIHtVP7P5PSp.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Po/tQ/300x300/PotQoZ7EXza0yoykIRvF6I5EKgAfEIHtVP7P5PSp.jpeg"
+        },
+        {
+          "id": 150012,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/rB/Gt/rBGtiOky3KyU5vOhegJVlJz7vEz0IMICTK4yo4Il.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/rB/Gt/300x300/rBGtiOky3KyU5vOhegJVlJz7vEz0IMICTK4yo4Il.png"
+        },
+        {
+          "id": 150013,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Xr/hz/Xrhz3GDpOcgxPpaP22aQA9JaPFFdEid3oOo8sb9X.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Xr/hz/300x300/Xrhz3GDpOcgxPpaP22aQA9JaPFFdEid3oOo8sb9X.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Mug Premium",
+      "variants": 5,
+      "sku": "MGP",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 161,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/un/8Y/un8YQmicTWZWvZhkiffDWUmolUJnneULvbsrfdFA.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/un/8Y/300x300/un8YQmicTWZWvZhkiffDWUmolUJnneULvbsrfdFA.jpeg"
+        },
+        {
+          "id": 150011,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sF/vw/sFvw56gEQKXr88w1pR6RL4HpclU4s45dNWZkwG05.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sF/vw/300x300/sFvw56gEQKXr88w1pR6RL4HpclU4s45dNWZkwG05.png"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Mouse Pad",
+      "variants": 1,
+      "sku": "MOS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 153,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sp/wD/spwDI3lWwGFhAZdvBQLU5Dtj4CgI125wIshq62sG.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sp/wD/300x300/spwDI3lWwGFhAZdvBQLU5Dtj4CgI125wIshq62sG.jpeg"
+        },
+        {
+          "id": 115818,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Yh/3S/Yh3SiWU7WTPRT8aOwZYuk7gAv09iY08gQhdBz6WI.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Yh/3S/300x300/Yh3SiWU7WTPRT8aOwZYuk7gAv09iY08gQhdBz6WI.png"
+        },
+        {
+          "id": 115819,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/R2/wn/R2wnLFq4h0KUo0tGEa2YwhIAB4wY8TEWSKpPYJkf.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/R2/wn/300x300/R2wnLFq4h0KUo0tGEa2YwhIAB4wY8TEWSKpPYJkf.png"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Acrylblock",
+      "variants": 4,
+      "sku": "ABS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 163,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/LM/vW/LMvWKGPxjJTPuLc2RxMCBT7HBoNFkYPDfTN82ZVr.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/LM/vW/300x300/LMvWKGPxjJTPuLc2RxMCBT7HBoNFkYPDfTN82ZVr.jpeg"
+        },
+        {
+          "id": 115820,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/70/4y/704ydxriHfvFZF0cFC4jbnCsFPOYNdhTe62g2PMv.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/70/4y/300x300/704ydxriHfvFZF0cFC4jbnCsFPOYNdhTe62g2PMv.png"
+        },
+        {
+          "id": 115821,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/GW/ah/GWahKb7Zh4d6lhTIuiiIzsP1KP1rGYZWca4BSqbg.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/GW/ah/300x300/GWahKb7Zh4d6lhTIuiiIzsP1KP1rGYZWca4BSqbg.png"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Blanket Premium",
+      "variants": 3,
+      "sku": "BLP",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 14448,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/rd/Zz/rdZzwpfjzpnHJmndO64ozrj3cBkJuCgYv2VcRqrh.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/rd/Zz/300x300/rdZzwpfjzpnHJmndO64ozrj3cBkJuCgYv2VcRqrh.jpeg"
+        },
+        {
+          "id": 14449,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fa/3O/fa3OesUCYquQHDnlwPg6UQMSCSuDbYHq9rjtPXWM.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fa/3O/300x300/fa3OesUCYquQHDnlwPg6UQMSCSuDbYHq9rjtPXWM.jpeg"
+        },
+        {
+          "id": 14450,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/bz/9K/bz9Kmy5m3ZQlwWGa4fov7SdxWOLBoZpkHhcF8TZO.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/bz/9K/300x300/bz9Kmy5m3ZQlwWGa4fov7SdxWOLBoZpkHhcF8TZO.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Tote Bag",
+      "variants": 2,
+      "sku": "TBS",
+      "dpi": 38,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 164,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Nf/du/NfduKrez1Tx9GhEwWOzcOhTBqiH7UlimosCpNVBV.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Nf/du/300x300/NfduKrez1Tx9GhEwWOzcOhTBqiH7UlimosCpNVBV.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Cushion Premium",
+      "variants": 3,
+      "sku": "CUP",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 14445,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/U7/9s/U79spwsTlMUaemYtgcu7tncUc50HEtKXOc6jEvi4.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/U7/9s/300x300/U79spwsTlMUaemYtgcu7tncUc50HEtKXOc6jEvi4.jpeg"
+        },
+        {
+          "id": 14446,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/K7/Le/K7Ledd6qbbrWNqycU6upQvTv1DwmGCPNpdj6fN2m.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/K7/Le/300x300/K7Ledd6qbbrWNqycU6upQvTv1DwmGCPNpdj6fN2m.jpeg"
+        },
+        {
+          "id": 14447,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/HW/JU/HWJUVGBwPPhida1VGbqxG45z62tGV013wxkNo4nP.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/HW/JU/300x300/HWJUVGBwPPhida1VGbqxG45z62tGV013wxkNo4nP.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Towel",
+      "variants": 3,
+      "sku": "TWS",
+      "dpi": 18,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 55878,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mp/4g/mp4gqfNTjnM15cWmcXssv1aaFs68wIBqSwkW26Mp.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mp/4g/300x300/mp4gqfNTjnM15cWmcXssv1aaFs68wIBqSwkW26Mp.png"
+        },
+        {
+          "id": 55879,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/l0/su/l0subyy0HKnQUZa4VGUqzTVnyYK1AWeGk70NBpBC.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/l0/su/300x300/l0subyy0HKnQUZa4VGUqzTVnyYK1AWeGk70NBpBC.png"
+        },
+        {
+          "id": 55880,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/tU/iQ/tUiQrcVsgjea8vcfqmGvyAUggr36kxI39f5ZdU4G.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/tU/iQ/300x300/tUiQrcVsgjea8vcfqmGvyAUggr36kxI39f5ZdU4G.png"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Rug",
+      "variants": 2,
+      "sku": "CPS",
+      "dpi": 18,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 10378,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eh/An/ehAnUtflyESp1XSc5p51f64HXShJrQoS46cWaC16.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eh/An/300x300/ehAnUtflyESp1XSc5p51f64HXShJrQoS46cWaC16.jpeg"
+        },
+        {
+          "id": 115823,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/uv/du/uvdunDyP9PuSdI5x5tylrkUbfwdblYzQkgSovKKS.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/uv/du/300x300/uvdunDyP9PuSdI5x5tylrkUbfwdblYzQkgSovKKS.png"
+        },
+        {
+          "id": 115824,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fe/qt/feqtPjxlFDkbv8xYivV1MPmYXxqXM8EGhp8Prqpl.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fe/qt/300x300/feqtPjxlFDkbv8xYivV1MPmYXxqXM8EGhp8Prqpl.png"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "MixPix",
+      "variants": 1,
+      "sku": "MPS",
+      "dpi": 74,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 10377,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/py/jx/pyjxkKJ8h6arWmDavm78HyhYqSlXbYVlCmJwE1Ab.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/py/jx/300x300/pyjxkKJ8h6arWmDavm78HyhYqSlXbYVlCmJwE1Ab.jpeg"
+        },
+        {
+          "id": 115825,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zq/0R/zq0RcLo66cMphprdnUFEyVPaszXWQLjGveOny5mV.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zq/0R/300x300/zq0RcLo66cMphprdnUFEyVPaszXWQLjGveOny5mV.png"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Framed Picture",
+      "variants": 6,
+      "sku": "FXD",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 24382,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Me/VQ/MeVQn7OSGwMRN1K9EgyuHRhoIjqrJrqezgCt4I1e.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Me/VQ/300x300/MeVQn7OSGwMRN1K9EgyuHRhoIjqrJrqezgCt4I1e.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "MIXBLOX",
+      "variants": 1,
+      "sku": "MBS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 24315,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/4F/yC/4FyCd6FBrCLtdRgFQx61LqPD6uL0eN7KBnm3z5QK.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/4F/yC/300x300/4FyCd6FBrCLtdRgFQx61LqPD6uL0eN7KBnm3z5QK.jpeg"
+        },
+        {
+          "id": 24316,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/B3/FN/B3FNesmgomXhNrB1tYBZD9fm9K8fnkEq1Gvjm3b8.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/B3/FN/300x300/B3FNesmgomXhNrB1tYBZD9fm9K8fnkEq1Gvjm3b8.jpeg"
+        },
+        {
+          "id": 24317,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vv/IZ/vvIZT6hZJGb84OQwcKIqKp9p8g28LeoJa9ADvWjk.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vv/IZ/300x300/vvIZT6hZJGb84OQwcKIqKp9p8g28LeoJa9ADvWjk.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "RETRO CANVAS",
+      "variants": 11,
+      "sku": "CRT",
+      "dpi": 38,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 21354,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oA/Is/oAIsDZa1bWpp7MBxZgC3th2ISjlzevBCaSx0MNSr.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oA/Is/300x300/oAIsDZa1bWpp7MBxZgC3th2ISjlzevBCaSx0MNSr.jpeg"
+        },
+        {
+          "id": 21355,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/gB/Yd/gBYdjQyu67t0Au1Xj3SC5qjDWeVQ273PUB0h2Qbp.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/gB/Yd/300x300/gBYdjQyu67t0Au1Xj3SC5qjDWeVQ273PUB0h2Qbp.jpeg"
+        },
+        {
+          "id": 21356,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ez/YP/ezYPzsusE2SZ17XfkALiA6w4a46LJtYO9ahCZN04.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ez/YP/300x300/ezYPzsusE2SZ17XfkALiA6w4a46LJtYO9ahCZN04.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Poster GM",
+      "variants": 2,
+      "sku": "PSR",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 21360,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ro/Vx/roVxKhhlbTUCIrUIptEgPpQR6I3GKrFfVfZwROWi.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ro/Vx/300x300/roVxKhhlbTUCIrUIptEgPpQR6I3GKrFfVfZwROWi.jpeg"
+        },
+        {
+          "id": 21361,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zU/1z/zU1z4nOevb5JZe3yA65PtRKuqJfa3E7RvpYNQiPD.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zU/1z/300x300/zU1z4nOevb5JZe3yA65PtRKuqJfa3E7RvpYNQiPD.jpeg"
+        },
+        {
+          "id": 21362,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/IY/dm/IYdm28LxjsAKzUhlM0NrOJMDWvdYZYSO1p1xwMGB.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/IY/dm/300x300/IYdm28LxjsAKzUhlM0NrOJMDWvdYZYSO1p1xwMGB.jpeg"
+        },
+        {
+          "id": 21363,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/VQ/Ef/VQEfSLkGuJGOKRikVMPTmLx88LZXmdADALgDdCuE.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/VQ/Ef/300x300/VQEfSLkGuJGOKRikVMPTmLx88LZXmdADALgDdCuE.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Windowblinds",
+      "variants": 6,
+      "sku": "WBL",
+      "dpi": 120,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 26901,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/T1/RZ/T1RZWqAjEWr1uiiG0N51qeSBN8MndPf4E3XZ1HBT.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/T1/RZ/300x300/T1RZWqAjEWr1uiiG0N51qeSBN8MndPf4E3XZ1HBT.jpeg"
+        },
+        {
+          "id": 26902,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Zb/Qp/ZbQpp9npAvbFYpsBFCGnjEpeS8jOqnhfSFysNKUe.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Zb/Qp/300x300/ZbQpp9npAvbFYpsBFCGnjEpeS8jOqnhfSFysNKUe.jpeg"
+        },
+        {
+          "id": 26903,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/R1/3B/R13BpaiFtUPIYXy1TmXQUEtfhtA4qVr6RhXXxJhF.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/R1/3B/300x300/R13BpaiFtUPIYXy1TmXQUEtfhtA4qVr6RhXXxJhF.jpeg"
+        },
+        {
+          "id": 26904,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eu/Ay/euAymiCrSuaZ6s5dYk7DRI8eDJJXd79EOdqHmiWG.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eu/Ay/300x300/euAymiCrSuaZ6s5dYk7DRI8eDJJXd79EOdqHmiWG.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Windowblinds Blackout",
+      "variants": 6,
+      "sku": "WBB",
+      "dpi": 120,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 26897,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/JC/6z/JC6zZUWqROkoPq7CemuoUhpvyaJ9kghXrYZlW1JD.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/JC/6z/300x300/JC6zZUWqROkoPq7CemuoUhpvyaJ9kghXrYZlW1JD.jpeg"
+        },
+        {
+          "id": 26898,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/gR/Zv/gRZveFdW3yr72eojFWn789ptwRqCUby5Q9R7SON7.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/gR/Zv/300x300/gRZveFdW3yr72eojFWn789ptwRqCUby5Q9R7SON7.jpeg"
+        },
+        {
+          "id": 26899,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/aH/P3/aHP3aQnszjtU1Jmcy1kZJKcoJX8rVsimXAulBnMM.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/aH/P3/300x300/aHP3aQnszjtU1Jmcy1kZJKcoJX8rVsimXAulBnMM.jpeg"
+        },
+        {
+          "id": 26900,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/kt/ou/ktounNTyxGQKMiLrsrJ1Akce50dXpRikZORQoelE.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/kt/ou/300x300/ktounNTyxGQKMiLrsrJ1Akce50dXpRikZORQoelE.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Sports Towel",
+      "variants": 1,
+      "sku": "TWM",
+      "dpi": 18,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 26893,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/5J/pB/5JpBT39fRxHoM5xMcCMneENeM1M3iS0L3zEPe9jS.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/5J/pB/300x300/5JpBT39fRxHoM5xMcCMneENeM1M3iS0L3zEPe9jS.jpeg"
+        },
+        {
+          "id": 26894,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ho/XK/HoXKuTdta8zicu4d0hP9luqlcrc4AnIDjKE48lYk.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ho/XK/300x300/HoXKuTdta8zicu4d0hP9luqlcrc4AnIDjKE48lYk.jpeg"
+        },
+        {
+          "id": 26895,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2p/ht/2phtN3KhudBgI4lYitfuGRWDzOShbLA6obNOyybQ.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2p/ht/300x300/2phtN3KhudBgI4lYitfuGRWDzOShbLA6obNOyybQ.jpeg"
+        },
+        {
+          "id": 26896,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/SP/0i/SP0ih4zMbR35EneAxQ4q8o0lwUQ7hRSMOhUwTwWK.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/SP/0i/300x300/SP0ih4zMbR35EneAxQ4q8o0lwUQ7hRSMOhUwTwWK.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Posters",
+      "variants": 20,
+      "sku": "PSD",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 24309,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6b/Tf/6bTf6q4EZFzK8vXPiooF1vnDgNct0KLZlNBpePiC.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6b/Tf/300x300/6bTf6q4EZFzK8vXPiooF1vnDgNct0KLZlNBpePiC.jpeg"
+        },
+        {
+          "id": 24310,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/g5/cq/g5cqZhL5sx7COo0nr2ecBchyr3xdEgwtEIwhRRfO.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/g5/cq/300x300/g5cqZhL5sx7COo0nr2ecBchyr3xdEgwtEIwhRRfO.jpeg"
+        },
+        {
+          "id": 24311,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vh/I6/vhI66Y4BTMPSvL2i86chHqGu7bQ1VoaXpdZVw8FT.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vh/I6/300x300/vhI66Y4BTMPSvL2i86chHqGu7bQ1VoaXpdZVw8FT.jpeg"
+        },
+        {
+          "id": 24312,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/IV/8i/IV8ikxmTYVmkEZ6XEDLvhds7CeTMO2jq65t1DFWo.jpeg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/IV/8i/300x300/IV8ikxmTYVmkEZ6XEDLvhds7CeTMO2jq65t1DFWo.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Enamel Mug",
+      "variants": 5,
+      "sku": "MGE",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 29725,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Od/AS/OdASNAqUwDHpLoZZ5Mpf9zxMdWI30FqJQ1M42fWG.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Od/AS/300x300/OdASNAqUwDHpLoZZ5Mpf9zxMdWI30FqJQ1M42fWG.jpg"
+        },
+        {
+          "id": 29726,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/c9/AS/c9ASud6IZHSqJDdCn5TqKDbKu66Ln0hv5t3yX3Xh.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/c9/AS/300x300/c9ASud6IZHSqJDdCn5TqKDbKu66Ln0hv5t3yX3Xh.jpg"
+        },
+        {
+          "id": 117099,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/yd/zI/ydzIZhnD9vOpSnbJQTNh66AAlr4gvSDrcEeuGPdB.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/yd/zI/300x300/ydzIZhnD9vOpSnbJQTNh66AAlr4gvSDrcEeuGPdB.png"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Bed Linen",
+      "variants": 4,
+      "sku": "BED",
+      "dpi": 38,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 35608,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/41/HP/41HPXxcWheQCmnrHbtuP3eQcoeoWeN7CLRuNlDeo.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/41/HP/300x300/41HPXxcWheQCmnrHbtuP3eQcoeoWeN7CLRuNlDeo.jpg"
+        },
+        {
+          "id": 35609,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eH/2D/eH2DcZPK6LINoyP8OL72e7tNoE1IMmyAE5jg9RH1.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eH/2D/300x300/eH2DcZPK6LINoyP8OL72e7tNoE1IMmyAE5jg9RH1.jpg"
+        },
+        {
+          "id": 35610,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zw/71/zw71XFvs7KAxew8jDCQfOBvJvsq3lN6PFlHns8zE.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zw/71/300x300/zw71XFvs7KAxew8jDCQfOBvJvsq3lN6PFlHns8zE.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Cushion Basic",
+      "variants": 1,
+      "sku": "CUS",
+      "dpi": 38,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 37409,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Jn/bg/JnbgaMYVzGhl89mn33rk3GIQ8UaeQdkrUpmgiaCx.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Jn/bg/300x300/JnbgaMYVzGhl89mn33rk3GIQ8UaeQdkrUpmgiaCx.jpg"
+        },
+        {
+          "id": 37410,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Lf/83/Lf83GLBo2tB4zZ2HcX5RFYmDePJdJVdhAmoCXTb2.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Lf/83/300x300/Lf83GLBo2tB4zZ2HcX5RFYmDePJdJVdhAmoCXTb2.jpg"
+        },
+        {
+          "id": 133776,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/c8/Xh/c8XhMw7p9FSXGFun3mCmyIL6FsYrrnf1Sh56RZ0N.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/c8/Xh/300x300/c8XhMw7p9FSXGFun3mCmyIL6FsYrrnf1Sh56RZ0N.png"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Heart Mug",
+      "variants": 5,
+      "sku": "MGH",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 60913,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/9v/nY/9vnYJLTFh4J9oVISJZoqhCAo8f5m4i5yVCVgGcfW.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/9v/nY/300x300/9vnYJLTFh4J9oVISJZoqhCAo8f5m4i5yVCVgGcfW.jpg"
+        },
+        {
+          "id": 60914,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pq/x7/Pqx7jugUMYdQj5W9nXduIcM41AwmdPTyfIdyzwNf.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pq/x7/300x300/Pqx7jugUMYdQj5W9nXduIcM41AwmdPTyfIdyzwNf.jpg"
+        },
+        {
+          "id": 60915,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/38/ev/38evzpi7nPtG2snb76EvngAKtAZkDqziB9REkQxO.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/38/ev/300x300/38evzpi7nPtG2snb76EvngAKtAZkDqziB9REkQxO.jpg"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Travel Mug",
+      "variants": 1,
+      "sku": "TBL",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 72587,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Vw/8b/Vw8b9PcnxbUtt8p8x0Heu0lW5BPnYmuCrhI470Sd.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Vw/8b/300x300/Vw8b9PcnxbUtt8p8x0Heu0lW5BPnYmuCrhI470Sd.jpg"
+        },
+        {
+          "id": 72588,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6n/Ve/6nVeRjAOnur1TSoyPJJXQkDP0irNtPj5z3EtxcYK.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6n/Ve/300x300/6nVeRjAOnur1TSoyPJJXQkDP0irNtPj5z3EtxcYK.jpg"
+        },
+        {
+          "id": 72589,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/z5/rn/z5rnWWssSyZf5cNVwTrrxUIFVLMlVDdYOWGLGcCq.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/z5/rn/300x300/z5rnWWssSyZf5cNVwTrrxUIFVLMlVDdYOWGLGcCq.jpg"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Hoodie Unisex",
+      "variants": 2,
+      "sku": "HOD",
+      "dpi": 150,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 85488,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/V9/8a/V98aDbCcSVk7nRpN5tOt8FbC8Z6gy8Bol2OmCEqT.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/V9/8a/300x300/V98aDbCcSVk7nRpN5tOt8FbC8Z6gy8Bol2OmCEqT.jpg"
+        },
+        {
+          "id": 85489,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/A2/hD/A2hD86EfoX54g2hbvB7IhsL6fYYbiwgN5NP0a2oU.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/A2/hD/300x300/A2hD86EfoX54g2hbvB7IhsL6fYYbiwgN5NP0a2oU.jpg"
+        },
+        {
+          "id": 85490,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/uh/CP/uhCPE4Eu2zsFyKFT9gcp8CcCtJyMMUG9huHnQWIH.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/uh/CP/300x300/uhCPE4Eu2zsFyKFT9gcp8CcCtJyMMUG9huHnQWIH.jpg"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Framed Poster",
+      "variants": 4,
+      "sku": "PSF",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 81703,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2W/WX/2WWXpMrmrgKmkzebRo4RLQqe896nD94ik3j36fwx.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2W/WX/300x300/2WWXpMrmrgKmkzebRo4RLQqe896nD94ik3j36fwx.jpg"
+        },
+        {
+          "id": 81704,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pl/3V/Pl3VCLTLornObpmtcYvmgXoxFcTVnrR3wMXlXtdn.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pl/3V/300x300/Pl3VCLTLornObpmtcYvmgXoxFcTVnrR3wMXlXtdn.jpg"
+        },
+        {
+          "id": 81705,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zt/pk/ztpkAdyrxQEkstZBjZouURAuU2ri5cGOQsJGRvD7.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zt/pk/300x300/ztpkAdyrxQEkstZBjZouURAuU2ri5cGOQsJGRvD7.jpg"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Dog Cushion",
+      "variants": 3,
+      "sku": "CPD",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 94447,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vy/N8/vyN8pNLx0vxem8nkDsyZ4sbXAPmcVguUvghyPj1H.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/vy/N8/300x300/vyN8pNLx0vxem8nkDsyZ4sbXAPmcVguUvghyPj1H.jpg"
+        },
+        {
+          "id": 94449,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/X7/Wa/X7WaGZRNNr2Af1v9TxXwmqpI47Qxf3RRRMnwnVjm.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/X7/Wa/300x300/X7WaGZRNNr2Af1v9TxXwmqpI47Qxf3RRRMnwnVjm.jpg"
+        },
+        {
+          "id": 137464,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sG/CJ/sGCJH0gyRKbuMT8ftTjmRZbKDsOAARMpjah01LaO.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/sG/CJ/300x300/sGCJH0gyRKbuMT8ftTjmRZbKDsOAARMpjah01LaO.png"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Adhesive Poster",
+      "variants": 15,
+      "sku": "PSA",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 93155,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oJ/1G/oJ1G7kczjPpkzEvcnzm5cVPLYwcc0iLrMTjb05P6.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/oJ/1G/300x300/oJ1G7kczjPpkzEvcnzm5cVPLYwcc0iLrMTjb05P6.jpg"
+        },
+        {
+          "id": 93156,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/SW/Xm/SWXmpPZNIY9oiPHG38LH2qeUmo05aNPcy8Qd6Vbn.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/SW/Xm/300x300/SWXmpPZNIY9oiPHG38LH2qeUmo05aNPcy8Qd6Vbn.jpg"
+        },
+        {
+          "id": 93157,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/p8/P4/p8P4LECOkzrpzcsQe8qLAAPWcrg5YcEguR6eOL7a.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/p8/P4/300x300/p8P4LECOkzrpzcsQe8qLAAPWcrg5YcEguR6eOL7a.jpg"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "T-Shirt",
+      "variants": 4,
+      "sku": "TSR",
+      "dpi": 150,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 133908,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pa/xt/Paxt1oEDIKpIXpqUovPX3kR287yTh1FdgYv92CtT.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Pa/xt/300x300/Paxt1oEDIKpIXpqUovPX3kR287yTh1FdgYv92CtT.png"
+        },
+        {
+          "id": 133909,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mr/u2/mru2Nkjx5IAR3m0IKlbyJbkhp9nR2XYCT9BNnmFt.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/mr/u2/300x300/mru2Nkjx5IAR3m0IKlbyJbkhp9nR2XYCT9BNnmFt.png"
+        },
+        {
+          "id": 135077,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/8s/pw/8spw90ZXjoShv2aF7GI5UZuYpxoCLw7pfeeXxF2A.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/8s/pw/300x300/8spw90ZXjoShv2aF7GI5UZuYpxoCLw7pfeeXxF2A.png"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Baby Bib",
+      "variants": 1,
+      "sku": "BIB",
+      "dpi": 150,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 130990,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6i/bz/6ibzh8fZaNFVw41a3n4akOfnHsygG0AUlUGiIVLw.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6i/bz/300x300/6ibzh8fZaNFVw41a3n4akOfnHsygG0AUlUGiIVLw.png"
+        },
+        {
+          "id": 130991,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wE/pE/wEpEuGB9pAULn7MgFj50RZIPnPz13l2MLnTnUxGh.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wE/pE/300x300/wEpEuGB9pAULn7MgFj50RZIPnPz13l2MLnTnUxGh.png"
+        },
+        {
+          "id": 130992,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/xb/xK/xbxKx3aOI3LmktFBSnJzjmOCm5FYNM4aPSR9ZjhO.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/xb/xK/300x300/xbxKx3aOI3LmktFBSnJzjmOCm5FYNM4aPSR9ZjhO.png"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Bed Linen Cotton",
+      "variants": 4,
+      "sku": "BLC",
+      "dpi": 38,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 139613,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/In/nK/InnKnQ35q6iV6ylPUJIOCpk3fEAjl6GY4ndpaz9V.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/In/nK/300x300/InnKnQ35q6iV6ylPUJIOCpk3fEAjl6GY4ndpaz9V.jpg"
+        },
+        {
+          "id": 139614,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ur/le/UrleB0lxwtqWQBFw0CuIu39E1ZFNIvpqtTWdyFjA.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ur/le/300x300/UrleB0lxwtqWQBFw0CuIu39E1ZFNIvpqtTWdyFjA.jpg"
+        },
+        {
+          "id": 139615,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/56/uU/56uUbsksWDsf9R4XYPnFU5QodbuXOTwrnFwHFAWE.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/56/uU/300x300/56uUbsksWDsf9R4XYPnFU5QodbuXOTwrnFwHFAWE.jpg"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Cushion Cotton",
+      "variants": 3,
+      "sku": "CUB",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 140496,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fA/vN/fAvNvMb0yZDmjo4pdSmG8PJCDkLEc38xtGuIsJQh.png",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/fA/vN/300x300/fAvNvMb0yZDmjo4pdSmG8PJCDkLEc38xtGuIsJQh.png"
+        },
+        {
+          "id": 140497,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Me/Ru/MeRuh9VHGXAbqPcaizbB0Gx78oepHtTRpn5adHqf.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Me/Ru/300x300/MeRuh9VHGXAbqPcaizbB0Gx78oepHtTRpn5adHqf.jpg"
+        },
+        {
+          "id": 140498,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2M/C3/2MC3Xvd4YEaQ1JlK7Z18laZzjOMPyS9EiFTjfM6d.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2M/C3/300x300/2MC3Xvd4YEaQ1JlK7Z18laZzjOMPyS9EiFTjfM6d.jpg"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Wood Block",
+      "variants": 1,
+      "sku": "WOB",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 147150,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/PI/gv/PIgv8fgldHJHbJfte1bHkHyTSKVrpDaJP2v1aQ99.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/PI/gv/300x300/PIgv8fgldHJHbJfte1bHkHyTSKVrpDaJP2v1aQ99.jpg"
+        },
+        {
+          "id": 147151,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6v/WE/6vWElnXkBqxEUxpvDZbQIEnYcWVt8bJAxIwGRLU1.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/6v/WE/300x300/6vWElnXkBqxEUxpvDZbQIEnYcWVt8bJAxIwGRLU1.jpg"
+        },
+        {
+          "id": 147152,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/L4/8d/L48ddEQkjo2cTTcJqDLb3vZJom5o0cCEbXe6Xqj1.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/L4/8d/300x300/L48ddEQkjo2cTTcJqDLb3vZJom5o0cCEbXe6Xqj1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Wall Tapestry",
+      "variants": 3,
+      "sku": "WTP",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 170630,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qj/vX/qjvXX97hC9eUPtUKK3J2wOsIKq9MGBeo0m6LKrCu.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qj/vX/300x300/qjvXX97hC9eUPtUKK3J2wOsIKq9MGBeo0m6LKrCu.jpg"
+        },
+        {
+          "id": 170631,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Dt/4O/Dt4OYv5Eri1zl6TvPLUkm1Q9TzfIak70unOYqrNV.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Dt/4O/300x300/Dt4OYv5Eri1zl6TvPLUkm1Q9TzfIak70unOYqrNV.jpg"
+        },
+        {
+          "id": 170632,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ZZ/93/ZZ93mNiW5BWaeoQ1sr7WfXI7Ert7J0QomaEtFciu.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ZZ/93/300x300/ZZ93mNiW5BWaeoQ1sr7WfXI7Ert7J0QomaEtFciu.jpg"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Shaped Rug",
+      "variants": 2,
+      "sku": "CPF",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 178615,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/dy/bD/dybDmH9FAo4RdjqngPMixXc3iaEKva6n4Stwzrl8.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/dy/bD/300x300/dybDmH9FAo4RdjqngPMixXc3iaEKva6n4Stwzrl8.jpg"
+        },
+        {
+          "id": 178616,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ww/Pb/WwPbud6xYxMkVhA69F919jRo7zWZeNYAd49YfTPq.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ww/Pb/300x300/WwPbud6xYxMkVhA69F919jRo7zWZeNYAd49YfTPq.jpg"
+        },
+        {
+          "id": 178617,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qB/JH/qBJHNpF88XwPo1nid61DDuXf6IJEvWyEzBhJ8M3O.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qB/JH/300x300/qBJHNpF88XwPo1nid61DDuXf6IJEvWyEzBhJ8M3O.jpg"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Snow Globe Picture Frame",
+      "variants": 1,
+      "sku": "ASF",
+      "dpi": 120,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 203400,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2V/4H/2V4HrU5TLcPSXWqfTW7vAvyzhe7FYaHNRhx5P1FW.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/2V/4H/300x300/2V4HrU5TLcPSXWqfTW7vAvyzhe7FYaHNRhx5P1FW.jpg"
+        },
+        {
+          "id": 203401,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zq/Qi/zqQifkvPYi6Ebmvy2lLCKYp3TYLNgxYy9hPguzwK.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/zq/Qi/300x300/zqQifkvPYi6Ebmvy2lLCKYp3TYLNgxYy9hPguzwK.jpg"
+        },
+        {
+          "id": 203402,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wj/wF/wjwFulVPrjplIapMf3022IZ4jsHf98oXjEfnD6so.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/wj/wF/300x300/wjwFulVPrjplIapMf3022IZ4jsHf98oXjEfnD6so.jpg"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Dog Bowl",
+      "variants": 1,
+      "sku": "DBO",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 213996,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ut/sd/utsddruszLDyFUFrWU2DDCaBqqnV2dM6bb7mam1I.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ut/sd/300x300/utsddruszLDyFUFrWU2DDCaBqqnV2dM6bb7mam1I.jpg"
+        },
+        {
+          "id": 213997,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ae/Sp/aeSpsxRjNiEPkJy6tkeiRZgpNtG6HKe8wFtqFF9U.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/ae/Sp/300x300/aeSpsxRjNiEPkJy6tkeiRZgpNtG6HKe8wFtqFF9U.jpg"
+        },
+        {
+          "id": 213998,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/dE/gR/dEgR5bJ8Xtx1wzise9G0l4jPuTSeACs0NV56qBUA.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/dE/gR/300x300/dEgR5bJ8Xtx1wzise9G0l4jPuTSeACs0NV56qBUA.jpg"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Acrylic Heart",
+      "variants": 1,
+      "sku": "AHS",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 276707,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eI/cR/eIcRUHFoJ7g6pxFsv27f4LyrYIXXKUGbV96HueAC.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/eI/cR/300x300/eIcRUHFoJ7g6pxFsv27f4LyrYIXXKUGbV96HueAC.jpg"
+        },
+        {
+          "id": 276708,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ml/1Q/Ml1QJ0M6RZAYkx8upFbmG5OaQs3wKgX2OVfiBfbL.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ml/1Q/300x300/Ml1QJ0M6RZAYkx8upFbmG5OaQs3wKgX2OVfiBfbL.jpg"
+        },
+        {
+          "id": 276709,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/yp/UY/ypUYhb0Q1xJ77rcSHMZCDOOMY5VmCmgzdECgaK3D.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/yp/UY/300x300/ypUYhb0Q1xJ77rcSHMZCDOOMY5VmCmgzdECgaK3D.jpg"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Round Photo Print",
+      "variants": 4,
+      "sku": "SPY",
+      "dpi": 120,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 319875,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/os/NQ/osNQWgz2WuOjejAcr5JIXyV32Sva5L55WVneHEJo.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/os/NQ/300x300/osNQWgz2WuOjejAcr5JIXyV32Sva5L55WVneHEJo.jpg"
+        },
+        {
+          "id": 319876,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qY/uu/qYuuEubGO4NLj1hP9ittsYpF4sRSWQtFt3mdthBp.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/qY/uu/300x300/qYuuEubGO4NLj1hP9ittsYpF4sRSWQtFt3mdthBp.jpg"
+        },
+        {
+          "id": 319877,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ef/im/EfimSfMuP2hPAZggvCB4zJ5k35p29M7wnzx89Nyr.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/Ef/im/300x300/EfimSfMuP2hPAZggvCB4zJ5k35p29M7wnzx89Nyr.jpg"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Photo Holder",
+      "variants": 3,
+      "sku": "PHD",
+      "dpi": 72,
+      "type": "PRINT",
+      "images": [
+        {
+          "id": 327857,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/D9/fe/D9feuBtqmrUpLW9G8WgNgzndPBW8QnyANj6h8ZH4.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/D9/fe/300x300/D9feuBtqmrUpLW9G8WgNgzndPBW8QnyANj6h8ZH4.jpg"
+        },
+        {
+          "id": 327858,
+          "original": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/F9/YZ/F9YZ4nvSeNWkOJqdj1EarWLiHcdclzvbYHn53MhP.jpg",
+          "thumb": "https://euc-premiumprint.s3.eu-central-1.amazonaws.com/images/image/F9/YZ/300x300/F9YZ4nvSeNWkOJqdj1EarWLiHcdclzvbYHn53MhP.jpg"
+        }
+      ]
+    }
+  ]
+}
