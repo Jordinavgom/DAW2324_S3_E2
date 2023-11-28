@@ -157,7 +157,7 @@ function comprovarDades() {
     }
 }
 
-function formulari() {
+function formulariregistre() {
     dades();
     comprovarDades();
 }

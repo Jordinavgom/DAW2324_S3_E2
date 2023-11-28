@@ -21,6 +21,9 @@
             <div class="alert alert-danger" id="generalAlert1" role="alert"></div>
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
+                <a href="#" onclick="mostrarLogin()" style="text-decoration: none; color: inherit;">
+                        <h1 class="fw-bold mb-0 fs-2 h1">Sign In</h1>
+                    </a>
                     <h1 class="fw-bold mb-0 fs-2 h1">Sign Up</h1>
                 </div>
                 <div class="modal-body p-5 pt-0">
@@ -47,9 +50,7 @@
                             <label class="form-check-label" for="checkCondicions">He llegit i accepto els termes i condicions</label>
                             <div class="alert alert-danger" id="alertCondicions" role="alert"></div>
                         </div>
-                        <button id="boto-registrar" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" name="boto-registrar" onclick="////()">Registrar-me</button>
-                        <button id="boto-registre" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="mostrarLogin()">Loginar</button>
-
+                        <button id="boto-registrar" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" name="boto-registrar" onclick="formulariregistre()">Registrar-me</button>
                     </form>
                 </div>
             </div>
@@ -65,7 +66,10 @@
             <div class="alert alert-danger" id="generalAlert" role="alert"></div>
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h1 class="fw-bold mb-0 fs-2 h1">Sign in</h1>
+                    <h1 class="fw-bold mb-0 fs-2 h1">Sign In</h1>
+                    <a href="#" onclick="mostrarRegistre()" style="text-decoration: none; color: inherit;">
+                        <h1 class="fw-bold mb-0 fs-2 h1">Sign Up</h1>
+                    </a>
                 </div>
                 <div class="modal-body p-5 pt-0">
                     <form id="formulario" action="../controllers/UserController.php?action=login" method="POST">
@@ -80,7 +84,6 @@
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
                         <button id="boto-login" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="formulari()">Inicia sessió</button>
-                        <button id="boto-registre" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="mostrarRegistre()">No tens compte? Registra't aquí.</button>
                     </form>
                 </div>
             </div>
