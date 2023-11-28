@@ -1,39 +1,26 @@
-import mysql.connector
+# import os
+# from dotenv import load_dotenv
+# from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table
 
-class DatabaseConnection:
-    def __init__(self, host, user, password, database):
-        self.host = host
-        self.user = user
-        self.password = password
-        self.database = database
-        self.connection = None
+# load_dotenv()
+# SECRET_KEY = os.getenv("SECRET_KEY")
+# ALGORITHM = os.getenv("ALGORITHM")
+# DB_USER = os.getenv("DB_USER")
+# DB_PASSWORD = os.getenv("DB_PASSWORD")
+# DB_HOST = os.getenv("DB_HOST")
+# DB_PORT = os.getenv("DB_PORT")
+# DB_NAME = os.getenv("DB_NAME")
 
-    def connect(self):
-        try:
-            self.connection = mysql.connector.connect(
-                host=self.host,
-                user=self.user,
-                password=self.password,
-                database=self.database
-            )
-            print("La connexió ha tingut exit")
-        except mysql.connector.Error as err:
-            print(f"Error al connectar: {err}")
+# user = DB_USER
+# userpassword = DB_PASSWORD
+# host = DB_HOST
+# port = DB_PORT
+# database = DB_NAME
 
-    def disconnect(self):
-        if self.connection and self.connection.is_connected():
-            self.connection.close()
-            print("Connexió tancada.")
+# # if user is None or userpassword is None or host is None or port is None or database is None:
+# #     print(user)
+# #     raise ValueError("Please set all the required environment variables.")
+    
 
-    def execute_query(self, query, values=None):
-        if not self.connection or not self.connection.is_connected():
-            print("No hi ha connexió.")
-            return
-
-        cursor = self.connection.cursor(dictionary=True)
-        cursor.execute(query, values)
-        result = cursor.fetchall()
-        cursor.close()
-        return result
-
-
+# database_user_uri = f"mariadb+pymysql://{user}:{userpassword}@{host}:{port}/{database}"
+# print ("user ======", {database_user_uri})
