@@ -8,7 +8,7 @@ $(document).ready(function () {
         restablirEstils();
     });
 
-    $('#password').on('input', function () {
+    $('#pass').on('input', function () {
         comprovarContrasenya();
         restablirEstils();
     });
@@ -23,13 +23,14 @@ $(document).ready(function () {
     });
 });
 
-let mailformat, patroAlfaNumeric;
+let email, password, patroAlfaNumeric;
+
 function restablirEstils() {
     if ($('#email').val() === '') {
         $('#email').removeClass('border-danger');
         $('#alertmail').hide();
-    } else if ($('#password').val() === '') {
-        $('#password').removeClass('border-danger');
+    } else if ($('#pass').val() === '') {
+        $('#pass').removeClass('border-danger');
         $('#alertPass').hide();
     }
 }
@@ -41,9 +42,15 @@ function restablirEstils() {
 // }
 
 function comprovarDades() {
+    email = $('#email').val();
+    password = $('#pass').val();
+
     if (email === '' || password === '') {
         $('#generalAlert').text('Completa tots els camps.').show();
+        return false;
     }
+
+    return true;
 }
 
 function comprovarMail() {
@@ -66,27 +73,28 @@ function comprovarMail() {
 }
 
 function comprovarContrasenya() {
-    password = $('#password').val();
+    password = $('#pass').val();
     if (password === '') {
-        $('#password').addClass('border-danger');
+        $('#pass').addClass('border-danger');
         $('#alertPass').text('Cal introduir una contrasenya.').show();
     } else if (!password.match(patroAlfaNumeric)) {
-        $('#password').addClass('border-danger');
+        $('#pass').addClass('border-danger');
         $('#alertPass').text('La contrasenya ha de tenir un format vàlid.').show();
     } else if (password !== '' && password.length < 8) {
-        $('#password').addClass('border-danger');
+        $('#pass').addClass('border-danger');
         $('#alertPass').text('La contrasenya ha de tenir com a mínim 8 caràcters.').show();
     } else {
         $('#alertPass').hide();
-        $('#password').removeClass('border-danger');
-        $('#password').addClass('border-success');
+        $('#pass').removeClass('border-danger');
+        $('#pass').addClass('border-success');
         return true;
     }
 }
 
 function formulari() {
     //dades();
+    comprovarContrasenya();
     comprovarDades();
     comprovarMail();
-    comprovarContrasenya();
+
 }
