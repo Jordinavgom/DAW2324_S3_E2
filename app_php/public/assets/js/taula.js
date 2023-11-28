@@ -24,7 +24,12 @@ function loadTable(movies) {
                     return '<img src="' + row.images[0].thumb + '" style="width:150px; height:150px">';
                 }
             },
-            { data: 'name' },
+            {
+                data: null,
+                render: function (data, type, row) {
+                    return '<a href="./product?id=' + row.id + '">' + row.name + '</a>';
+                }
+            },
             { data: 'variants' },
             {
                 data: null,
