@@ -23,7 +23,8 @@ $(document).ready(function () {
     });
 });
 
-let mailformat, patroAlfaNumeric;
+let email, password, patroAlfaNumeric;
+
 function restablirEstils() {
     if ($('#email').val() === '') {
         $('#email').removeClass('border-danger');
@@ -41,9 +42,15 @@ function restablirEstils() {
 // }
 
 function comprovarDades() {
+    email = $('#email').val();
+    password = $('#pass').val();
+
     if (email === '' || password === '') {
         $('#generalAlert').text('Completa tots els camps.').show();
+        return false;
     }
+
+    return true;
 }
 
 function comprovarMail() {
@@ -86,7 +93,8 @@ function comprovarContrasenya() {
 
 function formulari() {
     //dades();
+    comprovarContrasenya();
     comprovarDades();
     comprovarMail();
-    comprovarContrasenya();
+
 }

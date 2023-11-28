@@ -1,17 +1,19 @@
 <?php
-class Database {
+class Database
+{
     private $host = 'mariadb';
-    private $db_name = 'botiga_online';
+    private $db_name = 'testdb';
     private $username = 'root';
     private $password = 'rootpwd';
     private $conn;
 
-    public function connect() {
+    public function connect()
+    {
         $this->conn = null;
         try {
             $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             echo 'Connection Error: ' . $e->getMessage();
         }
         return $this->conn;

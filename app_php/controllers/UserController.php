@@ -14,8 +14,7 @@ if (!$conn) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_GET['action'] == 'signup') {
         $userController->create();
-    }
-    if ($_GET['action'] == 'login') {
+    } else if ($_GET['action'] == 'login') {
         $userController->login();
     }
     if ($_GET['action'] == 'update') {
