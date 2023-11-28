@@ -48,9 +48,26 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
 
+@app.get("/ping/picanova")
+async def ping_picanova():
+    response = requests.get('https://api.picanova.com/')
+    return {"status_code": response.status_code}
+
+@app.get("/ping/bigJPG")
+async def ping_big_jpg():
+    response = requests.get('https://bigjpg.com/')
+    return {"status_code": response.status_code}
+
 @app.get("/api-status", response_class=HTMLResponse)
 async def read_api_status(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    ping_picanova_result = await ping_picanova()
+    ping_big_jpg_result = await ping_big_jpg()
+    
+    return templates.TemplateResponse("home.html", {
+        "request": request,
+        "ping_picanova_result": ping_picanova_result,
+        "ping_big_jpg_result": ping_big_jpg_result
+    })
 
 
 ### Picanova ###
