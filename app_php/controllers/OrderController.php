@@ -7,7 +7,7 @@ $conn = $database->connect();
 
 if (!$conn) {
     echo "Error al conectar a la base de datos.";
-} else {
+} else if (!empty($orders)) {
     $orderController = new OrderController();
     $orders = $orderController->index();
 }
