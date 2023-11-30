@@ -7,6 +7,7 @@ include('header.php'); ?>
 
 <body>
     <div class="container">
+        <h1 class="registro">Les meves comandes</h1>
         <?php if (!empty($orders)) : ?>
             <table class="table">
                 <thead>
