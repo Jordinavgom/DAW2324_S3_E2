@@ -29,13 +29,6 @@ function loadTable(movies) {
                 render: function (data, type, row) {
                     return '<a href="./product?id=' + row.id + '">' + row.name + '</a>';
                 }
-            },
-            { data: 'variants' },
-            {
-                data: null,
-                render: function (data, type, row) {
-                    return '<button class="btn delete-button" data-id="' + row.id + '">Afegir al carretó</button>';
-                }
             }
         ]
     });
