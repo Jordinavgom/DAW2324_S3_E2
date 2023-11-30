@@ -27,7 +27,7 @@ function loadTable(movies) {
             {
                 data: null,
                 render: function (data, type, row) {
-                    return '<a href="./product?id=' + row.id + '">' + row.name + '</a>';
+                    return '<a href="./product?id=' + row.id + '" target="_blank">' + row.name + '</a>';
                 }
             }
         ]
