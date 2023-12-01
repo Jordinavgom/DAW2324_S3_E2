@@ -1,54 +1,121 @@
-<?php require('header.php'); ?>
-
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src='../public/assets/js/payment.js'></script>
-  <title>Pàgina de Pagament</title>
-  <style>
-    body,
-    h1,
-    h2,
-    p,
-    label {
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="../public/assets/css/payment.css">
+  <script src="../public/assets/js/credit_card.js"></script>
 </head>
+<div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <h2>Order Summary</h2>
+        <div class='line'></div>
+        <table class='order-table'>
+          <tbody>
+            <tr>
+              <td><img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG' class='full-width'></img>
+              </td>
+              <td>
+                <br> <span class='thin'>Nike</span>
+                <br> Free Run 3.0 Women<br> <span class='thin small'> Color: Grey/Orange, Size: 10.5<br><br></span>
+              </td>
 
-<div class="container" style="margin-top:50px;">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <h2>Informació del Pagament</h2>
-      <form id="formulario-pago">
-        <div class="form-group">
-          <label for="nombre">Nom a la Targeta</label>
-          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Titular de la Targeta" required>
-          <div id="nombre-error" class="alert alert-danger" style="display: none;"></div>
+            </tr>
+            <tr>
+              <td>
+                <div class='price'>$99.95</div>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+        <div class='line'></div>
+        <table class='order-table'>
+          <tbody>
+            <tr>
+              <td><img src='https://dl.dropboxusercontent.com/s/qbj9tsbvthqq72c/Vintage-20L-Backpack-by-Fj%C3%A4llr%C3%A4ven.jpg' class='full-width'></img>
+              </td>
+              <td>
+                <br> <span class='thin'>Fjällräven</span>
+                <br>Vintage Backpack<br> <span class='thin small'> Color: Olive, Size: 20L</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='price'>$235.95</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class='line'></div>
+        <table class='order-table'>
+          <tbody>
+            <tr>
+              <td><img src='https://dl.dropboxusercontent.com/s/nbr4koso8dpoggs/6136C1p5FjL._SL1500_.jpg' class='full-width'></img>
+              </td>
+              <td>
+                <br> <span class='thin'>Monobento</span>
+                <br>Double Lunchbox<br> <span class='thin small'> Color: Pink, Size: Medium</span>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <div class='price'>$25.95</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class='line'></div>
+        <div class='total'>
+          <span style='float:left;'>
+            <div class='thin dense'>VAT 19%</div>
+            <div class='thin dense'>Delivery</div>
+            TOTAL
+          </span>
+          <span style='float:right; text-align:right;'>
+            <div class='thin dense'>$68.75</div>
+            <div class='thin dense'>$4.95</div>
+            $435.55
+          </span>
         </div>
-        <br>
-        <div class="form-group">
-          <label for="numero-tarjeta">Número de Targeta</label>
-          <input type="text" class="form-control" name="numero-tarjeta" id="numero-tarjeta" placeholder="Número de Targeta" required>
-          <div id="numero-tarjeta-error" class="alert alert-danger" style="display: none;"></div>
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="fecha-expiracion">Data d'Expiració</label>
-          <input type="text" class="form-control" name="fecha-expiracion" id="fecha-expiracion" placeholder="MM/AA" required>
-          <div id="fecha-expiracion-error" class="alert alert-danger" style="display: none;"></div>
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="codigo-seguridad">Códi de Seguretat</label>
-          <input type="text" class="form-control" name="codigo-seguridad" id="codigo-seguridad" placeholder="Codi de Seguretat" required>
-          <div id="codigo-seguridad-error" class="alert alert-danger" style="display: none;"></div>
-        </div>
-        <br>
-        <div class="form-group">
-          <button id="pagar" type="button" class="btn btn-primary">Pagar</button>
-        </div>
-      </form>
+      </div>
+    </div>
+    <div class='credit-info'>
+      <div class='credit-info-content'>
+        <table class='half-input-table'>
+          <tr>
+            <td>Please select your card: </td>
+            <td>
+              <div class='dropdown' id='card-dropdown'>
+                <div class='dropdown-btn' id='current-card'>Visa</div>
+                <div class='dropdown-select'>
+                  <ul>
+                    <li>Master Card</li>
+                    <li>American Express</li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+        Card Number
+        <input class='input-field'></input>
+        Card Holder
+        <input class='input-field'></input>
+        <table class='half-input-table'>
+          <tr>
+            <td> Expires
+              <input class='input-field'></input>
+            </td>
+            <td>CVC
+              <input class='input-field'></input>
+            </td>
+          </tr>
+        </table>
+        <button class='pay-btn'>Checkout</button>
+
+      </div>
+
     </div>
   </div>
-</div>
 </div>
