@@ -1,54 +1,68 @@
-<?php require('header.php'); ?>
-
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src='../public/assets/js/payment.js'></script>
-  <title>Pàgina de Pagament</title>
-  <style>
-    body,
-    h1,
-    h2,
-    p,
-    label {
-      color: white;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../public/assets/css/payment.css">
 </head>
 
-<div class="container" style="margin-top:50px;">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <h2>Informació del Pagament</h2>
-      <form id="formulario-pago">
-        <div class="form-group">
-          <label for="nombre">Nom a la Targeta</label>
-          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Titular de la Targeta" required>
-          <div id="nombre-error" class="alert alert-danger" style="display: none;"></div>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../public/assets/js/credit_card.js"></script>
+  <div id="wrapper">
+    <div class="row">
+      <div class="col-xs-5">
+        <div id="cards">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+        </div><!--#cards end-->
+        <div class="form-check">
+          <label class="form-check-label" for='card'>
+            <input id="card" class="form-check-input" type="checkbox" value="">
+            Paga amb targeta de credit
+          </label>
         </div>
-        <br>
-        <div class="form-group">
-          <label for="numero-tarjeta">Número de Targeta</label>
-          <input type="text" class="form-control" name="numero-tarjeta" id="numero-tarjeta" placeholder="Número de Targeta" required>
-          <div id="numero-tarjeta-error" class="alert alert-danger" style="display: none;"></div>
+      </div><!--col-xs-5 end-->
+      <div class="col-xs-5">
+        <div id="cards">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+        </div><!--#cards end-->
+        <div class="form-check">
+          <label class="form-check-label" for='paypal'>
+            <input id="paypal" class="form-check-input" type="checkbox" value="">
+            Paga amb PayPal
+          </label>
         </div>
-        <br>
-        <div class="form-group">
-          <label for="fecha-expiracion">Data d'Expiració</label>
-          <input type="text" class="form-control" name="fecha-expiracion" id="fecha-expiracion" placeholder="MM/AA" required>
-          <div id="fecha-expiracion-error" class="alert alert-danger" style="display: none;"></div>
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="codigo-seguridad">Códi de Seguretat</label>
-          <input type="text" class="form-control" name="codigo-seguridad" id="codigo-seguridad" placeholder="Codi de Seguretat" required>
-          <div id="codigo-seguridad-error" class="alert alert-danger" style="display: none;"></div>
-        </div>
-        <br>
-        <div class="form-group">
-          <button id="pagar" type="button" class="btn btn-primary">Pagar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-</div>
+      </div><!--col-xs-5 end-->
+    </div><!--row end-->
+    <div class="row">
+      <div class="col-xs-5">
+        <i class="fa fa fa-user"></i>
+        <label for="cardholder">Nom del titular de la targeta</label>
+        <input type="text" id="cardholder">
+      </div><!--col-xs-5-->
+      <div class="col-xs-5">
+        <i class="fa fa-credit-card-alt"></i>
+        <label for="cardnumber">Número de la targeta</label>
+        <input type="text" id="cardnumber">
+      </div><!--col-xs-5-->
+    </div><!--row end-->
+    <div class="row row-three">
+      <div class="col-xs-2">
+        <i class="fa fa-calendar"></i>
+        <label for="date">Valid fins</label>
+        <input type="text" placeholder="MM/YY" id="date">
+      </div><!--col-xs-3-->
+      <div class="col-xs-2">
+        <i class="fa fa-lock"></i>
+        <label for="date">CVV / CVC *</label>
+        <input type="text">
+      </div><!--col-xs-3-->
+      <!-- <div class="col-xs-5">
+        <span class="small">* CVV or CVC is the card security code, unique three digits number on the back of your card seperate from its number.</span>
+      </div>col-xs-6 end -->
+    </div><!--row end-->
+    <footer>
+      <button class="btn">Back</button>
+      <button class="btn">Pagar</buton>
+    </footer>
+  </div><!--wrapper end-->
+</body>

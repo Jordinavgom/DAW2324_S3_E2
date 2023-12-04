@@ -10,14 +10,12 @@
 </head>
 
 <body>
-    <div class="container w-50">
+    <div class="container w-50 text-center">
         <table id="taula" class="display" style="width:100%">
-            <thead>
+            <thead class="text-center">
                 <tr>
-                    <th>Product</th>
-                    <th>Name</th>
-                    <th>Variants</th>
-                    <th>Afegir al carretó</th>
+                    <th class="text-center">Producte</th>
+                    <th class="text-center">Nom del producte</th>
                 </tr>
             </thead>
         </table>
