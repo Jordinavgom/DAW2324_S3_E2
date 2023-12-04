@@ -1,5 +1,6 @@
 $(document).ready(function () {
     // Verificar si hi ha dades al localStorage
+    console.log("hola");
     const moviesData = JSON.parse(localStorage.getItem('movies'));
     if (moviesData && moviesData.length > 0) {
         loadTable(moviesData);
@@ -27,7 +28,7 @@ function loadTable(movies) {
             {
                 data: null,
                 render: function (data, type, row) {
-                    return '<a href="./product?id=' + row.id + '">' + row.name + '</a>';
+                    return '<a href="../controllers/ControladorProducte.php?id=' + row.id + '">' + row.name + '</a>';
                 }
             },
             { data: 'variants' },
