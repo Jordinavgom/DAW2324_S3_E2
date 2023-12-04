@@ -1,6 +1,7 @@
 <?php
-
+session_start();
 require_once 'Database.php';
+require_once '../controllers/UserController.php';
 
 class User
 {
@@ -51,31 +52,35 @@ class User
         }
     }
 
-    public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone)
-    {
+    public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone) {
+        
+        $id_user = $_SESSION['id_user'];
+        
         try {
-            $sql = "UPDATE " . $this->table_name . " 
-        SET firstName = :firstName, 
-            lastName = :lastName, 
-            street_primary = :street_primary, 
-            city = :city, 
-            postcode = :postcode, 
-            telephone = :telephone 
-        WHERE id_user = " . $_SESSION['id_user'];
+        $sql = "UPDATE " . $this->table_name . " 
+            SET firstname = :firstname, 
+                lastname = :lastname, 
+                street_primary = :street_primary, 
+                city = :city, 
+                postcode = :postcode, 
+                telephone = :telephone 
+            WHERE id_user = :id_user";
 
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':firstName', $firstName);
-            $stmt->bindParam(':lastName', $lastName);
-            $stmt->bindParam(':street_primary', $street_primary);
-            $stmt->bindParam(':city', $city);
-            $stmt->bindParam(':postcode', $postCode);
-            $stmt->bindParam(':telephone', $telephone);
-            $stmt->execute();
-        } catch (PDOException $e) {
-            // Log error o redirigir a una página de error
-            echo "Error en el modelo: " . $e->getMessage();
-        }
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':firstname', $firstName);
+        $stmt->bindParam(':lastname', $lastName);
+        $stmt->bindParam(':street_primary', $street_primary);
+        $stmt->bindParam(':city', $city);
+        $stmt->bindParam(':postcode', $postCode);
+        $stmt->bindParam(':telephone', $telephone);
+        $stmt->bindParam(':id_user', $id_user);
+        $stmt->execute();
+
+    } catch (Exception $e) {
+        // Log error or redirect to an error page
+        echo "Error en el modelo: " . $e->getMessage();
     }
+}
 
     public function isValidUser($email, $password)
     {

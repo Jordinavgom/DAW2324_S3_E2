@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 class UserController
 {
     private $model;
+    public $id_user;
 
     public function __construct()
     {
@@ -95,8 +96,8 @@ class UserController
             }
 
             // Iniciar sesión
-            session_start();
             $_SESSION['id_user'] = $this->model->logUser($email, $pass);
+            $id_user = $_SESSION['id_user'];
             setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
 
             // Manejar el caso en que no se puede obtener el ID del usuario
@@ -107,8 +108,7 @@ class UserController
         }
     }
 
-    public function update()
-    {
+    public function update() {
         try {
             $firstName = $_POST['nom'];
             $lastName = $_POST['cognoms'];
