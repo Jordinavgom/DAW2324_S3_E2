@@ -23,15 +23,28 @@ class Product
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    public function getProductDetailsById($productId)
+    public function getProductDetailsByProductId($productId)
     {
-        $query = "SELECT name, formatted_price FROM product_details WHERE id = :id";
+        $query = "SELECT name, formatted_price FROM product_details WHERE product_id = :product_id";
+        $this->conn->exec("set names utf8");
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(":id", $productId);
+        $stmt->bindParam(":product_id", $productId);
 
         $stmt->execute();
 
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getImatgesByProductId($productId)
+    {
+        $query = "SELECT original, thumb FROM images_table WHERE product_id = :product_id";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":product_id", $productId);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
