@@ -1,121 +1,68 @@
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link rel="stylesheet" href="../public/assets/css/payment.css">
-  <script src="../public/assets/js/credit_card.js"></script>
 </head>
-<div class='container'>
-  <div class='window'>
-    <div class='order-info'>
-      <div class='order-info-content'>
-        <h2>Order Summary</h2>
-        <div class='line'></div>
-        <table class='order-table'>
-          <tbody>
-            <tr>
-              <td><img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG' class='full-width'></img>
-              </td>
-              <td>
-                <br> <span class='thin'>Nike</span>
-                <br> Free Run 3.0 Women<br> <span class='thin small'> Color: Grey/Orange, Size: 10.5<br><br></span>
-              </td>
 
-            </tr>
-            <tr>
-              <td>
-                <div class='price'>$99.95</div>
-              </td>
-            </tr>
-          </tbody>
-
-        </table>
-        <div class='line'></div>
-        <table class='order-table'>
-          <tbody>
-            <tr>
-              <td><img src='https://dl.dropboxusercontent.com/s/qbj9tsbvthqq72c/Vintage-20L-Backpack-by-Fj%C3%A4llr%C3%A4ven.jpg' class='full-width'></img>
-              </td>
-              <td>
-                <br> <span class='thin'>Fjällräven</span>
-                <br>Vintage Backpack<br> <span class='thin small'> Color: Olive, Size: 20L</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class='price'>$235.95</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class='line'></div>
-        <table class='order-table'>
-          <tbody>
-            <tr>
-              <td><img src='https://dl.dropboxusercontent.com/s/nbr4koso8dpoggs/6136C1p5FjL._SL1500_.jpg' class='full-width'></img>
-              </td>
-              <td>
-                <br> <span class='thin'>Monobento</span>
-                <br>Double Lunchbox<br> <span class='thin small'> Color: Pink, Size: Medium</span>
-              </td>
-
-            </tr>
-            <tr>
-              <td>
-                <div class='price'>$25.95</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class='line'></div>
-        <div class='total'>
-          <span style='float:left;'>
-            <div class='thin dense'>VAT 19%</div>
-            <div class='thin dense'>Delivery</div>
-            TOTAL
-          </span>
-          <span style='float:right; text-align:right;'>
-            <div class='thin dense'>$68.75</div>
-            <div class='thin dense'>$4.95</div>
-            $435.55
-          </span>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../public/assets/js/credit_card.js"></script>
+  <div id="wrapper">
+    <div class="row">
+      <div class="col-xs-5">
+        <div id="cards">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+        </div><!--#cards end-->
+        <div class="form-check">
+          <label class="form-check-label" for='card'>
+            <input id="card" class="form-check-input" type="checkbox" value="">
+            Paga amb targeta de credit
+          </label>
         </div>
-      </div>
-    </div>
-    <div class='credit-info'>
-      <div class='credit-info-content'>
-        <table class='half-input-table'>
-          <tr>
-            <td>Please select your card: </td>
-            <td>
-              <div class='dropdown' id='card-dropdown'>
-                <div class='dropdown-btn' id='current-card'>Visa</div>
-                <div class='dropdown-select'>
-                  <ul>
-                    <li>Master Card</li>
-                    <li>American Express</li>
-                  </ul>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
-        Card Number
-        <input class='input-field'></input>
-        Card Holder
-        <input class='input-field'></input>
-        <table class='half-input-table'>
-          <tr>
-            <td> Expires
-              <input class='input-field'></input>
-            </td>
-            <td>CVC
-              <input class='input-field'></input>
-            </td>
-          </tr>
-        </table>
-        <button class='pay-btn'>Checkout</button>
-
-      </div>
-
-    </div>
-  </div>
-</div>
+      </div><!--col-xs-5 end-->
+      <div class="col-xs-5">
+        <div id="cards">
+          <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+        </div><!--#cards end-->
+        <div class="form-check">
+          <label class="form-check-label" for='paypal'>
+            <input id="paypal" class="form-check-input" type="checkbox" value="">
+            Paga amb PayPal
+          </label>
+        </div>
+      </div><!--col-xs-5 end-->
+    </div><!--row end-->
+    <div class="row">
+      <div class="col-xs-5">
+        <i class="fa fa fa-user"></i>
+        <label for="cardholder">Nom del titular de la targeta</label>
+        <input type="text" id="cardholder">
+      </div><!--col-xs-5-->
+      <div class="col-xs-5">
+        <i class="fa fa-credit-card-alt"></i>
+        <label for="cardnumber">Número de la targeta</label>
+        <input type="text" id="cardnumber">
+      </div><!--col-xs-5-->
+    </div><!--row end-->
+    <div class="row row-three">
+      <div class="col-xs-2">
+        <i class="fa fa-calendar"></i>
+        <label for="date">Valid fins</label>
+        <input type="text" placeholder="MM/YY" id="date">
+      </div><!--col-xs-3-->
+      <div class="col-xs-2">
+        <i class="fa fa-lock"></i>
+        <label for="date">CVV / CVC *</label>
+        <input type="text">
+      </div><!--col-xs-3-->
+      <!-- <div class="col-xs-5">
+        <span class="small">* CVV or CVC is the card security code, unique three digits number on the back of your card seperate from its number.</span>
+      </div>col-xs-6 end -->
+    </div><!--row end-->
+    <footer>
+      <button class="btn">Back</button>
+      <button class="btn">Pagar</buton>
+    </footer>
+  </div><!--wrapper end-->
+</body>

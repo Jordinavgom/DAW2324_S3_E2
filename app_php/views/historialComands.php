@@ -10,7 +10,7 @@ include('header.php'); ?>
         <h1 class="registro">Les meves comandes</h1>
         <?php if (!empty($orders)) : ?>
             <table class="table">
-                <thead>
+                <thead class="text-center">
                     <tr>
                         <th>ID comanda</th>
                         <th>Data</th>
@@ -25,7 +25,7 @@ include('header.php'); ?>
                         <th>Estat</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="text-center">
                     <?php foreach ($orders as $order) : ?>
                         <tr>
                             <td><?= $order['id_order'] ?> </td>
