@@ -4,7 +4,6 @@ var_dump($_SESSION);
 ?>
 
 <head>
-
     <title>La teva comanda</title>
     <script src="../public/assets/js/new_sign_up_form.js"></script>
 </head>

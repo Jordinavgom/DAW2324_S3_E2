@@ -110,17 +110,70 @@ class UserController
 
     public function update() {
         try {
-            $firstName = $_POST['nom'];
-            $lastName = $_POST['cognoms'];
-            $street_primary = $_POST['adreça'];
-            $city = $_POST['ciutat'];
-            $postCode = $_POST['codipostal'];
-            $telephone = $_POST['telefon'];
+            // Validar que no haya campos vacíos
+            if (
+                empty($_POST['nom']) || 
+                empty($_POST['cognoms']) || 
+                empty($_POST['adreça']) || 
+                empty($_POST['ciutat']) || 
+                empty($_POST['codipostal']) || 
+                empty($_POST['telefon'])
+            ) {
+                //$_SESSION['error_message'] = 'Todos los campos son obligatorios.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
+    
+            // Filtrar y validar campos
+            $firstName = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
+            $lastName = filter_var($_POST['cognoms'], FILTER_SANITIZE_STRING);
+            $street_primary = filter_var($_POST['adreça'], FILTER_SANITIZE_STRING);
+            $city = filter_var($_POST['ciutat'], FILTER_SANITIZE_STRING);
+            $postCode = filter_var($_POST['codipostal'], FILTER_VALIDATE_INT);
+            $telephone = filter_var($_POST['telefon'], FILTER_VALIDATE_INT);
+    
+            if (!preg_match('/^[A-Za-z0-9.\s_@#$%^&*()-]+$/u', $street_primary)) {
+                //$_SESSION['error_message'] = 'La dirección puede contener letras, números, puntos, guiones bajos y algunos caracteres especiales.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
+    
+            if (!ctype_alpha($firstName) || !ctype_alpha($lastName) || !ctype_alpha($city)) {
+                //$_SESSION['error_message'] = 'Los nombres y la ciudad deben contener solo letras.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
+    
+            // Validar la longitud de los nombres
+            if (strlen($firstName) > 12 || strlen($lastName) > 12) {
+                //$_SESSION['error_message'] = 'Los nombres no pueden tener más de 12 caracteres.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
 
-            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
+            if (!preg_match('/^\d{5}$/', $postCode)) {
+                //$_SESSION['error_message'] = 'El código postal debe tener 5 dígitos.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
+
+            if (!preg_match('/^\+?\d+$/', $telephone)) {
+                //$_SESSION['error_message'] = 'El número de teléfono debe contener solo dígitos y puede comenzar con un signo +.';
+                header('Location: ../views/updateUserDetails.php');
+                return;
+            }
+    
+            // Llamar al modelo para actualizar al usuario
+            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone); 
+    
+            //$_SESSION['success_message'] = 'Usuario actualizado exitosamente.';
+            header('Location: ../views/payment.php');
+        } catch (PDOException $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el controlador: " . $e->getMessage();
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
         }
-    }
+    }    
 }
