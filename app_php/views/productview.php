@@ -21,6 +21,7 @@ require_once('../controllers/ProductController.php') ?>
             <div class="col-lg-2">
                 <?php
                 $num = 0;
+                $imatges = [];
                 // Verifica si se encontró información del producto antes de mostrar la vista
                 if ($productInfo) {
                     foreach ($productImage as $image) {
@@ -28,9 +29,10 @@ require_once('../controllers/ProductController.php') ?>
                         $thumb = $image['thumb'];
                         $num++;
 
+                        array_push($imatges, $image['original']);
                 ?>
 
-                        <img src="<?= $thumb ?>" class="img-fluid img-rescale mb-3" id="thumb<?= $num ?>" alt="<?= $num ?>" onclick="handleThumbnailClick(<?= $num ?>, '<?= $original ?>')">
+                        <img src="<?= $thumb ?>" class="img img-fluid img-rescale mb-3" id="thumb<?= $num ?>" alt="<?= $num ?>" onclick="handleThumbnailClick(<?= $num ?>, '<?= $original ?>')">
 
                 <?php
                     }
@@ -54,6 +56,7 @@ require_once('../controllers/ProductController.php') ?>
                         foreach ($productDetails as $details) {
                             $name = $details['name'];
                             $formattedPrice = $details['formatted_price'];
+
 
                             // Muestra los detalles del producto en la vista
 
@@ -92,9 +95,57 @@ require_once('../controllers/ProductController.php') ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
             // Inicializa Medium Zoom en la imagen principal
             const zoomableImage = document.querySelector('.col-lg-6 img.zoomable');
-            mediumZoom(zoomableImage);
+            const mediumZoomInstance = mediumZoom(zoomableImage);
+            //passem l'array d'imatges php a js
+            var imatges = <?php echo json_encode($imatges); ?>;
+
+            var mainImage = $(".col-lg-6 img");
+            mainImage.attr("src", imatges[0]);
+
+
+            // Verifica cuando se hace zoom
+
+            let i = 0;
+            mediumZoomInstance.on('opened', function(event) {
+
+                console.log('La imagen está en modo de zoom.');
+
+                $(document).keydown(function(e) {
+                    if (e.keyCode == 37) {
+                        // ESQUERRA
+                        var mainImage = $("img.zoomable.medium-zoom-image.medium-zoom-image--opened");
+                        i--;
+                        if (i == -1) {
+                            i = 2
+                        }
+                        mainImage.attr("src", imatges[i]);
+                        console.log(i);
+
+                    } else if (e.keyCode == 39) {
+                        // DRETA
+                        var mainImage = $("img.zoomable.medium-zoom-image.medium-zoom-image--opened");
+                        i++;
+                        if (i == 3) {
+                            i = 0
+                        }
+                        mainImage.attr("src", imatges[i]);
+                        console.log(i);
+
+
+                    }
+                });
+            });
+            // Verifica cuando se cierra el zoom
+            mediumZoomInstance.on('closed', function(event) {
+                console.log('El zoom se ha cerrado.');
+
+                var imatgeGran = $(".col-lg-6 img");
+                imatgeGran.attr("src", imatges[i]);
+            });
+
         });
     </script>
 
