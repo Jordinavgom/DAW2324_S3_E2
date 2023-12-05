@@ -35,6 +35,6 @@ if (empty($_SESSION['id_user'])) { ?>
     </div>
 <?php
 } else { ?>
-    <?= include('header.php'); ?>
+    <?php include('header.php'); ?>
     <p style="color:white">Ya estas conectado</p>
 <?php } ?>
