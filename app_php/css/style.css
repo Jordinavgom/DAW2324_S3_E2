@@ -220,3 +220,7 @@ td {
 .img-rescale {
   width: 80%;
 }
+
+img {
+  cursor: pointer;
+}
