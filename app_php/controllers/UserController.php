@@ -138,7 +138,6 @@ class UserController
                 return;
             }
     
-            // Verificar si el nombre y los apellidos contienen solo letras
             if (!ctype_alpha($firstName) || !ctype_alpha($lastName) || !ctype_alpha($city)) {
                 //$_SESSION['error_message'] = 'Los nombres y la ciudad deben contener solo letras.';
                 header('Location: ../views/updateUserDetails.php');
