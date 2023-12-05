@@ -167,7 +167,6 @@ class UserController
             // Llamar al modelo para actualizar al usuario
             $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone); 
     
-            // Redirección con mensaje de éxito
             //$_SESSION['success_message'] = 'Usuario actualizado exitosamente.';
             header('Location: ../views/payment.php');
         } catch (PDOException $e) {
