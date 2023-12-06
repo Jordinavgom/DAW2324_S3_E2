@@ -187,7 +187,7 @@ metadata = MetaData()
 ### TAULA PRODUCTES ###
 products_table = Table(
     'products', metadata,
-    Column('idProduct', Integer),
+    Column('idProduct', Integer, primary_key = True),
     Column('name', String(255)),  # Ajusta el tipo y nombre de las columnas según tus necesidades
     Column('variants', Integer),
     Column('sku', String(255)),
@@ -273,10 +273,12 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                     dpi=dpi,
                                     type=product_type
                                 )
-
+                                print(f'lo product id es:     {product_id}')
                                 # Ejecuta la sentencia de inserción del producto
                                 result = connection.execute(ins_product)
-                                product_id = result.lastrowid  # Obtiene el ID del producto insertado
+                                # product_id = result.lastrowid  # Obtiene el ID del producto insertado
+                                product_id = result.inserted_primary_key[0]
+                                print(f'lo product id es:     {product_id}')
 
                                 # Itera sobre la lista de imágenes y realiza la inserción en la base de datos
                                 images_data = product_data.get('images', [])
@@ -317,7 +319,7 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                         idProductDetail=id,
                                         idProduct=product_id,
                                         code=code,
-                                        variant_id=variant_id,
+                                        idVariant=variant_id,
                                         variant_code=variant_code,
                                         sku=sku,
                                         name=name,
