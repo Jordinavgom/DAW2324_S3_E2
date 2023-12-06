@@ -34,7 +34,7 @@ print ("user ======", {database_user_uri})
 # from sqlalchemy.exc import OperationalError
 
 # try:
-#     engine = create_engine(database_user_uri)
+    # engine = create_engine(database_user_uri)
 #     connection = engine.connect()
 #     print("Conexión exitosa a la base de datos.")
 #     connection.close()
@@ -182,12 +182,12 @@ engine = create_engine(database_user_uri)
 metadata = MetaData()
 
 # Crea la tabla si no existe
-metadata.create_all(engine)
+# metadata.create_all(engine)
 
 ### TAULA PRODUCTES ###
 products_table = Table(
     'products', metadata,
-    Column('id', Integer, primary_key=True),
+    Column('idProduct', Integer),
     Column('name', String(255)),  # Ajusta el tipo y nombre de las columnas según tus necesidades
     Column('variants', Integer),
     Column('sku', String(255)),
@@ -198,21 +198,21 @@ products_table = Table(
 
 ### TAULA IMATGES PRODUCTES ###
 products_images_table = Table(
-    'images_table', metadata,
-    Column('id', Integer, primary_key=True),
+    'productImages', metadata,
+    Column('idProductImage', Integer),
     Column('original', String(255)),
     Column('thumb', String(255)),
-    Column('product_id', Integer, ForeignKey('products.id')),
+    Column('idProduct', Integer),
     # Agrega más columnas según sea necesario
 )
 
 # Tabla de detalles de productos
 product_details_table = Table(
-    'product_details', metadata,
-    Column('id', Integer),
-    Column('product_id', Integer, ForeignKey('products.id')),  # Clave foránea que apunta al ID del producto
+    'productDetails', metadata,
+    Column('idProductDetail', Integer),
+    Column('idProduct', Integer),  # Clave foránea que apunta al ID del producto
     Column('code', String(255)),
-    Column('variant_id', Integer),
+    Column('idVariant', Integer),
     Column('variant_code', String(255)),
     Column('sku', String(255)),
     Column('name', String(255)),
@@ -226,7 +226,7 @@ product_details_table = Table(
 )
 
 # Crea la tabla de imágenes si no existe
-metadata.create_all(engine)
+# metadata.create_all(engine)
 
 
 @app.get("/products")
@@ -266,7 +266,7 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                             if product_id is not None:
                                 # Realiza la inserción del producto en la base de datos
                                 ins_product = products_table.insert().values(
-                                    id=product_id,
+                                    idProduct=product_id,
                                     name=name,
                                     variants=variants,
                                     sku=sku,
@@ -287,10 +287,10 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
 
                                     # Realiza la inserción de la imagen en la base de datos
                                     ins_image = products_images_table.insert().values(
-                                        id=image_id,
+                                        idProductImage=image_id,
                                         original=original,
                                         thumb=thumb,
-                                        product_id=product_id
+                                        idProduct=product_id
                                     )
 
                                     # Ejecuta la sentencia de inserción de la imagen
@@ -314,8 +314,8 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                     print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
 
                                     ins_details = product_details_table.insert().values(
-                                        id=id,
-                                        product_id=product_id,
+                                        idProductDetail=id,
+                                        idProduct=product_id,
                                         code=code,
                                         variant_id=variant_id,
                                         variant_code=variant_code,
