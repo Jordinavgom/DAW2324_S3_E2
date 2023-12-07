@@ -1,7 +1,7 @@
 <?php
 
 if (empty($_SESSION['id_user'])) { ?>
-    <?php include('header.php'); ?>
+    <?php include('./header.php'); ?>
 
     <head>
         <script src="../public/assets/js/sign_in_form.js"></script>

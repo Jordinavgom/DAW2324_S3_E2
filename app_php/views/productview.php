@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include('header.php');
+<?php include('./header.php');
 require_once('../controllers/ProductController.php') ?>
 
 <head>
