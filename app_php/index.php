@@ -51,14 +51,40 @@ include('views/header.php'); ?>
             </div>
         </div>
     </div>
-    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></script>
+    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
     <script>
         var config = {
             apiKey: '33014b62ff1fa0dac6259bc9880be870d5721ff5',
-            product: 'COMMUNITY',
+            product: 'community',
+            optionalCookies: [{
+                name: 'analytics',
+                label: 'Analytics',
+                description: '',
+                cookies: [],
+                onAccept: function() {},
+                onRevoke: function() {}
+            }, {
+                name: 'marketing',
+                label: 'Marketing',
+                description: '',
+                cookies: [],
+                onAccept: function() {},
+                onRevoke: function() {}
+            }, {
+                name: 'preferences',
+                label: 'Preferences',
+                description: '',
+                cookies: [],
+                onAccept: function() {},
+                onRevoke: function() {}
+            }],
+
+            position: 'RIGHT',
+            theme: 'LIGHT'
         };
 
         CookieControl.load(config);
     </script>
+
 </body>
 <?php require('views/footer.php'); ?>
