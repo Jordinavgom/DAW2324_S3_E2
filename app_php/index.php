@@ -2,7 +2,8 @@
 // xdebug_info();
 session_start();
 include('views/header.php'); ?>
-<main>
+
+<body>
     <div class="container">
         <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="jumbotron">
             <div class="container-fluid py-5">
@@ -50,5 +51,14 @@ include('views/header.php'); ?>
             </div>
         </div>
     </div>
-</main>
+    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></script>
+    <script>
+        var config = {
+            apiKey: '33014b62ff1fa0dac6259bc9880be870d5721ff5',
+            product: 'COMMUNITY',
+        };
+
+        CookieControl.load(config);
+    </script>
+</body>
 <?php require('views/footer.php'); ?>
