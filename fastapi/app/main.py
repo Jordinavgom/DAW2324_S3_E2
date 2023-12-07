@@ -12,7 +12,7 @@ from fastapi.security import OAuth2PasswordBearer
 from dotenv import load_dotenv
 import os
 from fastapi import Form
-from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey, Float
+from sqlalchemy import create_engine, Column, Boolean, Integer, String, MetaData, Table, ForeignKey, Float
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -225,6 +225,16 @@ product_details_table = Table(
     # Agrega más columnas según sea necesario
 )
 
+product_variant_options_table = Table(
+    'variantOptions', metadata,
+    Column('idVariantOption', Integer),
+    Column('idVariant', Integer),
+    Column('name', String(255)),
+    Column('image', String(255)),
+    Column('description', String(255)),
+    Column('is_required', Boolean),
+)
+
 # Crea la tabla de imágenes si no existe
 # metadata.create_all(engine)
 
@@ -313,7 +323,20 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                     currency=product_detail_data.get('price_details', {}).get('currency')
                                     formatted_price=product_detail_data.get('price_details', {}).get('formatted')
                                     price_in_subunit=product_detail_data.get('price_details', {}).get('in_subunit')
-                                    print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
+                                    options_data = product_detail_data.get('options', {})
+
+                                    if options_data:  # Check if options_data_list is not empty
+                                        for option_id, option_data  in options_data.items():
+                                            print(f"Option ID: {option_id}, Option Data: {option_data}")
+                                    else:
+                                        print("No options data available.")               
+
+                                    # if options_data is not None:
+
+                                    #     for option_id, option_data in options_data.items():
+                                    #         print(f"Option ID: {option_id}, Option Data: {option_data}")
+                                    # print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
+                                    
 
                                     ins_details = product_details_table.insert().values(
                                         idProductDetail=id,
