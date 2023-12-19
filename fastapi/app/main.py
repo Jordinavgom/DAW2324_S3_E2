@@ -12,7 +12,7 @@ from fastapi.security import OAuth2PasswordBearer
 from dotenv import load_dotenv
 import os
 from fastapi import Form
-from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, ForeignKey, Float
+from sqlalchemy import create_engine, Column, Boolean, Integer, String, MetaData, Table, ForeignKey, Float
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -34,7 +34,7 @@ print ("user ======", {database_user_uri})
 # from sqlalchemy.exc import OperationalError
 
 # try:
-#     engine = create_engine(database_user_uri)
+    # engine = create_engine(database_user_uri)
 #     connection = engine.connect()
 #     print("Conexión exitosa a la base de datos.")
 #     connection.close()
@@ -182,12 +182,12 @@ engine = create_engine(database_user_uri)
 metadata = MetaData()
 
 # Crea la tabla si no existe
-metadata.create_all(engine)
+# metadata.create_all(engine)
 
 ### TAULA PRODUCTES ###
 products_table = Table(
     'products', metadata,
-    Column('id', Integer, primary_key=True),
+    Column('idProduct', Integer, primary_key = True),
     Column('name', String(255)),  # Ajusta el tipo y nombre de las columnas según tus necesidades
     Column('variants', Integer),
     Column('sku', String(255)),
@@ -198,19 +198,19 @@ products_table = Table(
 
 ### TAULA IMATGES PRODUCTES ###
 products_images_table = Table(
-    'images_table', metadata,
-    Column('id', Integer, primary_key=True),
+    'productImages', metadata,
+    Column('idProductImage', Integer),
     Column('original', String(255)),
     Column('thumb', String(255)),
-    Column('product_id', Integer, ForeignKey('products.id')),
+    Column('idProduct', Integer),
     # Agrega más columnas según sea necesario
 )
 
 # Tabla de detalles de productos
 product_details_table = Table(
-    'product_details', metadata,
-    Column('id', Integer),
-    Column('product_id', Integer, ForeignKey('products.id')),  # Clave foránea que apunta al ID del producto
+    'productDetails', metadata,
+    Column('idProductDetail', Integer),
+    Column('idProduct', Integer),  # Clave foránea que apunta al ID del producto
     Column('code', String(255)),
     Column('variant_id', Integer),
     Column('variant_code', String(255)),
@@ -225,8 +225,18 @@ product_details_table = Table(
     # Agrega más columnas según sea necesario
 )
 
+# product_variant_options_table = Table(
+#     'variantOptions', metadata,
+#     Column('idVariantOption', Integer),
+#     Column('idVariant', Integer),
+#     Column('name', String(255)),
+#     Column('image', String(255)),
+#     Column('description', String(255)),
+#     Column('is_required', Boolean),
+# )
+
 # Crea la tabla de imágenes si no existe
-metadata.create_all(engine)
+# metadata.create_all(engine)
 
 
 @app.get("/products")
@@ -266,17 +276,19 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                             if product_id is not None:
                                 # Realiza la inserción del producto en la base de datos
                                 ins_product = products_table.insert().values(
-                                    id=product_id,
+                                    idProduct=product_id,
                                     name=name,
                                     variants=variants,
                                     sku=sku,
                                     dpi=dpi,
                                     type=product_type
                                 )
-
+                                print(f'lo product id es:     {product_id}')
                                 # Ejecuta la sentencia de inserción del producto
                                 result = connection.execute(ins_product)
-                                product_id = result.lastrowid  # Obtiene el ID del producto insertado
+                                # product_id = result.lastrowid  # Obtiene el ID del producto insertado
+                                product_id = result.inserted_primary_key[0]
+                                print(f'lo product id es:     {product_id}')
 
                                 # Itera sobre la lista de imágenes y realiza la inserción en la base de datos
                                 images_data = product_data.get('images', [])
@@ -287,10 +299,10 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
 
                                     # Realiza la inserción de la imagen en la base de datos
                                     ins_image = products_images_table.insert().values(
-                                        id=image_id,
+                                        idProductImage=image_id,
                                         original=original,
                                         thumb=thumb,
-                                        product_id=product_id
+                                        idProduct=product_id
                                     )
 
                                     # Ejecuta la sentencia de inserción de la imagen
@@ -311,11 +323,24 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                     currency=product_detail_data.get('price_details', {}).get('currency')
                                     formatted_price=product_detail_data.get('price_details', {}).get('formatted')
                                     price_in_subunit=product_detail_data.get('price_details', {}).get('in_subunit')
-                                    print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
+                                    options_data = product_detail_data.get('options', {})
+
+                                    if options_data:  # Check if options_data_list is not empty
+                                        for option_id, option_data  in options_data.items():
+                                            print(f"Option ID: {option_id}, Option Data: {option_data}")
+                                    else:
+                                        print("No options data available.")               
+
+                                    # if options_data is not None:
+
+                                    #     for option_id, option_data in options_data.items():
+                                    #         print(f"Option ID: {option_id}, Option Data: {option_data}")
+                                    # print(f'La ID del {product_id} es: {id} ...... correspon a {code}???¿¿¿')
+                                    
 
                                     ins_details = product_details_table.insert().values(
-                                        id=id,
-                                        product_id=product_id,
+                                        idProductDetail=id,
+                                        idProduct=product_id,
                                         code=code,
                                         variant_id=variant_id,
                                         variant_code=variant_code,
