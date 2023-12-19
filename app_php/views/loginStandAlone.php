@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_SESSION['id_user'])) { ?>
+if (empty($_SESSION['idClient'])) { ?>
     <?php include('./header.php'); ?>
 
     <head>

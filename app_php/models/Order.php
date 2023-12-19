@@ -14,8 +14,8 @@ class Order
 
     public function getAll()
     {
-        $id_user = $_SESSION['id_user'];
-        $query = 'SELECT * FROM ' . $this->table_name . ', orderDetails, products WHERE orders.id_order = orderDetails.id_order AND id_user = ' . $id_user;
+        $idClient = $_SESSION['idClient'];
+        $query = 'SELECT * FROM ' . $this->table_name . ', orderDetails, products WHERE orders.id_order = orderDetails.id_order AND idClient = ' . $idClient;
         $this->conn->exec("set names utf8");
         $stmt = $this->conn->prepare($query);
         $stmt->execute();

@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 class UserController
 {
     private $model;
-    public $id_user;
+    public $idClient;
 
     public function __construct()
     {
@@ -96,9 +96,9 @@ class UserController
             }
 
             // Iniciar sesión
-            $_SESSION['id_user'] = $this->model->logUser($email, $pass);
-            $id_user = $_SESSION['id_user'];
-            setcookie('id_user_cookie', $_SESSION['id_user'], time() + 3600, '/');
+            $_SESSION['idClient'] = $this->model->logUser($email, $pass);
+            $idClient = $_SESSION['idClient'];
+            setcookie('idClient_cookie', $_SESSION['idClient'], time() + 3600, '/');
 
             // Manejar el caso en que no se puede obtener el ID del usuario
             header('Location: ../index.php');
@@ -108,22 +108,23 @@ class UserController
         }
     }
 
-    public function update() {
+    public function update()
+    {
         try {
             // Validar que no haya campos vacíos
             if (
-                empty($_POST['nom']) || 
-                empty($_POST['cognoms']) || 
-                empty($_POST['adreça']) || 
-                empty($_POST['ciutat']) || 
-                empty($_POST['codipostal']) || 
+                empty($_POST['nom']) ||
+                empty($_POST['cognoms']) ||
+                empty($_POST['adreça']) ||
+                empty($_POST['ciutat']) ||
+                empty($_POST['codipostal']) ||
                 empty($_POST['telefon'])
             ) {
                 //$_SESSION['error_message'] = 'Todos los campos son obligatorios.';
                 header('Location: ../views/updateUserDetails.php');
                 return;
             }
-    
+
             // Filtrar y validar campos
             $firstName = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
             $lastName = filter_var($_POST['cognoms'], FILTER_SANITIZE_STRING);
@@ -131,19 +132,19 @@ class UserController
             $city = filter_var($_POST['ciutat'], FILTER_SANITIZE_STRING);
             $postCode = filter_var($_POST['codipostal'], FILTER_VALIDATE_INT);
             $telephone = filter_var($_POST['telefon'], FILTER_VALIDATE_INT);
-    
+
             if (!preg_match('/^[A-Za-z0-9.\s_@#$%^&*()-]+$/u', $street_primary)) {
                 //$_SESSION['error_message'] = 'La dirección puede contener letras, números, puntos, guiones bajos y algunos caracteres especiales.';
                 header('Location: ../views/updateUserDetails.php');
                 return;
             }
-    
+
             if (!ctype_alpha($firstName) || !ctype_alpha($lastName) || !ctype_alpha($city)) {
                 //$_SESSION['error_message'] = 'Los nombres y la ciudad deben contener solo letras.';
                 header('Location: ../views/updateUserDetails.php');
                 return;
             }
-    
+
             // Validar la longitud de los nombres
             if (strlen($firstName) > 12 || strlen($lastName) > 12) {
                 //$_SESSION['error_message'] = 'Los nombres no pueden tener más de 12 caracteres.';
@@ -162,10 +163,10 @@ class UserController
                 header('Location: ../views/updateUserDetails.php');
                 return;
             }
-    
+
             // Llamar al modelo para actualizar al usuario
-            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone); 
-    
+            $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
+
             //$_SESSION['success_message'] = 'Usuario actualizado exitosamente.';
             header('Location: ../views/payment.php');
         } catch (PDOException $e) {
@@ -175,5 +176,5 @@ class UserController
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
         }
-    }    
+    }
 }
