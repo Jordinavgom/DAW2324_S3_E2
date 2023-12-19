@@ -40,7 +40,8 @@ include('./header.php'); ?>
                             <td><?= $order['priceEach'] + $order['shipping_price'] ?></td>
                             <td> <?= $order['status'] ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php break;
+                    endforeach; ?>
                 </tbody>
             </table>
         <?php else : ?>
