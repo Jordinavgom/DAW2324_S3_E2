@@ -2,9 +2,9 @@
 class Database
 {
     private $host = 'mariadb';
-    private $db_name = 'testdb';
-    private $username = 'root';
-    private $password = 'rootpwd';
+    private $db_name = 'botiga_online';
+    private $username = 'testuser';
+    private $password = 'testpassword';
     private $conn;
 
     public function connect()
