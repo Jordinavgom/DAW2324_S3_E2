@@ -212,7 +212,7 @@ product_details_table = Table(
     Column('idProductDetail', Integer),
     Column('idProduct', Integer),  # Clave foránea que apunta al ID del producto
     Column('code', String(255)),
-    Column('idVariant', Integer),
+    Column('variant_id', Integer),
     Column('variant_code', String(255)),
     Column('sku', String(255)),
     Column('name', String(255)),
@@ -225,15 +225,15 @@ product_details_table = Table(
     # Agrega más columnas según sea necesario
 )
 
-product_variant_options_table = Table(
-    'variantOptions', metadata,
-    Column('idVariantOption', Integer),
-    Column('idVariant', Integer),
-    Column('name', String(255)),
-    Column('image', String(255)),
-    Column('description', String(255)),
-    Column('is_required', Boolean),
-)
+# product_variant_options_table = Table(
+#     'variantOptions', metadata,
+#     Column('idVariantOption', Integer),
+#     Column('idVariant', Integer),
+#     Column('name', String(255)),
+#     Column('image', String(255)),
+#     Column('description', String(255)),
+#     Column('is_required', Boolean),
+# )
 
 # Crea la tabla de imágenes si no existe
 # metadata.create_all(engine)
@@ -342,7 +342,7 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
                                         idProductDetail=id,
                                         idProduct=product_id,
                                         code=code,
-                                        idVariant=variant_id,
+                                        variant_id=variant_id,
                                         variant_code=variant_code,
                                         sku=sku,
                                         name=name,
