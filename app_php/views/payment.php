@@ -48,8 +48,8 @@
       </div>
     </div>
 
-    <footer class="text-center">
+    <div class="text-center">
       <button class="btn btn-success" id="boto-pagar" onclick=comprovaDades()>Pagar</a>
-    </footer>
+    </div>
   </div>
 </body>
