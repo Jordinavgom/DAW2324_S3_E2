@@ -1,22 +1,24 @@
 $(document).ready(function () {
-    $('#email').blur(function () {
+    $('#email').on('input', function () {
         var email = $(this).val();
 
         $.ajax({
-            url: 'User.php',
+            url: '../../controllers/UserController.php',
             type: 'POST',
-            data: { email: email },
+            data: {
+                action: 'check_email', // Nueva acción para la verificación de correo
+                email: email
+            },
             success: function (response) {
-                $('#correoDisponible').html(response);
+                try {
+                    $('#correoDisponible').html(response);
+                } catch (error) {
+                    console.error('Error al procesar la respuesta AJAX:', error);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error en la solicitud AJAX:', error);
             }
         });
     });
-});
-
-// Evitar que el formulario se envíe si el correo no está disponible
-$('#formulario').submit(function (e) {
-    if ($('#correoDisponible').text() !== 'El correo electrónico está disponible.') {
-        e.preventDefault();
-        alert('Por favor, elija un correo electrónico disponible.');
-    }
 });

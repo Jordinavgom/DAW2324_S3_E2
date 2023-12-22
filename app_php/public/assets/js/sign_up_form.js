@@ -62,6 +62,26 @@ function comprovarMail() {
         $('#alertmail').hide();
         $('#email').removeClass('border-danger');
         $('#email').addClass('border-success');
+
+        $.ajax({
+            url: '../../controllers/UserController.php',
+            type: 'POST',
+            data: {
+                action: 'check_email',
+                email: email
+            },
+            success: function (response) {
+                try {
+                    $('#correoDisponible').html(response);
+                } catch (error) {
+                    console.error('Error al procesar la respuesta AJAX:', error);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error en la solicitud AJAX:', error);
+            }
+        });
+
         return true;
     }
 }
@@ -79,7 +99,7 @@ function comprovarContrasenya() {
         mostrarError('La contrasenya és obligatòria.');
     } else if (password.length < 8) {
         mostrarError('La contrasenya ha de tenir com a mínim 8 caràcters.');
-    } else if ( !password.match(patroAlfaNumeric) || !password2.match(patroAlfaNumeric) && password2 !=='' ) {
+    } else if (!password.match(patroAlfaNumeric) || !password2.match(patroAlfaNumeric) && password2 !== '') {
         mostrarError('La contrasenya ha de tenir un format vàlid.');
     } else if (password2 !== password) {
         mostrarError('Les contrasenyes han de coincidir.');

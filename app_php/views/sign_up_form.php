@@ -18,33 +18,6 @@
 </head>
 
 <body>
-    <script>
-        $(document).ready(function() {
-            $('#email').on('input', function() {
-                var email = $(this).val();
-
-                $.ajax({
-                    url: '../controllers/UserController.php',
-                    type: 'POST',
-                    data: {
-                        action: 'check_email', // Nueva acción para la verificación de correo
-                        email: email
-                    },
-                    success: function(response) {
-                        try {
-                            $('#correoDisponible').html(response);
-                        } catch (error) {
-                            console.error('Error al procesar la respuesta AJAX:', error);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Error en la solicitud AJAX:', error);
-                    }
-                });
-            });
-        });
-    </script>
-
     <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignup">
         <div class="modal-dialog" role="document">
             <div class="alert alert-danger" id="generalAlert" role="alert"></div>
@@ -53,7 +26,8 @@
                     <h1 class="fw-bold mb-0 fs-2 h1">Sign Up</h1>
                 </div>
                 <div class="modal-body p-5 pt-0">
-                    <form id="formulario" action="../controllers/UserController.php?action=signup" method="post">
+                    <form id="formulario" action="../controllers/UserController.php" method="post">
+                        <input type="hidden" name="action" value="signup">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email">
                             <label for="floatingInput" class="inputInside" style="color: black">Correu electrònic</label>
