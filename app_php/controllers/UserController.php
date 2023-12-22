@@ -12,15 +12,32 @@ if (!$conn) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_GET['action'] == 'signup') {
-        $userController->create();
-    } else if ($_GET['action'] == 'login') {
-        $userController->login();
-    }
-    if ($_GET['action'] == 'update') {
-        $userController->update();
+    $action = isset($_POST['action']) ? $_POST['action'] : '';
+
+    // Utiliza un switch o if-elseif para manejar las diferentes acciones
+    switch ($action) {
+        case 'signup':
+            $userController->create();
+            break;
+
+        case 'login':
+            $userController->login();
+            break;
+
+        case 'check_email':
+            $userController->checkEmailAvailability();
+            break;
+
+        case 'update':
+            $userController->update();
+            break;
+
+        default:
+            // Manejar cualquier acción no válida o sin acción
+            break;
     }
 }
+
 
 class UserController
 {
@@ -30,6 +47,25 @@ class UserController
     public function __construct()
     {
         $this->model = new User();
+    }
+
+    public function checkEmailAvailability()
+    {
+        try {
+            $email = isset($_POST['email']) ? $_POST['email'] : '';
+
+            // Verificar la disponibilidad del correo utilizando el modelo
+            $isAvailable = $this->model->isEmailAvailable($email);
+
+            if ($isAvailable) {
+                echo '<div class="alert alert-success mt-3">El correo electrónico está disponible.</div>';
+            } else {
+                echo '<div class="alert alert-danger mt-3">El correo electrónico ya está registrado.</div>';
+            }
+        } catch (Exception $e) {
+            // Log error o redirigir a una página de error
+            echo "Error en el controlador: " . $e->getMessage();
+        }
     }
 
     public function create()

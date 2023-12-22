@@ -31,6 +31,23 @@ class User
         }
     }
 
+    public function isEmailAvailable($email)
+    {
+        try {
+            $query = "SELECT COUNT(*) as count FROM clients WHERE email = :email";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return ($result['count'] == 0);
+        } catch (Exception $e) {
+            // Log error o manejar de otra manera
+            return false;
+        }
+    }
+
     public function logUser($email, $pass)
     {
         try {
