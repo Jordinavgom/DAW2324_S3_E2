@@ -18,7 +18,6 @@ include('./header.php'); ?>
                         <th>Descripció</th>
                         <th>Quantitat</th>
                         <th>Imatge generada</th>
-                        <th>Transportista</th>
                         <th>Preu</th>
                         <th>Preu d'enviament</th>
                         <th>Preu total</th>
@@ -34,11 +33,10 @@ include('./header.php'); ?>
                             <td><?= $order['name']; ?> </td>
                             <td> <?= $order['quantity']; ?></td>
                             <td><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($order['generatedImage']) . '" style="width: 100px; height: 100px;"/>'; ?></td>
-                            <td> <?= $order['carrier']; ?></td>
-                            <td> <?= $order['priceEach']; ?></td>
-                            <td> <?= $order['shipping_price']; ?></td>
-                            <td><?= $order['priceEach'] + $order['shipping_price'] ?></td>
-                            <td> <?= $order['status'] ?></td>
+                            <td> <?= $order['priceEach'] . ' €'  ?></td>
+                            <td> <?= $order['shippingPrice'] . ' €'  ?></td>
+                            <td><?= $order['priceEach'] + $order['shippingPrice'] . ' €' ?></td>
+                            <td> <?= $order['orderStatus'] ?></td>
                         </tr>
                     <?php break;
                     endforeach; ?>
