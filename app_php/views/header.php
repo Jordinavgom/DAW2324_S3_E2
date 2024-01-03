@@ -40,9 +40,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link fw-bold" href="">Contacto</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold" href="../views/historialComands.php">Pedidos</a>
-                                </li>
 
                                 <li class="nav-item">
                                     <a class="nav-link fw-bold" href="../views/loginStandAlone.php">Login</a>
