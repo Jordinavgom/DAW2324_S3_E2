@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException, status, Request
+from fastapi import FastAPI, Depends, HTTPException, status, Request, APIRouter
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
@@ -46,19 +46,24 @@ print ("user ======", {database_user_uri})
 
 app = FastAPI()
 
+version_v1 = APIRouter()
+version_v2 = APIRouter()
+
+
+
 templates = Jinja2Templates(directory="templates")
 
-@app.get("/ping/picanova")
+@version_v2.get("/ping/picanova")
 async def ping_picanova():
     response = requests.get('https://api.picanova.com/')
     return {"status_code": response.status_code}
 
-@app.get("/ping/bigJPG")
+@version_v2.get("/ping/bigJPG")
 async def ping_big_jpg():
     response = requests.get('https://bigjpg.com/')
     return {"status_code": response.status_code}
 
-@app.get("/api-status", response_class=HTMLResponse)
+@version_v2.get("/api-status", response_class=HTMLResponse)
 async def read_api_status(request: Request):
     ping_picanova_result = await ping_picanova()
     ping_big_jpg_result = await ping_big_jpg()
@@ -102,7 +107,7 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
 def verify_credentials(username: str, password: str):
     return username == external_api_user and password == external_api_password
 
-@app.post("/token")
+@version_v1.post("/token")
 def login(username: str = Form(...), password: str = Form(...)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -152,7 +157,7 @@ class CreateOrderRequest(BaseModel):
     shipping: ShippingDetails
     items: list[Item]
 
-@app.post("/orders")
+@version_v2.post("/orders")
 def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(get_current_user)):
     try:
         # URL a la que se enviará la solicitud POST para crear una orden
@@ -239,7 +244,7 @@ product_details_table = Table(
 # metadata.create_all(engine)
 
 
-@app.get("/products")
+@version_v2.get("/products")
 async def get_and_insert_products(current_user: dict = Depends(get_current_user)):
     try:
         # URL del nuevo endpoint
@@ -396,7 +401,7 @@ class BigJpgRequest(BaseModel):
     file_name: str
     input: str
 
-@app.post("/api/task/")
+@version_v2.post("/api/task/")
 def create_bigjpg_task(request: BigJpgRequest, current_user: dict = Depends(get_current_user)):
     try:
         # Enviar la solicitud a BigJPG en formato JSON
@@ -416,3 +421,7 @@ def create_bigjpg_task(request: BigJpgRequest, current_user: dict = Depends(get_
     except Exception as e:
         # Captura otros errores y los devuelve como detalle en la excepción HTTP
         raise HTTPException(status_code=500, detail=f"Error interno en el servidor: {str(e)}")
+    
+
+app.include_router(version_v1, prefix='/v1')
+app.include_router(version_v2, prefix = '/v2')
