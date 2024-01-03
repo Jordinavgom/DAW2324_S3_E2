@@ -14,7 +14,7 @@ class Product
 
     public function getProductById($productId)
     {
-        $query = "SELECT name FROM products WHERE id = :id";
+        $query = "SELECT name FROM products WHERE idProduct = :id";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(":id", $productId);
@@ -25,7 +25,7 @@ class Product
     }
     public function getProductDetailsByProductId($productId)
     {
-        $query = "SELECT name, formatted_price FROM product_details WHERE product_id = :product_id";
+        $query = "SELECT name, formatted_price FROM productDetails WHERE idProduct = :product_id";
         $this->conn->exec("set names utf8");
         $stmt = $this->conn->prepare($query);
 
@@ -38,7 +38,7 @@ class Product
 
     public function getImatgesByProductId($productId)
     {
-        $query = "SELECT original, thumb FROM images_table WHERE product_id = :product_id";
+        $query = "SELECT original, thumb FROM productImages WHERE idProduct = :product_id";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(":product_id", $productId);
