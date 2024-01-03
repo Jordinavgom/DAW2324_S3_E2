@@ -15,7 +15,8 @@ if (empty($_SESSION['idClient'])) { ?>
                     <h1 class="fw-bold mb-0 fs-2 h1">Sign in</h1>
                 </div>
                 <div class="modal-body p-5 pt-0">
-                    <form id="formulario" action="../controllers/UserController.php?action=login" method="POST">
+                    <form id="formulario" action="../controllers/UserController.php" method="POST">
+                        <input type="hidden" name="action" value="login">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email">
                             <label for="floatingInput" class="inputInside">Correu electrònic</label>
