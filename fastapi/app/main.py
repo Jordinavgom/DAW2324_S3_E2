@@ -24,26 +24,7 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-# if user is None or userpassword is None or host is None or port is None or database is None:
-#     print(user)
-#     raise ValueError("Please set all the required environment variables.")
-    
-
 database_user_uri = f"mariadb+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-print ("user ======", {database_user_uri})
-
-# from sqlalchemy.exc import OperationalError
-
-# try:
-    # engine = create_engine(database_user_uri)
-#     connection = engine.connect()
-#     print("Conexión exitosa a la base de datos.")
-#     connection.close()
-# except OperationalError as e:
-#     print(f"Error al conectar a la base de datos: {e}")
-
-
-####
 
 app = FastAPI()
 
