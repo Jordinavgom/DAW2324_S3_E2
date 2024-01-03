@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 import os
 from fastapi import Form
 from sqlalchemy import create_engine, Column, Boolean, Integer, String, MetaData, Table, ForeignKey, Float
+from apscheduler.schedulers.background import BackgroundScheduler
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -49,7 +50,18 @@ app = FastAPI()
 version_v1 = APIRouter()
 version_v2 = APIRouter()
 
+scheduler = BackgroundScheduler()
+i = 0
 
+@version_v2.get("/scheduled_task")
+def scheduled_task():
+    global i
+    print(f"Tasca executada per {i} cop")
+    i += 1
+
+scheduler.add_job(scheduled_task, trigger='cron', second='*/10')
+
+scheduler.start()
 
 templates = Jinja2Templates(directory="templates")
 
@@ -77,7 +89,7 @@ async def read_api_status(request: Request):
 
 ### Picanova ###
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="v1/token")
 
 external_api_user = "alumne"
 external_api_password = "2b8af5289aa93fc62eae989b4dcc9725"
