@@ -33,7 +33,7 @@ include('./header.php');
                         <?php foreach ($orders as $order) : ?>
                             <tr>
                                 <td>
-                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($order['image']) . '" class="full-width" />'; ?>
+                                    <?php echo '<img src="' . $order['thumb'] . '" style="width: 150px; height: 150px;" />'; ?>
                                     <!-- <img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG' class='full-width'></img> -->
                                 </td>
                                 <td><?= $order['name']; ?></td>
@@ -49,7 +49,8 @@ include('./header.php');
                                     <div class='price'><?= $order['priceEach']; ?>€</div>
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php break;
+                        endforeach; ?>
                     </tbody>
 
                 </table>

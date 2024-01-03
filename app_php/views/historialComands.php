@@ -28,9 +28,9 @@ include('./header.php'); ?>
                 <tbody class="text-center">
                     <?php foreach ($orders as $order) : ?>
                         <tr>
-                            <td><?= $order['id_order'] ?> </td>
-                            <td> <?= $order['date'] ?></td>
-                            <td><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($order['image']) . '" style="width: 100px; height: 100px;"/>'; ?></td>
+                            <td><?= $order['idOrder'] ?> </td>
+                            <td> <?= $order['datetime'] ?></td>
+                            <td><?php echo '<img src="' . $order['thumb'] . '" style="width: 100px; height: 100px;"/>'; ?></td>
                             <td><?= $order['name']; ?> </td>
                             <td> <?= $order['quantity']; ?></td>
                             <td><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($order['generatedImage']) . '" style="width: 100px; height: 100px;"/>'; ?></td>
@@ -40,7 +40,8 @@ include('./header.php'); ?>
                             <td><?= $order['priceEach'] + $order['shipping_price'] ?></td>
                             <td> <?= $order['status'] ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php break;
+                    endforeach; ?>
                 </tbody>
             </table>
         <?php else : ?>

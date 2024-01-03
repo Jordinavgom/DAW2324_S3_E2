@@ -6,8 +6,7 @@ require_once '../controllers/UserController.php';
 class User
 {
     private $conn;
-    private $table_name = "users";
-    private $id;
+    private $table_name = "clients";
 
     public function __construct()
     {
@@ -35,14 +34,14 @@ class User
     public function logUser($email, $pass)
     {
         try {
-            $sql = "SELECT id_user, email, password FROM " . $this->table_name . " WHERE email = :email";
+            $sql = "SELECT idClient, email, password FROM " . $this->table_name . " WHERE email = :email";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($result && password_verify($pass, $result['password'])) {
-                return $result['id_user'];
+                return $result['idClient'];
             } else {
                 return false;
             }
@@ -52,35 +51,35 @@ class User
         }
     }
 
-    public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone) {
-        
-        $id_user = $_SESSION['id_user'];
-        
+    public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone)
+    {
+
+        $idClient = $_SESSION['idClient'];
+
         try {
-        $sql = "UPDATE " . $this->table_name . " 
-            SET firstname = :firstname, 
-                lastname = :lastname, 
-                street_primary = :street_primary, 
+            $sql = "UPDATE " . $this->table_name . " 
+            SET name = :firstname, 
+                surnames = :lastname, 
+                address = :street_primary, 
                 city = :city, 
                 postcode = :postcode, 
                 telephone = :telephone 
-            WHERE id_user = :id_user";
+            WHERE idClient = :idClient";
 
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':firstname', $firstName);
-        $stmt->bindParam(':lastname', $lastName);
-        $stmt->bindParam(':street_primary', $street_primary);
-        $stmt->bindParam(':city', $city);
-        $stmt->bindParam(':postcode', $postCode);
-        $stmt->bindParam(':telephone', $telephone);
-        $stmt->bindParam(':id_user', $id_user);
-        $stmt->execute();
-
-    } catch (Exception $e) {
-        // Log error or redirect to an error page
-        echo "Error en el modelo: " . $e->getMessage();
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':firstname', $firstName);
+            $stmt->bindParam(':lastname', $lastName);
+            $stmt->bindParam(':street_primary', $street_primary);
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':postcode', $postCode);
+            $stmt->bindParam(':telephone', $telephone);
+            $stmt->bindParam(':idClient', $idClient);
+            $stmt->execute();
+        } catch (Exception $e) {
+            // Log error or redirect to an error page
+            echo "Error en el modelo: " . $e->getMessage();
+        }
     }
-}
 
     public function isValidUser($email, $password)
     {
@@ -95,7 +94,7 @@ class User
     private function getStoredHash($email)
     {
         try {
-            $stmt = $this->conn->prepare("SELECT password FROM users WHERE email = :email");
+            $stmt = $this->conn->prepare("SELECT password FROM " . $this->table_name . " WHERE email = :email");
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);

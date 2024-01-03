@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse justify-content-md-right" id="navbarsExample08">
                     <div class="container borderYtoX">
                         <ul class="navbar-nav">
-                            <?php if (empty($_SESSION['id_user'])) { ?>
+                            <?php if (empty($_SESSION['idClient'])) { ?>
                                 <li class="nav-item">
                                     <a class="nav-link fw-bold" aria-current="page" href="../index.php">Inicio</a>
                                 </li>
