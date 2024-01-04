@@ -57,15 +57,15 @@ $(document).ready(function () {
 });
 
 function promptIdea1() {
-    $("#textPrompt").val("hola");
+    $("#textPrompt").val("Imagina un paisatge hivernal màgic on l'aurora boreal il·lumina el cel estavellat");
 }
 
 function promptIdea2() {
-    $("#textPrompt").val("hola 2");
+    $("#textPrompt").val("Visualitza un moment romàntic a la tarda de Sant Valentí. Una parella està asseguda en un acollidor cafè, il·luminat per llums tènues");
 }
 
 function promptIdea3() {
-    $("#textPrompt").val("hola 3");
+    $("#textPrompt").val("Imagina una escena d'amor en una assolellada tarda de primavera. Al cor de l'escena, una parella comparteix rialles i converses en un jardí encantador");
 }
 
 function buttonClick(clickedImage) {
