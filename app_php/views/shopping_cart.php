@@ -71,7 +71,8 @@ include('./header.php');
 
 <div id="updateDetails" class='container'>
     <div class='window'>
-        <form class id="formulario" action="../controllers/UserController.php?action=update" method="post" style="margin-top: 20px;">
+        <form class id="formulario" action="../controllers/UserController.php" method="post" style="margin-top: 20px;">
+            <input type="hidden" name="action" value="update">
             <div class="row">
                 <div class="col-md-4">
                     <label for="nom" class="form-label">Nom</label>
