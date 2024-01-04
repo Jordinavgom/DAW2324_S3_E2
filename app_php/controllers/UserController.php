@@ -58,9 +58,9 @@ class UserController
             $isAvailable = $this->model->isEmailAvailable($email);
 
             if ($isAvailable) {
-                echo '<div class="alert alert-success mt-3">El correo electrónico está disponible.</div>';
+                echo '<div class="alert alert-success mt-3">El correu electrònic està disponible.</div>';
             } else {
-                echo '<div class="alert alert-danger mt-3">El correo electrónico ya está registrado.</div>';
+                echo '<div class="alert alert-danger mt-3">El correu electrònic ja està registrat!</div>';
             }
         } catch (Exception $e) {
             // Log error o redirigir a una página de error
