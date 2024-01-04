@@ -15,12 +15,10 @@ include('views/header.php'); ?>
 
                 <div class="col-md-6 order-md-1">
                     <h1 class="display-5 fw-bold">Da vida a tus pensamientos</h1>
-                    <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one
-                        in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it
-                        to your liking.</p>
+                    <p class="fs-4">Imagina. <br> Crea. <br> Personaliza. <br> Diseños únicos, tú eliges dónde brillar.</p>
 
                     <a href="./views/generateImages.php">
-                        <button class="btn btn-primary btn-lg" type="button" id="botonCrear">Crear</button>
+                        <button class="btn btn-primary btn-lg" type="button" id="botonCrear">Empieza a crear</button>
                     </a>
                 </div>
             </div>
