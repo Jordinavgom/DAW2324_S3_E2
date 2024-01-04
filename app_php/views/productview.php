@@ -1,7 +1,9 @@
+<?php session_start();
+include('./header.php');
+require_once('../controllers/ProductController.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
-<?php include('./header.php');
-require_once('../controllers/ProductController.php') ?>
 
 <head>
     <meta charset="UTF-8">
