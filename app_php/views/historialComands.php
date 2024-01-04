@@ -2,9 +2,11 @@
 session_start();
 include('../models/Database.php');
 require_once '../controllers/OrderController.php';
+include('./header.php'); 
+?>
 
-include('./header.php'); ?>
-
+<!DOCTYPE html>
+<html lang="en">
 <body>
     <div class="container">
         <h1 class="registro">Les meves comandes</h1>
@@ -44,8 +46,7 @@ include('./header.php'); ?>
             </table>
         <?php else : ?>
             <h1 class="registro">Encara no has realitzat cap comanda.</h1>
-        <?php endif; ?>
+        <?php endif; ?>    
     </div>
 </body>
-<?php //include('footer.php'); 
-?>
+<?php include('footer.php'); ?>

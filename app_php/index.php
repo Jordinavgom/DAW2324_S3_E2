@@ -4,6 +4,18 @@ session_start();
 include('views/header.php'); ?>
 
 <body>
+    <style> 
+        #footer {
+        margin-top: auto;
+        background-color: #4e45a3;
+        color: white;
+        text-align: center;
+        padding: 10px; /* Puedes ajustar este valor según tu diseño */
+        position: static;
+        width: 100%;
+        }
+    </style>
+
     <div class="container">
         <div class="p-5 bg-body-tertiary rounded-3" id="jumbotron">
             <div class="row align-items-center">

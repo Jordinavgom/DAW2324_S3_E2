@@ -92,9 +92,7 @@ require_once('../controllers/ProductController.php') ?>
             </div>
         </div>
     </div>
-
     <?php include('footer.php'); ?>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
@@ -150,8 +148,5 @@ require_once('../controllers/ProductController.php') ?>
 
         });
     </script>
-
-
 </body>
-
 </html>
