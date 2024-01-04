@@ -7,14 +7,12 @@ include('views/header.php'); ?>
     <div class="container">
         <div class="p-5 bg-body-tertiary rounded-3" id="jumbotron">
             <div class="row align-items-center">
-                <!-- Columna de imagen -->
                 <div class="col-md-6 order-md-2">
                     <div class="h-50">
                         <img src="../public/assets/img/logo.png" class="img-fluid d-block mx-auto" alt="Logo">
                     </div>
                 </div>
 
-                <!-- Columna de texto -->
                 <div class="col-md-6 order-md-1">
                     <h1 class="display-5 fw-bold">Da vida a tus pensamientos</h1>
                     <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one
@@ -27,15 +25,8 @@ include('views/header.php'); ?>
                 </div>
             </div>
         </div>
-
-        <!-- Título de la sección -->
         <h2 class="tituloSeccion col-md-2">Popular</h2>
     </div>
-
-
-
-
-
 
     <div class="album py-5 tertiary" id="album">
         <div class="container">
