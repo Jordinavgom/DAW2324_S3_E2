@@ -6,14 +6,13 @@ include('./header.php');
 ?>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../public/assets/css/new_shopping_cart.css">
     <script src="../public/assets/js/new_shopping_cart.js"></script>
     <script src="../public/assets/js/updateUser.js"></script>
 </head>
 
-<div class='container'>
+<div class='container d-flex justify-content-center'>
     <div class='window'>
         <div class='order-info'>
             <div class='order-info-content'>
@@ -69,8 +68,8 @@ include('./header.php');
 </div>
 
 
-<div id="updateDetails" class='container'>
-    <div class='window'>
+<div class='container2 d-flex justify-content-center'>
+    <div id="updateDetails" class='window px-4' style="height : 250px">
         <form class id="formulario" action="../controllers/UserController.php" method="post" style="margin-top: 20px;">
             <input type="hidden" name="action" value="update">
             <div class="row">
