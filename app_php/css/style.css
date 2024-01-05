@@ -7,10 +7,7 @@ p {
   background-color: #4e45a3 !important;
 }
 
-.blue {
-  background-color: #4e45a3 !important;
-  margin-bottom: -25px !important;
-}
+
 
 .text-body-secondary {
   color: #01eeac !important;
@@ -34,10 +31,6 @@ p {
   margin-top: 50px !important;
 }
 
-
-
-
-
 .nav-item {
   font-weight: bold;
   color: #01eeac !important;
@@ -54,10 +47,15 @@ p {
 }
 
 #footer {
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
+  margin-top: auto;
   background-color: #4e45a3;
+  color: white;
+  text-align: center;
+  padding: 10px; /* Puedes ajustar este valor según tu diseño */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .card-body {
@@ -72,8 +70,6 @@ p {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-
-
 
 :root {
   --bs-dark: #241651;
