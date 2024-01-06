@@ -213,7 +213,7 @@ class UserController
             $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
 
             //$_SESSION['success_message'] = 'Usuario actualizado exitosamente.';
-            header('Location: ../views/payment.php');
+            include('../views/payment.php');
         } catch (PDOException $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
