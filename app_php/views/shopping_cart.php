@@ -2,6 +2,7 @@
 session_start();
 include('../models/Database.php');
 require_once '../controllers/OrderController.php';
+require_once '../controllers/UserController.php';
 include('./header.php');
 ?>
 
@@ -75,20 +76,20 @@ include('./header.php');
             <div class="row">
                 <div class="col-md-4">
                     <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" name="nom">
+                    <input type="text" class="form-control" id="nom" name="nom" value="<?= $userInfo[0]['name'] ?>">
                     <div class="alert alert-danger" id="alertNom" role="alert"></div>
                 </div>
 
                 <div class="col-md-4">
                     <label for="cognoms" class="form-label">Cognoms</label>
-                    <input type="text" class="form-control" id="cognoms" name="cognoms">
+                    <input type="text" class="form-control" id="cognoms" name="cognoms" value="<?= $userInfo[0]['surnames'] ?>">
                     <div class="alert alert-danger" id="alertCognoms" role="alert"></div>
                 </div>
 
 
                 <div class="col-md-4">
                     <label for="adreça" class="form-label">Adreça</label>
-                    <input type="text" class="form-control" id="adreça" name="adreça">
+                    <input type="text" class="form-control" id="adreça" name="adreça" value="<?= $userInfo[0]['address'] ?>">
                     <div class="alert alert-danger" id="alertAdreça" role="alert"></div>
                 </div>
 
@@ -96,17 +97,17 @@ include('./header.php');
             <div class="row">
                 <div class="col-md-4">
                     <label for="ciutat" class="form-label">Ciutat</label>
-                    <input type="text" class="form-control" id="ciutat" name="ciutat">
+                    <input type="text" class="form-control" id="ciutat" name="ciutat" value="<?= $userInfo[0]['city'] ?>">
                     <div class="alert alert-danger" id="alertCiutat" role="alert"></div>
                 </div>
                 <div class="col-md-4">
                     <label for="codipostal" class="form-label">Codi Postal</label>
-                    <input type="text" class="form-control" id="codipostal" name="codipostal">
+                    <input type="text" class="form-control" id="codipostal" name="codipostal" value="<?= $userInfo[0]['postcode'] ?>">
                     <div class="alert alert-danger" id="alertCodiPostal" role="alert"></div>
                 </div>
                 <div class="col-md-4">
                     <label for="telefon" class="form-label">Número de telèfon</label>
-                    <input type="text" class="form-control" id="telefon" name="telefon">
+                    <input type="text" class="form-control" id="telefon" name="telefon" value="<?= $userInfo[0]['telephone'] ?>">
                     <div class="alert alert-danger" id="alertTelefon" role="alert"></div>
                 </div>
 
