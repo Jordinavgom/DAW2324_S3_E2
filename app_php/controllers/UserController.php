@@ -4,11 +4,14 @@ require_once '../models/Database.php';
 
 $database = new Database();
 $conn = $database->connect();
+$idClient;
 
 if (!$conn) {
     echo "Error al conectar a la base de datos.";
 } else {
     $userController = new UserController();
+
+    $userInfo = $userController->index($idClient);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
 
         default:
+            $userInfo = $userController->index($idClient);
             // Manejar cualquier acción no válida o sin acción
             break;
     }
@@ -47,6 +51,11 @@ class UserController
     public function __construct()
     {
         $this->model = new User();
+    }
+
+    public function index($idClient)
+    {
+        return $this->model->getCurrentUserData($idClient);
     }
 
     public function checkEmailAvailability()
