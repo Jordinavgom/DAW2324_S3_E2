@@ -70,7 +70,6 @@ class User
 
     function getCurrentUserData($idClient)
     {
-        $idClient = $_SESSION['idClient'];
         $query = "SELECT * FROM " . $this->table_name . " WHERE idClient = :idClient";
         $this->conn->exec("set names utf8");
         $stmt = $this->conn->prepare($query);
@@ -78,6 +77,7 @@ class User
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone)
     {

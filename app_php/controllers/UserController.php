@@ -4,14 +4,17 @@ require_once '../models/Database.php';
 
 $database = new Database();
 $conn = $database->connect();
-$idClient;
+if (isset($_SESSION['idClient'])) {
+    $idClient = $_SESSION['idClient'];
+}
 
 if (!$conn) {
     echo "Error al conectar a la base de datos.";
 } else {
     $userController = new UserController();
-
-    $userInfo = $userController->index($idClient);
+    if (isset($_SESSION['idClient'])) {
+        $userInfo = $userController->index($idClient);
+    }
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,8 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
 
         default:
-            $userInfo = $userController->index($idClient);
-            // Manejar cualquier acción no válida o sin acción
             break;
     }
 }
