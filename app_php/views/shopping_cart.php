@@ -59,7 +59,7 @@ include('./header.php');
                         TOTAL <?= $order['priceEach']; ?>€
                     </span>
                     <span style='float:right; text-align:right;'>
-                        <button id="boto-pagament" class="btn btn-primary">Procedir al pagament</button>
+                        <button id="boto-pagament" class="btn btn-primary">Afegir direcció</button>
                     </span>
                 </div>
             </div>

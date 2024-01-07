@@ -49,7 +49,7 @@
     </div>
 
     <div class="text-center">
-      <button class="btn btn-success" id="boto-pagar" onclick=comprovaDades()>Pagar</a>
+      <button class="btn btn-success mb-3" id="boto-pagar" onclick=comprovaDades()>Pagar</a>
     </div>
   </div>
 </body>

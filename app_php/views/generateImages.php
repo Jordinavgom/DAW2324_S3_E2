@@ -4,6 +4,7 @@ include('./header.php'); ?>
 <html lang="en">
 
 <head>
+    <title>CustomAIze</title>
     <script src="../public/assets/js/generatedImages.js"></script>
 </head>
 <style>
@@ -53,18 +54,18 @@ include('./header.php'); ?>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <img id="img1" class="rounded img-fade zoom" onclick="buttonClick('img1')" src="../public/assets/img/generatedImages/image-1.jpeg" alt="..." width="70%" height="auto">
+                <img id="img1" class="rounded img-fade zoom" onclick="buttonClick('img1')" src="../public/assets/img/generatedImages/image-1.webp" alt="..." width="70%" height="auto">
             </div>
             <div class="col-12 col-md-6">
-                <img id="img2" class="rounded img-fade zoom" onclick="buttonClick('img2')" src="../public/assets/img/generatedImages/image-2.jpeg" alt="..." width="70%" height="auto">
+                <img id="img2" class="rounded img-fade zoom" onclick="buttonClick('img2')" src="../public/assets/img/generatedImages/image-2.webp" alt="..." width="70%" height="auto">
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <img id="img3" class="rounded img-fade zoom" onclick="buttonClick('img3')" src="../public/assets/img/generatedImages/image-3.jpeg" alt="..." width="70%" height="auto">
+                <img id="img3" class="rounded img-fade zoom" onclick="buttonClick('img3')" src="../public/assets/img/generatedImages/image-3.webp" alt="..." width="70%" height="auto">
             </div>
             <div class="col-12 col-md-6">
-                <img id="img4" class="rounded img-fade zoom" onclick="buttonClick('img4')" src="../public/assets/img/generatedImages/image-4.jpeg" alt="..." width="70%" height="auto">
+                <img id="img4" class="rounded img-fade zoom" onclick="buttonClick('img4')" src="../public/assets/img/generatedImages/image-4.webp" alt="..." width="70%" height="auto">
             </div>
         </div>
     </div>

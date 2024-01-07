@@ -3,16 +3,21 @@
 session_start();
 include('views/header.php'); ?>
 
+<head>
+    <title>CustomAIze</title>
+</head>
+
 <body>
-    <style> 
+    <style>
         #footer {
-        margin-top: auto;
-        background-color: #4e45a3;
-        color: white;
-        text-align: center;
-        padding: 10px; /* Puedes ajustar este valor según tu diseño */
-        position: static;
-        width: 100%;
+            margin-top: auto;
+            background-color: #4e45a3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* Puedes ajustar este valor según tu diseño */
+            position: static;
+            width: 100%;
         }
     </style>
 
@@ -21,7 +26,7 @@ include('views/header.php'); ?>
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-2">
                     <div class="h-50">
-                        <img src="../public/assets/img/logo.png" class="img-fluid d-block mx-auto" alt="Logo">
+                        <img src="../public/assets/img/logo.webp" class="img-fluid d-block mx-auto" alt="Logo">
                     </div>
                 </div>
 
@@ -43,7 +48,7 @@ include('views/header.php'); ?>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="img/imgInicio/1.png" alt="">
+                        <img src="img/imgInicio/1.webp" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
@@ -51,7 +56,7 @@ include('views/header.php'); ?>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="img/imgInicio/2.png" alt="">
+                        <img src="img/imgInicio/2.webp" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
@@ -59,7 +64,7 @@ include('views/header.php'); ?>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="img/imgInicio/3.png" alt="">
+                        <img src="img/imgInicio/3.webp" alt="">
                         <div class="card-body">
                             <p class="card-text"></p>
                         </div>
