@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    // Start the session
+    session_start();
+}
 require_once 'Database.php';
 require_once '../controllers/UserController.php';
 
