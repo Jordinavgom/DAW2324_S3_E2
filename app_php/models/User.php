@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    // Start the session
+    session_start();
+}
 require_once 'Database.php';
 require_once '../controllers/UserController.php';
 
@@ -67,6 +70,17 @@ class User
             echo "Error en el modelo: " . $e->getMessage();
         }
     }
+
+    function getCurrentUserData($idClient)
+    {
+        $query = "SELECT * FROM " . $this->table_name . " WHERE idClient = :idClient";
+        $this->conn->exec("set names utf8");
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':idClient', $idClient);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
     public function updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone)
     {

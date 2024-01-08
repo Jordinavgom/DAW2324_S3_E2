@@ -2,11 +2,13 @@
 session_start();
 include('../models/Database.php');
 require_once '../controllers/OrderController.php';
-include('./header.php'); 
+require_once '../controllers/UserController.php';
+include('./header.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
     <div class="container">
         <h1 class="registro">Les meves comandes</h1>
@@ -44,9 +46,33 @@ include('./header.php');
                     endforeach; ?>
                 </tbody>
             </table>
+            <table class="table">
+                <thead class="text-center">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Cognoms</th>
+                        <th>Correu electrònic</th>
+                        <th>Número de telèfon</th>
+                        <th>Adreça</th>
+                        <th>Ciutat</th>
+                        <th>Codi Postal</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td><?= $userInfo[0]['name'] ?> </td>
+                        <td><?= $userInfo[0]['surnames'] ?> </td>
+                        <td><?= $userInfo[0]['email'] ?> </td>
+                        <td><?= $userInfo[0]['telephone'] ?> </td>
+                        <td><?= $userInfo[0]['address'] ?> </td>
+                        <td><?= $userInfo[0]['city'] ?> </td>
+                        <td><?= $userInfo[0]['postcode'] ?> </td>
+                    </tr>
+                </tbody>
+            </table>
         <?php else : ?>
             <h1 class="registro">Encara no has realitzat cap comanda.</h1>
-        <?php endif; ?>    
+        <?php endif; ?>
     </div>
 </body>
 <?php include('footer.php'); ?>

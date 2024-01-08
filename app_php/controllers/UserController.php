@@ -4,11 +4,17 @@ require_once '../models/Database.php';
 
 $database = new Database();
 $conn = $database->connect();
+if (isset($_SESSION['idClient'])) {
+    $idClient = $_SESSION['idClient'];
+}
 
 if (!$conn) {
     echo "Error al conectar a la base de datos.";
 } else {
     $userController = new UserController();
+    if (isset($_SESSION['idClient'])) {
+        $userInfo = $userController->index($idClient);
+    }
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
 
         default:
-            // Manejar cualquier acción no válida o sin acción
             break;
     }
 }
@@ -47,6 +52,11 @@ class UserController
     public function __construct()
     {
         $this->model = new User();
+    }
+
+    public function index($idClient)
+    {
+        return $this->model->getCurrentUserData($idClient);
     }
 
     public function checkEmailAvailability()
@@ -204,7 +214,7 @@ class UserController
             $this->model->updateUser($firstName, $lastName, $street_primary, $city, $postCode, $telephone);
 
             //$_SESSION['success_message'] = 'Usuario actualizado exitosamente.';
-            header('Location: ../views/payment.php');
+            include('../views/payment.php');
         } catch (PDOException $e) {
             // Log error o redirigir a una página de error
             echo "Error en el controlador: " . $e->getMessage();
