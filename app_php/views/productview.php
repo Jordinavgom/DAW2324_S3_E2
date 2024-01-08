@@ -11,7 +11,8 @@ require_once('../controllers/ProductController.php') ?>
     <title>Detalles del Producto</title>
     <!-- Puedes añadir tu propio CSS aquí -->
     <script src="../public/assets/js/product.js"></script>
-    <link rel="stylesheet" href="../public/assets/css/stylepopup.css"></script>
+    <link rel="stylesheet" href="../public/assets/css/stylepopup.css">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
 
 </head>
@@ -77,7 +78,7 @@ require_once('../controllers/ProductController.php') ?>
                 </select>
                 <h2 id="priceDisplay"><?= $formattedPrice ?></h2>
                 <!-- Formulario para añadir al carrito -->
-                
+
                 <div id="carritoPopup" class="popup">
                     <span class="cerrar" onclick="cerrarPopup()">&times;</span>
                     <h2 class="fw-bold text-body-secondary">Carrito</h2>
@@ -85,14 +86,14 @@ require_once('../controllers/ProductController.php') ?>
                     <p id="variant"></p>
                     <p id="precio"></p>
                 </div>
-                    <div class="mb-3">
-                        <label for="cantidad" class="form-label nav-link">Cantidad:</label>
-                        <input type="number" class="form-control" id="cantidad" value="1" min="1">
-                    </div>
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label nav-link">Cantidad:</label>
+                    <input type="number" class="form-control" id="cantidad" value="1" min="1">
+                </div>
 
-                    <button class="btn btn-primary bg-dark" onclick="abrirPopup()">Añadir al Carrito</button>
-                
-                
+                <button class="btn btn-primary bg-dark" onclick="abrirPopup()">Añadir al Carrito</button>
+
+
 
                 <!-- Otras informaciones relevantes -->
                 <div class="mt-3">
@@ -101,7 +102,7 @@ require_once('../controllers/ProductController.php') ?>
             </div>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
@@ -158,5 +159,8 @@ require_once('../controllers/ProductController.php') ?>
         });
     </script>
     <script src="../public/assets/js/scriptpopup.js"></script>
+
 </body>
+<?php require('./footer.php'); ?>
+
 </html>
