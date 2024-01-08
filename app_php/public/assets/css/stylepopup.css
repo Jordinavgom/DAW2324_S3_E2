@@ -1,0 +1,21 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 12%;
+    right: 1%;
+    background-color: #4e45a3;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Estilos específicos para el carrito */
+#carritoPopup {
+    width: 300px;
+}
