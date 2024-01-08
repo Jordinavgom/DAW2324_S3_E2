@@ -14,6 +14,7 @@
     <script src='../public/assets/js/shopping_cart.js'></script>
     <script src="../public/assets/js/updateUser.js"></script>
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="icon" href="../public/assets/img/logo.webp" type="image/x-icon">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
                         <ul class="navbar-nav">
                             <?php if (empty($_SESSION['idClient'])) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold" aria-current="page" href="../index.php">Inicio</a>
+                                    <a class="nav-link fw-bold" aria-current="page" href="../index.php">CustomAIze</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link fw-bold" href="#">Tendencias</a>

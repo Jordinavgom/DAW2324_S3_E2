@@ -12,6 +12,7 @@ include('./header.php');
     <script src="../public/assets/js/new_shopping_cart.js"></script>
     <script src="../public/assets/js/updateUser.js"></script>
     <link rel="stylesheet" href="../css/botoanimat.css">
+    <title>Carrito</title>
 </head>
 
 <div class='container d-flex justify-content-center'>

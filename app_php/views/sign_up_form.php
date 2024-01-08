@@ -1,7 +1,7 @@
 <?php include('./header.php'); ?>
 
 <head>
-    <title>Formulari de registre</title>
+    <title>Registro</title>
     <script src="../public/assets/js/sign_up_form.js"></script>
     <!-- <script src="../public/assets/js/ajax_register.js"></script> -->
     <link rel="stylesheet" href="../css/botoanimat.css">

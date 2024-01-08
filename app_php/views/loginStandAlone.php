@@ -6,6 +6,7 @@ if (empty($_SESSION['idClient'])) { ?>
     <head>
         <script src="../public/assets/js/sign_in_form.js"></script>
         <link rel="stylesheet" href="../css/botoanimat.css">
+        <title>Inicio de sesión</title>
     </head>
     <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
         <div class="modal-dialog" role="document">
