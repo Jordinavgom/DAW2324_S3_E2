@@ -12,6 +12,7 @@ require_once('../controllers/ProductController.php') ?>
     <!-- Puedes añadir tu propio CSS aquí -->
     <script src="../public/assets/js/product.js"></script>
     <link rel="stylesheet" href="../public/assets/css/stylepopup.css">
+    <link rel="stylesheet" href="../css/botoanimat.css">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
 
@@ -82,16 +83,20 @@ require_once('../controllers/ProductController.php') ?>
                 <div id="carritoPopup" class="popup">
                     <span class="cerrar" onclick="cerrarPopup()">&times;</span>
                     <h2 class="fw-bold text-body-secondary">Carrito</h2>
-                    <p><?= $productInfo['name'] ?></p>
-                    <p id="variant"></p>
-                    <p id="precio"></p>
+                    <span class="fw-bold" style="color: white"><?= $productInfo['name'] ?> - </span>
+                    <span class="fw-bold" style="color: white" id="variant"></span><br>
+                    <span class="fw-bold" style="color: white" id="precio"></span><br>
+                    <span class="fw-bold" style="color: white" id="quantidad"></span><br>
+                    <span class="fw-bold" style="color: white" id="total"></span><br><br>
+                    <button id="boto-login" type="submit" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" value="Iniciar Sesión" name="boto-login" onclick="carrito()">Tramitar pedido</button>
+
                 </div>
                 <div class="mb-3">
                     <label for="cantidad" class="form-label nav-link">Cantidad:</label>
                     <input type="number" class="form-control" id="cantidad" value="1" min="1">
                 </div>
 
-                <button class="btn btn-primary bg-dark" onclick="abrirPopup()">Añadir al Carrito</button>
+                <button class="w-50 mt-1 btn-lg rounded-3 custom-btn btn-1" onclick="abrirPopup()">Añadir al Carrito</button>
 
 
 

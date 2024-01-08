@@ -5,6 +5,7 @@ include('views/header.php'); ?>
 
 <head>
     <title>CustomAIze</title>
+    <link rel="stylesheet" href="../css/botoanimat.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@ include('views/header.php'); ?>
                     <p class="fs-4">Imagina. <br> Crea. <br> Personaliza. <br> Diseños únicos, tú eliges dónde brillar.</p>
 
                     <a href="./views/generateImages.php">
-                        <button class="btn btn-primary btn-lg" type="button" id="botonCrear">Empieza a crear</button>
+                        <button class="w-50 mt-1 btn-lg rounded-3 custom-btn btn-1" type="button" id="botonCrear">Empieza a crear</button>
                     </a>
                 </div>
             </div>

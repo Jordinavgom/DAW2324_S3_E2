@@ -13,6 +13,8 @@
     float: right;
     cursor: pointer;
     font-size: 20px;
+    color: white;
+    /* Puedes ajustar el color según tus preferencias */
 }
 
 /* Estilos específicos para el carrito */

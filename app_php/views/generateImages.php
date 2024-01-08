@@ -6,6 +6,7 @@ include('./header.php'); ?>
 <head>
     <title>CustomAIze</title>
     <script src="../public/assets/js/generatedImages.js"></script>
+    <link rel="stylesheet" href="../css/botoanimat.css">
 </head>
 <style>
     .zoom {
@@ -23,15 +24,15 @@ include('./header.php'); ?>
 
 <body>
     <div class="container text-center">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-md-4">
-                <button id="promptIdea1" type="button" class="btn btn-primary mt-3 w-100" onclick=promptIdea1();>Regal de Nadal</button>
+                <button id="promptIdea1" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" onclick=promptIdea1();>Regal de Nadal</button>
             </div>
             <div class="col-md-4">
-                <button id="promptIdea2" type="button" class="btn btn-primary mt-3 w-100" onclick=promptIdea2();>Regal de Sant Valentí</button>
+                <button id="promptIdea2" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" onclick=promptIdea2();>Regal de Sant Valentí</button>
             </div>
             <div class="col-md-4">
-                <button id="promptIdea3" type="button" class="btn btn-primary mt-3 w-100" onclick=promptIdea3();>Aniversari especial</button>
+                <button id="promptIdea3" type="button" class="w-100 mt-1 btn-lg rounded-3 custom-btn btn-1" onclick=promptIdea3();>Aniversari especial</button>
             </div>
         </div>
 
@@ -39,7 +40,7 @@ include('./header.php'); ?>
 
             <div class="mt-3">
                 <input type="text" class="form-control" id="textPrompt" name="prompt">
-                <button id="promptButton" type="button" class="btn btn-primary mt-3 w-50" name="promptButton">Generar imatges</button>
+                <button id="promptButton" type="button" class="w-50 mt-1 btn-lg rounded-3 custom-btn btn-1 mt-3" name="promptButton">Generar imatges</button>
             </div>
         </div>
 
@@ -72,10 +73,10 @@ include('./header.php'); ?>
 
     <div class="col">
         <div class="row justify-content-center">
-            <button id="continueButton" type="button" class="btn mt-3 w-25" name="continueButton">Selecciona una imatge per a escollir un suport</button>
+            <button id="continueButton" type="button" class="w-25 mt-1 btn-lg rounded-3 custom-btn btn-1 mt-3" name="continueButton">Selecciona una imatge per a escollir un suport</button>
         </div>
         <div class="row justify-content-center">
-            <button id="keepTrying" type="button" class="btn btn-primary mt-3 w-25" name="keepTrying">Torna a generar una imatge</button>
+            <button id="keepTrying" type="button" class="w-25 mt-1 btn-lg rounded-3 custom-btn btn-1 mt-3 mb-5" name="keepTrying">Torna a generar una imatge</button>
         </div>
     </div>
     <div id="contentContainer" class="mt-4">

@@ -11,6 +11,7 @@ include('./header.php');
     <link rel="stylesheet" href="../public/assets/css/new_shopping_cart.css">
     <script src="../public/assets/js/new_shopping_cart.js"></script>
     <script src="../public/assets/js/updateUser.js"></script>
+    <link rel="stylesheet" href="../css/botoanimat.css">
 </head>
 
 <div class='container d-flex justify-content-center'>
@@ -42,7 +43,7 @@ include('./header.php');
                                     <!-- <img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG' class='full-width'></img> -->
                                 </td>
                                 <td><?= $order['quantity']; ?></td>
-                                <td><button class="btn btn-danger">Eliminar</button></td>
+                                <td><button class="mt-1 btn-lg rounded-3 custom-btn btn-1">Eliminar</button></td>
                             </tr>
                             <tr>
                                 <td>
@@ -60,7 +61,8 @@ include('./header.php');
                         TOTAL <?= $order['priceEach']; ?>€
                     </span>
                     <span style='float:right; text-align:right;'>
-                        <button id="boto-pagament" class="btn btn-primary">Afegir direcció</button>
+                        <button id="boto-pagament" class="rounded-3 custom-btn btn-1" style="font-size: 16px">Afegir direcció</button>
+
                     </span>
                 </div>
             </div>
@@ -113,7 +115,7 @@ include('./header.php');
 
             </div>
 
-            <button id="boto-update" type="submit" class="btn btn-primary" name="boto-update" style="margin-top:20px;" onclick="formulari()">Procedeix al pagament</button>
+            <button id="boto-update" type="submit" class="mt-3 btn-lg rounded-3 custom-btn btn-1" name="boto-update" style="margin-top:20px;" onclick="formulari()">Procedeix al pagament</button>
         </form>
     </div>
 </div>
