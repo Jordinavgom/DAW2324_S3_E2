@@ -7,6 +7,7 @@ include('./header.php');
 ?>
 
 <!DOCTYPE html>
+<title>Pedidos</title>
 <html lang="en">
 <style>
     ::marker {
