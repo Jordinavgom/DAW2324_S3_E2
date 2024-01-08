@@ -4,7 +4,7 @@ p {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: #4e45a3 !important;
+  background-color: #061f41 !important;
 }
 
 
@@ -16,17 +16,17 @@ p {
 #jumbotron {
   margin-top: 60px;
   color: #01eeac;
-  background-color: #4e45a3 !important;
+  background-color: #061f41 !important;
 }
 
 #botonCrear {
   background-color: #01eeac;
-  color: #4e45a3;
+  color: #061f41;
   font-weight: bold;
 }
 
 .tituloSeccion {
-  color: #4e45a3;
+  color: #061f41;
   font-weight: bolder;
   margin-top: 50px !important;
 }
@@ -43,15 +43,16 @@ p {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   background-color: #01eeac !important;
-  color: #4e45a3 !important;
+  color: #061f41 !important;
 }
 
 #footer {
   margin-top: auto;
-  background-color: #4e45a3;
+  background-color: #061f41;
   color: white;
   text-align: center;
-  padding: 10px; /* Puedes ajustar este valor según tu diseño */
+  padding: 10px;
+  /* Puedes ajustar este valor según tu diseño */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -134,7 +135,7 @@ p {
 
 th {
   background-color: #01eeac !important;
-  color: #4e45a3 !important;
+  color: #061f41 !important;
   border-bottom: #241651;
 }
 
@@ -150,19 +151,19 @@ tr {
 }
 
 td {
-  background-color: #4e45a3 !important;
+  background-color: #061f41 !important;
   color: white !important;
   border-bottom: #241651;
 
 }
 
 .modal-content {
-  background-color: #4e45a3 !important;
+  background-color: #061f41 !important;
 }
 
 .btn {
   background-color: #01eeac !important;
-  color: #4e45a3 !important;
+  color: #061f41 !important;
   font-weight: bold !important;
 }
 
@@ -204,7 +205,7 @@ td {
 .registro {
   margin-top: 40px;
   text-align: center;
-  color: #4e45a3;
+  color: #061f41;
 }
 
 

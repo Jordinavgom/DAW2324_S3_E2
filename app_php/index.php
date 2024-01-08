@@ -11,7 +11,6 @@ include('views/header.php'); ?>
     <style>
         #footer {
             margin-top: auto;
-            background-color: #4e45a3;
             color: white;
             text-align: center;
             padding: 10px;

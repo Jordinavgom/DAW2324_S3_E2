@@ -8,6 +8,33 @@ include('./header.php');
 
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    #footer {
+        margin-top: auto;
+        background-color: #061f41;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        /* Puedes ajustar este valor según tu diseño */
+        position: static;
+        width: 100%;
+    }
+
+    .window {
+        text-align: center;
+        height: auto;
+        margin: 0 auto;
+        width: 50%;
+        background-color: #061f41;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: list-item;
+        box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        z-index: 10;
+    }
+</style>
 
 <body>
     <div class="container">
@@ -46,33 +73,20 @@ include('./header.php');
                     endforeach; ?>
                 </tbody>
             </table>
-            <table class="table">
-                <thead class="text-center">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Cognoms</th>
-                        <th>Correu electrònic</th>
-                        <th>Número de telèfon</th>
-                        <th>Adreça</th>
-                        <th>Ciutat</th>
-                        <th>Codi Postal</th>
-                    </tr>
-                </thead>
-                <tbody class="text-center">
-                    <tr>
-                        <td><?= $userInfo[0]['name'] ?> </td>
-                        <td><?= $userInfo[0]['surnames'] ?> </td>
-                        <td><?= $userInfo[0]['email'] ?> </td>
-                        <td><?= $userInfo[0]['telephone'] ?> </td>
-                        <td><?= $userInfo[0]['address'] ?> </td>
-                        <td><?= $userInfo[0]['city'] ?> </td>
-                        <td><?= $userInfo[0]['postcode'] ?> </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h1 class="registro">Direcció d'entrega</h1>
+            <div class="window">
+                <p>Nom: <?= $userInfo[0]['name'] ?><br>
+                    Cognoms: <?= $userInfo[0]['surnames'] ?><br>
+                    Correu electrònic: <?= $userInfo[0]['email'] ?><br>
+                    Telèfon: <?= $userInfo[0]['telephone'] ?><br>
+                    Adreça: <?= $userInfo[0]['address'] ?><br>
+                    Ciutat: <?= $userInfo[0]['city'] ?><br>
+                    Codi postal: <?= $userInfo[0]['postcode'] ?><br></p>
+            </div>
         <?php else : ?>
             <h1 class="registro">Encara no has realitzat cap comanda.</h1>
         <?php endif; ?>
     </div>
 </body>
-<?php include('footer.php'); ?>
+<?php include('footer.php');
+?>

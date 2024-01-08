@@ -94,7 +94,7 @@ ul li:hover {
 .window {
     height: 350px;
     width: auto;
-    background-color: #4e45a3;
+    background-color: #061f41;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -115,7 +115,7 @@ ul li:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: #4e45a3;
+    background-color: #061f41;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
