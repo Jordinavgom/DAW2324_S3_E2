@@ -18,7 +18,7 @@ include('./header.php');
     <div class='window'>
         <div class='order-info'>
             <div class='order-info-content'>
-                <h2>Carret de compres</h2>
+                <h2 class="fw-bold" style="color: #01eeac">Carret de compres</h2>
                 <div class='line'></div>
                 <table class='order-table'>
                     <thead class="text-center">
@@ -57,7 +57,7 @@ include('./header.php');
                 </table>
                 <div class='line'></div>
                 <div class='total'>
-                    <span style='float:left;'>
+                    <span style='float:left; color: white'>
                         TOTAL <?= $order['priceEach']; ?>€
                     </span>
                     <span style='float:right; text-align:right;'>

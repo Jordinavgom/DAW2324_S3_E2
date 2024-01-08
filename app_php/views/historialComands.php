@@ -9,6 +9,10 @@ include('./header.php');
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    ::marker {
+        color: white
+    }
+
     #footer {
         margin-top: auto;
         background-color: #061f41;
