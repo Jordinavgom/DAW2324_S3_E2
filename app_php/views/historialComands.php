@@ -64,13 +64,13 @@ include('./header.php');
                     <?php foreach ($orders as $order) : ?>
                         <tr>
                             <td><?= $order['idOrder'] ?> </td>
-                            <td> <?= $order['datetime'] ?></td>
+                            <td><?= date('d-m-Y', strtotime($order['datetime'])); ?></td>
                             <td><?php echo '<img src="' . $order['thumb'] . '" style="width: 100px; height: 100px;"/>'; ?></td>
                             <td><?= $order['name']; ?> </td>
                             <td> <?= $order['quantity']; ?></td>
                             <td><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($order['generatedImage']) . '" style="width: 100px; height: 100px;"/>'; ?></td>
-                            <td> <?= $order['priceEach'] . ' €'  ?></td>
-                            <td> <?= $order['shippingPrice'] . ' €'  ?></td>
+                            <td><?= number_format($order['priceEach'], 0, ',', '.') ?> €</td>
+                            <td><?= number_format($order['shippingPrice'], 0, ',', '.') ?> €</td>
                             <td><?= $order['priceEach'] + $order['shippingPrice'] . ' €' ?></td>
                             <td> <?= $order['orderStatus'] ?></td>
                         </tr>
