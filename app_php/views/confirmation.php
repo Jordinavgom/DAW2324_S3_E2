@@ -4,6 +4,7 @@ include('./header.php'); ?>
 <html lang="en">
 
 <head>
+    <title>Confirmació</title>
     <link rel="stylesheet" href="../css/botoanimat.css">
     <style>
         #footer {
