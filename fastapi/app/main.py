@@ -44,18 +44,21 @@ print ("user ======", {database_user_uri})
 
 ####
 
+PICANOVA_BASE_URL = "https://api.picanova.com/"
+BIGJPG_URL = "https://bigjpg.com/"
+
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
 
 @app.get("/ping/picanova")
 async def ping_picanova():
-    response = requests.get('https://api.picanova.com/')
+    response = requests.get(PICANOVA_BASE_URL)
     return {"status_code": response.status_code}
 
 @app.get("/ping/bigJPG")
 async def ping_big_jpg():
-    response = requests.get('https://bigjpg.com/')
+    response = requests.get(BIGJPG_URL)
     return {"status_code": response.status_code}
 
 @app.get("/api-status", response_class=HTMLResponse)
@@ -156,7 +159,7 @@ class CreateOrderRequest(BaseModel):
 def create_order(order_data: CreateOrderRequest, current_user: dict = Depends(get_current_user)):
     try:
         # URL a la que se enviará la solicitud POST para crear una orden
-        url = 'https://api.picanova.com/api/beta/orders'
+        url = (f"{PICANOVA_BASE_URL}api/beta/orders")
      
         # Realiza la solicitud POST a la API externa de Picanova
         response = requests.post(url, json=jsonable_encoder(order_data), headers={'Authorization': f'Basic {encoded_credentials}'})
@@ -243,7 +246,7 @@ product_details_table = Table(
 async def get_and_insert_products(current_user: dict = Depends(get_current_user)):
     try:
         # URL del nuevo endpoint
-        url = 'https://api.picanova.com/api/beta/products'
+        url = (f"{PICANOVA_BASE_URL}api/beta/products")
 
         async with httpx.AsyncClient() as client:
             # Realiza la solicitud GET al nuevo endpoint
@@ -377,7 +380,7 @@ async def get_and_insert_products(current_user: dict = Depends(get_current_user)
 
 
 async def get_product_details_from_api(product_id: int, encoded_credentials: str) -> dict:
-    url = f'https://api.picanova.com/api/beta/products/{product_id}'
+    url = (f"{PICANOVA_BASE_URL}api/beta/products/{product_id}")
     async with httpx.AsyncClient() as client:
         response = await client.get(
             url,
