@@ -78,6 +78,7 @@ include('views/header.php'); ?>
         var config = {
             apiKey: '33014b62ff1fa0dac6259bc9880be870d5721ff5',
             product: 'community',
+            necessaryCookies: ['PHPSESSID'],
             optionalCookies: [{
                 name: 'analytics',
                 label: 'Analytics',
