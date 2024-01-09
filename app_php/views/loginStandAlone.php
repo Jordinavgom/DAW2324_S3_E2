@@ -7,6 +7,15 @@ if (empty($_SESSION['idClient'])) { ?>
         <script src="../public/assets/js/sign_in_form.js"></script>
         <link rel="stylesheet" href="../css/botoanimat.css">
         <title>Inicio de sesión</title>
+        <style>
+            input:invalid {
+                border: none;
+            }
+
+            input:valid {
+                border: 2px solid green;
+            }
+        </style>
     </head>
     <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
         <div class="modal-dialog" role="document">
@@ -19,12 +28,12 @@ if (empty($_SESSION['idClient'])) { ?>
                     <form id="formulario" action="../controllers/UserController.php" method="POST">
                         <input type="hidden" name="action" value="login">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email">
+                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email" minlength="8" maxlength="40" required>
                             <label for="floatingInput" class="inputInside">Correu electrònic</label>
                         </div>
                         <div class="alert alert-danger" id="alertmail" role="alert"></div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="pass" placeholder="Password" name="pass">
+                            <input type="password" class="form-control rounded-3" id="pass" placeholder="Password" name="pass" minlength="8" maxlength="20" required>
                             <label for="floatingPassword" class="inputInside">Contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
@@ -35,6 +44,7 @@ if (empty($_SESSION['idClient'])) { ?>
             </div>
         </div>
     </div>
+
 <?php
 } else { ?>
     <?php include('header.php'); ?>

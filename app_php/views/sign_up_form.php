@@ -14,6 +14,14 @@
         label {
             color: white;
         }
+
+        input:invalid {
+            border: none;
+        }
+
+        input:valid {
+            border: 2px solid green;
+        }
     </style>
 </head>
 
@@ -29,25 +37,25 @@
                     <form id="formulario" action="../controllers/UserController.php" method="post">
                         <input type="hidden" name="action" value="signup">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email">
+                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" name="email" minlength="8" maxlength="40" required>
                             <label for="floatingInput" class="inputInside" style="color: black">Correu electrònic</label>
                             <span id="correoDisponible"></span>
                         </div>
 
                         <div class="alert alert-danger" id="alertmail" role="alert"></div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="pass" placeholder="Password" name="pass">
+                            <input type="password" class="form-control rounded-3" id="pass" placeholder="Password" name="pass" minlength="8" maxlength="20" required>
                             <label for="floatingPassword" class="inputInside" style="color: black">Contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass" role="alert"></div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="password2" placeholder="Confirm password" name="password2">
+                            <input type="password" class="form-control rounded-3" id="password2" placeholder="Confirm password" name="password2" minlength="8" maxlength="20" required>
                             <label for="floatingPassword" class="inputInside" style="color: black">Confirmar contrasenya</label>
                         </div>
                         <div class="alert alert-danger" id="alertPass2" role="alert"></div>
 
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="checkCondicions">
+                            <input type="checkbox" class="form-check-input" id="checkCondicions" required>
                             <label class="form-check-label" for="checkCondicions">He llegit i accepto els termes i condicions</label>
                             <div class="alert alert-danger" id="alertCondicions" role="alert"></div>
                         </div>
