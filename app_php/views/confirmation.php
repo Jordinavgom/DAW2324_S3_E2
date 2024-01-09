@@ -3,14 +3,27 @@ include('./header.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <link rel="stylesheet" href="../css/botoanimat.css">
+    <style>
+        #footer {
+            margin-top: auto;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* Puedes ajustar este valor según tu diseño */
+            position: static;
+            width: 100%;
+        }
+    </style>
+</head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <br>
-                <h1 class="display-4">Confirmació de pagament</h1>
-                <br>
-                <h2>Compra realitzada correctament! Gràcies per la seva visita!</h2>
+                <h1 class="registro">Confirmació de pagament</h1>
+                <h1 class="registro">Compra realitzada correctament! Gràcies per la seva visita!</h1>
             </div>
         </div>
     </div>
@@ -20,9 +33,10 @@ include('./header.php'); ?>
         <img src="../public/assets/img/GifEnvio.gif" class="img-fluid">
     </div>
 
-    <div class="text-center mt-4">
-        <br>
-        <a href="historialComands.php" class="btn btn-primary">Veure historial de compres</a>
+    <div class="text-center mt-4 mb-3">
+        <a href="historialComands.php">
+            <button class="w-50 mt-1 btn-lg rounded-3 custom-btn btn-1" style="color: white" type="button" id="botonCrear">Veure historial de compres</button>
+        </a>
     </div>
 </body>
 
