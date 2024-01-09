@@ -33,6 +33,7 @@ function comprovarDades() {
     comprovarMail();
     comprovarContrasenya();
     comprovarCheckBox();
+    validacio()
     if (email === '' || password === '' || password2 === '') {
         $('#generalAlert').text('Completa tots els camps.').show();
     } else if (comprovarMail() && comprovarContrasenya() && comprovarCheckBox()) {
@@ -45,6 +46,16 @@ function comprovarDades() {
 function formulari() {
     dades();
     comprovarDades();
+}
+
+function validacio() {
+    const email = document.getElementById("email");
+    const pass = document.getElementById("pass");
+    const password2 = document.getElementById("password2");
+
+    if (!email.checkValidity() || !pass.checkValidity() || !password2.checkValidity()) {
+        $('#generalAlert').text('Completa todos los campos.').show();
+    }
 }
 
 function comprovarMail() {

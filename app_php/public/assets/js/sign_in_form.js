@@ -91,10 +91,19 @@ function comprovarContrasenya() {
     }
 }
 
+function validacio() {
+    const email = document.getElementById("email");
+    const pass = document.getElementById("pass");
+
+    if (!email.checkValidity() || !pass.checkValidity()) {
+        $('#generalAlert').text('Completa todos los campos.').show();
+    }
+}
+
 function formulari() {
     //dades();
     comprovarContrasenya();
     comprovarDades();
     comprovarMail();
-
+    validacio()
 }
